@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
+<textParent>
 <textBlock dest="test">
     <msg>
         if you see this right now then the world is saved
@@ -67,3 +68,4 @@
         Union Coverage Is Coming Soon To A Tunnel Vision Website Near You!";
     </msg> 
 </textBlock>
+</textParent>
