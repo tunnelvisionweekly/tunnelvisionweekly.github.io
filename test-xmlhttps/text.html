@@ -87,8 +87,16 @@
                 var xmlDoc = xml.responseXML;
                 var x = xmlDoc.getElementsByTagName("textBlock");
                 var output = "";
+                var bold = false;
                 for (i = 0;i<x.length;i++) {
+                    for (child in x) {
+                        var temp = x[i].getElementsByTagName("dest").nodeValue;
+                        console.log("THE TEMP DEST VALUE IS: " + temp);
+                        if (temp == "JEC") {output += "<b>";bold = true;}
+                    }
                     output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
+                    console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
+                    if (bold) {output += "</b>";bold = false;}
                 }
                 document.getElementById("guinea-pig").innerHTML = output;
             }
