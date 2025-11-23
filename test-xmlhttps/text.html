@@ -90,8 +90,7 @@
                 var bold = false;
                 for (i = 0;i<x.length;i++) {
                     for (child in x) {
-                        var temp = x[i].getElementsByTagName("dest").nodeValue;
-                        console.log("THE TEMP DEST VALUE IS: " + temp);
+                        var temp = x[i][0];
                         if (temp == "JEC") {output += "<b>";bold = true;}
                     }
                     output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
