@@ -39,12 +39,12 @@
       <li>- Allow you to get to know us a little better!</li>
     </ul>
     <h3>Hope you enjoy, and be ready every other Monday for the next issue of Tunnel Vision (bi)Weekly! Latest Issue released yesterday (11/17)!</h3>
-    <h1 style="color:rgb(255, 149, 0)">(11/18) was still a release day! Be sure to find us in the Library, DCC, JEC, or select tech dumps!!</h1>
+    <h1 style="color:rgb(255, 149, 0)">(11/18) was a release day! Be sure to find us in the Library, DCC, JEC, or select tech dumps while supplies last!!</h1>
     <h2>If you missed us this fortnight and still want a copy, email us at tunnelvisionweekly@proton.me!</h2>
     <button onclick="window.location.href = 'TDS-web-1-0-0.html';" style="background-color:orange;">SPECIAL FEATURE: Tech Dump Simulator - Play now!</button>
     <br>
     </div>
-    <marquee style="font-size:25px;" scrollamount=12>Thank you for tuning into the official news ticker of Tunnel Vision (bi)Weekly. Latest news (Updated 10-28-25): Issue #11 is coming out 11/3 (hopefully, halloween will be busy for probably everyone)! Hope you're excited for Halloween, we sure are! The tech dumps have been relatively uneventful lately, though the DCC has had a cool dump of more media, this time in plastic reel-to-reel! ... The tunnels are still camera'd, would not recommend drawing or anything like that down there. We are going to continue coverage of the Starbucks doodle notebook unless you guys say otherwise, hope you're enjoying that so far! ... Did you notice the hot dog eating contest feud forming? We'll see if we can get a look at what exactly is going on for you all! ... This has been the news ticker team for Tunnel Vision (bi)Weekly, thanks for tuning in, we'll see you next time! - I, Tunnel Vision (bi)Weekly, Updated 10-28-25.</marquee>
+    <marquee style="font-size:25px;" scrollamount=12 id="news-ticker">Testing testing 123, if you see this, this is a bug! Please email us that you see this, and any Console errors (in the inspect element) if you get any.</marquee>
     <br><br><br>
     
     <h3>The blue-green gradient has been added for your viewing pleasure. (Nonexistent) Studies show that these colors allow your brain to see past the fourth wall and break out of the matrix. It is definitely not because I has no idea how to make a good looking website in HTML and CSS.</h3>
@@ -56,6 +56,9 @@
         <td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">View the archives of past issues!</button></td>
       </tr>
     </table> -->
-    
+    <script>
+      document.getElementById('news-ticker').innerHTML = localStorage.getItem("marquee-text");
+    </script>
+
   </body>
 </html>
