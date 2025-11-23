@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Sixtyfour&display=swap" rel="stylesheet">
+	<link href="/styles/tds.css" rel="stylesheet" type="text/css">
+	<title>RPI Tech Dump Simulator</title>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1>Tech Dump Simulator</h1>
+		<main>
+			<h2>Get the experience of tech dumping right in the comfort of your own PC!</h2>
+		</main>
+		<h3>By I, for the 10th issue-versary!</h3>
+		<p>Read the <a href="tds-readme.html">readme</a> if you'd like!</p>
+
+		<h2>Play Now!</h2>
+		<p>In a world where the tech dumps provide multitudes of tech, you have 2 choices. You can either be a
+			collector
+			of goodies you would have trouble finding elsewhere, or you can try to sell this stuff. The point of the
+			tech dumps
+			is to admire the interesting tech that runs through, and taking what you need/want, leaving the rest for
+			others.
+			In real life, don't sell this stuff. It's all free stuff for everyone, plus it's just not worth it.</p>
+		<p>In this game though, sell as much as you want! Your goal is to pay for your RPI tuition using the tech
+			dumps!
+			Get ready for some wacky situations, too! You never know what you'll find at the tech dumps!</p>
+		<div id="controls">
+			<div id="difficultySelect">
+				<h3>Difficulty:</h3>
+				<label for="diff">Select difficulty (event frequency):</label>
+				<select name="diff" id="diff" type="dropdown">
+					<option value="1">Impossible (100%)</option>
+					<option value="0.9">Harder (90%)</option>
+					<option value="0.75">Hard (75%)</option>
+					<option value="0.5" selected>Medium (50%)</option>
+					<option value="0.25">Easy (25%)</option>
+					<option value="0.10">Easier (10%)</option>
+					<option value="0.00">Peaceful (0%)</option>
+				</select>
+			</div>
+			<h3>Take Action:</h3>
+			<menu>
+				<li><button onclick="minebtn()" id="pick">Go to a tech dump</button></li>
+				<li><button onclick="findThings()" id="find">Dig through the stuff</button></li>
+				<li><button onclick="craftbtn()" id="craft">Sell your wares</button></li>
+				<li><button onclick="valueList()" id="valListBtn">View Item Value List</button></li>
+				<li><button onclick="document.getElementById('shop').style.display='block';" id="buy">Buy some cool stuff (Open Shop)</button></li>
+				<!-- <li><button onclick="viewbtn()">Admire your collection</button></li> -->
+				<li><button onclick="sleep()">Sleep to go to next day</button></li>
+			</menu>
+
+			<div id="gBcolChtn" style="display:none;">
+				<button id="changeColor" onclick="document.getElementsByTagName('body').style.backgroundColor = '#' + document.getElementById('newColor').value;">Change Background Color</button>
+				<label for="newColor">New color (hex code)</label>
+				<input type="text" name="newColor" id="newColor" />
+			</div>
+
+		</div>
+
+		<div id="shop" style="background-color:lime;display:none;text-align:left;">
+			<h3>The Everything Store</h3>
+			<button onclick="buy('cereal',10);">Cereal ($10) - +2 health</button><br>
+			<button onclick="buy('car',1500);">Car ($1500) - $25 bonus for each item sold (you can go to the good store)</button><br>
+			<button onclick="buy('display-case',50);">Display Case ($50) - Change the background color of this page!</button><br>
+			<button onclick="buy('RPI-tuition',100000);">Pay off RPI Tuition ($100,000) - You win the game!</button><br>
+			<button onclick="buy('laptop',1000);">Laptop ($1,000) - You'll make $10 a day for every laptop you buy, since you started an online business!</button><br>
+			<button onclick="buy('store',10000);">Physical Store ($10,000) - You'll make $250 a day for every store you buy!</button><br>
+			<button onclick="buy('store-name',2000);">Change Business Name ($2,000) - Don't like your business name? Change it here!</button><br>
+			<button onclick="document.getElementById('shop').style.display='none';"><b>Close Shop</b></button>
+		</div>
+
+		<div id="restartBtn" style="display:none;background-color:red;">
+			<h1>You lost! Your final stats are below.</h1>
+			<h2>Want to remember this game? Check out the game log at the bottom if you haven't already!</h2>
+			<button onclick="location.reload()">Restart Game!</button>
+		</div>
+
+		<section>
+			<h3>Location:</h3>
+			<p id="location">You are currently at: Home</p>
+		</section>
+		<section>
+			<h3>Inventory:</h3>
+			<p id="store_name" style="display:none">[Store name Placeholder]</p>
+			<p id="inventory">Head to a tech dump to start!</p>
+		</section>
+		<section>
+			<h3>Last Haul:</h3>
+			<p id="lasthaul">Head to a tech dump to start!</p>
+		</section>
+		<section>
+			<h3>Money:</h3>
+			<p id="money">$0</p>
+		</section>
+		<section>
+			<h3>Health:</h3>
+			<p id="health">100/100</p>
+		</section>
+		<section>
+			<h3>Number of items:</h3>
+			<p id="numItems">0</p>
+		</section>
+
+		<section>
+			<h3>Game Log:</h3>
+			<button id="hideLogBtn" onclick="document.getElementById('logwrapper').style.display = 'block'"
+				style="display:inline">Show Game Log</button>
+			<button id="hideLogBtn" onclick="document.getElementById('logwrapper').style.display = 'none'">Hide Game
+				Log</button>
+			<div id="logwrapper">
+				<p id="log">This is your game log. All actions will be saved here!</p>
+			</div>
+		</section>
+
+		<footer>
+			<p>Version 1.0.0</p>
+		</footer>
+
+		<script src="/scripts/tds.js"></script>
+	</div>
+</body>
+
+</html>
