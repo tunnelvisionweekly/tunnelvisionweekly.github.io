@@ -42,7 +42,7 @@
 
         <menuItem>
         <title>SPECIAL FEATURE: Tech Dump Simulator - Play now!</title>
-        <link>'TDS-web-1-0-0.html';" style="background-color:orange;</link> 
+        <link>'TDS-web-1-0-0.html';\" style=\"background-color:orange;</link> 
         </menuItem>
 
 </topLinks>
