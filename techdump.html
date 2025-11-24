@@ -6,7 +6,7 @@
     <title>My Page</title>
     <link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body onload="loadDoc1();">
+  <body onload="init();">
     <h1>Tech Dump Listings!</h1>
     <div id=top>
     <table class=toptable id="toptable">
@@ -46,6 +46,10 @@
   <!-- <script src="techdump.js"></script> -->
   <script src="header-gen.js"></script>
   <script>
+    function init() {
+      loadDoc();
+      loadDoc1();
+    }
     var date = new Date();
     var day = date.getDate();
     var mon = date.getMonth() + 1;
