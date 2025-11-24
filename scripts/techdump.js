@@ -28,10 +28,6 @@ function loadDoc(file) {
 	xhttp.send();
 }
 
-function retXML(xml) {
-	return xml;
-}
-
 function parseXML(xml) {
 	// console.log(xml);
 	var i;

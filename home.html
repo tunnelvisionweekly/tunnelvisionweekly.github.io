@@ -8,7 +8,7 @@
 	<link href="styles/old.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
-<body onload="loadDoc();">
+<body onload="loadDoc()">
 	<h1>Welcome to Tunnel Vision (bi)Weekly: The website!</h1>
 	<h2>(soon to be) New and Improved!</h2>
 	<div id="top">
@@ -61,38 +61,7 @@
 			<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">View the archives of past issues!</button></td>
 		</tr>
 	</table> -->
-	<script>
-		// TODO: Move this successfully to a separate file, add XML reading to get the marquee text as well.
-		document.getElementById('news-ticker').innerHTML = localStorage.getItem("marquee-text");
-
-		function loadDoc() {
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function () {
-				if (this.readyState == 4 && this.status == 200) {
-					myFunction(this);
-				}
-			};
-			xhttp.open("GET", "/resources/top-links.xml", true);
-			xhttp.send();
-		}
-
-		function myFunction(xml) {
-			console.log(xml);
-			var i;
-			var xmlDoc = xml.responseXML;
-			var x = xmlDoc.getElementsByTagName("menuItem");
-			var output = "";
-			for (i = 0; i < x.length; i++) {
-				var title = x[i].childNodes[1].childNodes[0].textContent;
-				var link = x[i].childNodes[3].childNodes[0].textContent;
-				// <td><button onclick="window.location.href = 'home.html';">Home</button></td>  
-				output += "<td><button onclick=\"window.location.href = " + link + "\">" + title + "</button></td>";
-			}
-			output += "</tr>";
-			document.getElementById("toptable").innerHTML = output;
-			console.log(output);
-		}
-	</script>
+	<script src="/scripts/header-gen.js"></script>
 
 </body>
 

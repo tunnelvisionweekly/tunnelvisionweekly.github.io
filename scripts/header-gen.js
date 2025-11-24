@@ -12,19 +12,19 @@ function loadDoc() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
-			myFunction(this);
+			createHeader(this);
 		}
 	};
 	xhttp.open("GET", "/resources/top-links.xml", true);
 	xhttp.send();
 }
 
-function myFunction(xml) {
+function createHeader(xml) {
 	console.log(xml);
 	var i;
 	var xmlDoc = xml.responseXML;
 	var x = xmlDoc.getElementsByTagName("menuItem");
-	var output = "";
+	var output = "<tr>";
 	for (i = 0; i < x.length; i++) {
 		var title = x[i].childNodes[1].childNodes[0].textContent;
 		var link = x[i].childNodes[3].childNodes[0].textContent;
