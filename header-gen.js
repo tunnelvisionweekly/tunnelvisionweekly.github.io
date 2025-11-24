@@ -15,7 +15,7 @@ function loadDoc() {
         myFunction(this);
         }
     };
-    xhttp.open("GET","//top-links.xml", true);
+    xhttp.open("GET","top-links.xml", true);
     xhttp.send();
 }
 
@@ -29,7 +29,7 @@ function myFunction(xml) {
         var title = x[i].childNodes[1].childNodes[0].textContent;
         var link = x[i].childNodes[3].childNodes[0].textContent;
         // <td><button onclick="window.location.href = 'home.html';">Home</button></td>  
-        output += "<td><button onclick=\"window.location.href = '//" + link + "\">" + title + "</button></td>"; 
+        output += "<td><button onclick=\"window.location.href = " + link + "\">" + title + "</button></td>"; 
     }
     output += "</tr>";
     document.getElementById("toptable").innerHTML = output;

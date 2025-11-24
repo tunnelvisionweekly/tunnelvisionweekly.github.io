@@ -2,47 +2,47 @@
 <topLinks>
         <menuItem>
         <title>Home</title>
-        <link>home.html';</link> 
+        <link>'home.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>What's New In The Box(es): Online Edition</title>
-        <link>techdump.html';</link> 
+        <link>'techdump.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>Puzzles n' Stuff Hall of Fame</title>
-        <link>games/puzzles/halloffame.html';</link> 
+        <link>'games/puzzles/halloffame.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>Latest Issue</title>
-        <link>https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';</link>
+        <link>'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';</link>
         </menuItem>
 
         <menuItem>
         <title>Past Issues</title>
-        <link>past-issues.html';</link> 
+        <link>'past-issues.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>About us</title>
-        <link>about.html';</link> 
+        <link>'about.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>Submit News/Join Team</title>
-        <link>submit.html';</link> 
+        <link>'submit.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>Crossword Solutions!</title>
-        <link>games/puzzles/crosswordsolutions.html';</link> 
+        <link>'games/puzzles/crosswordsolutions.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>SPECIAL FEATURE: Tech Dump Simulator - Play now!</title>
-        <link>games/techdumpsimulator.html';\" style=\"background-color:orange;</link> 
+        <link>'games/techdumpsimulator.html';\" style=\"background-color:orange;</link> 
         </menuItem>
 
 </topLinks>
