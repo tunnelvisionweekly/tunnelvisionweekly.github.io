@@ -46,6 +46,7 @@
   <!-- <script src="techdump.js"></script> -->
 
   <script>
+    var date = new Date();
     var day = date.getDate();
     var mon = date.getMonth() + 1;
     var yr  = date.getFullYear();
@@ -64,7 +65,6 @@
 
     function myFunction(xml) {
         console.log(xml);
-        var date = new Date();
         var i;
         var xmlDoc = xml.responseXML;
         var x = xmlDoc.getElementsByTagName("textBlock");
