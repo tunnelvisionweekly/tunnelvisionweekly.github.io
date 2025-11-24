@@ -6,7 +6,7 @@
     <title>My Page</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body>
+  <body onload="fillTable();">
     <h1>Tech Dump Listings!</h1>
     <div id=top>
     <table class=toptable>
@@ -24,8 +24,9 @@
   <h2>Find a listing of what was last seen in each tech dumps (by us), as of the updated date.</h2>
   <h5>Note: Under construction</h5>
 <div class=infotable>
-  <table class=infotable>
+  <table class=infotable id="infotable">
     <tr><th>Tech Dump Location</th><th>Last Updated</th><th>Items currently there (as of updated date)</th></tr>
+
     <tr><td>JEC</td>                  <td id="dJEC">11/21/25</td>        <td id="JEC"> There's so many (3) printers, plus a bunch of random electronic/plastic bits.</td></tr>
     <tr><td>DCC</td>                  <td id="dDCC">11/21/25</td>        <td id="DCC">Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.</td></tr>
     <tr><td>VCC</td>                  <td id="dVCC">11/21/25</td>        <td id="VCC">A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).</td></tr>
@@ -42,12 +43,6 @@
   
   <p>Updated 11/21/2025</p>
 
-  <script>
-    function getFromStorage(loc, dest) { //loc = localStorage key, dest is the id of the element to change
-      var temp = localStorage.getItem(loc);
-      document.getElementById(dest).innerHTML = temp.substring(5);
-      document.getElementById("d" + dest).innerHTML = temp.substring(0,5);
-    }
-  </script>
+  <script src="scripts/techdump.js"></script>
   </body>
 </html>
