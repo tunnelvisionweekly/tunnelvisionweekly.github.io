@@ -1,12 +1,12 @@
-var foffset = "";
-try {
-    if (offset != "") {
-        console.log("Offset found!");
-        foffset = offset;
-    }
-} catch (e) {
-    console.log("No offset set.");
-} 
+// var foffset = "";
+// try {
+//     if (offset != "") {
+//         console.log("Offset found!");
+//         foffset = offset;
+//     }
+// } catch (e) {
+//     console.log("No offset set.");
+// } 
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -15,7 +15,7 @@ function loadDoc() {
         myFunction(this);
         }
     };
-    xhttp.open("GET", foffset + "top-links.xml", true);
+    xhttp.open("GET","/top-links.xml", true);
     xhttp.send();
 }
 
