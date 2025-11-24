@@ -6,7 +6,7 @@
     <title>My Page</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body onload="fillTable();">
+  <body onload="loadDoc();">
     <h1>Tech Dump Listings!</h1>
     <div id=top>
     <table class=toptable>
@@ -27,12 +27,12 @@
   <table class=infotable id="infotable">
     <tr><th>Tech Dump Location</th><th>Last Updated</th><th>Items currently there (as of updated date)</th></tr>
 
-    <tr><td>JEC</td>                  <td id="dJEC">11/21/25</td>        <td id="JEC"> There's so many (3) printers, plus a bunch of random electronic/plastic bits.</td></tr>
-    <tr><td>DCC</td>                  <td id="dDCC">11/21/25</td>        <td id="DCC">Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.</td></tr>
-    <tr><td>VCC</td>                  <td id="dVCC">11/21/25</td>        <td id="VCC">A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).</td></tr>
-    <tr><td>LOW</td>                  <td id="dLow">11/21/25</td>        <td id="Low">The VCC's box from over the past month or more ended up here today (11/7), there was a medium-sized PC dump the other day, the shells are still there (11/7). There are remnants of a robotic dog made by Sony, an 'aibo,' if you've heard of it. A bunch of PCs and the HEAVIEST/DENSEST cylinder I have ever seen, weighs at least 50 lbs but it's like a foot in diameter.</td></tr>
-    <tr><td>MRC/Cogswell</td>         <td id="dMRCCogs">11/21/25</td>        <td id="MRCCogs">Cogswell still quite empty. Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.</td></tr>
-    <tr><td>Other (Sage and West)</td><td id="dSageWestUnion">11/21/25</td>        <td id="SageWestUnion">(9/30)In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ... (11/21) In Sage, so many wires. Go check it out if you need an ethernet cord or something. </td></tr>
+    <tr><td>JEC</td>                  <td id="dJEC">11/21/25</td>        <td id="JEC"> aoeuThere's so many (3) printers, plus a bunch of random electronic/plastic bits.</td></tr>
+    <tr><td>DCC</td>                  <td id="dDCC">11/21/25</td>        <td id="DCC">aoeuAround 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.</td></tr>
+    <tr><td>VCC</td>                  <td id="dVCC">11/21/25</td>        <td id="VCC">aeouA complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).</td></tr>
+    <tr><td>LOW</td>                  <td id="dLow">11/21/25</td>        <td id="Low">aoeuThe VCC's box from over the past month or more ended up here today (11/7), there was a medium-sized PC dump the other day, the shells are still there (11/7). There are remnants of a robotic dog made by Sony, an 'aibo,' if you've heard of it. A bunch of PCs and the HEAVIEST/DENSEST cylinder I have ever seen, weighs at least 50 lbs but it's like a foot in diameter.</td></tr>
+    <tr><td>MRC/Cogswell</td>         <td id="dMRCCogs">11/21/25</td>        <td id="MRCCogs">aoeuCogswell still quite empty. Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.</td></tr>
+    <tr><td>Other (Sage and West)</td><td id="dSageWestUnion">11/21/25</td>        <td id="SageWestUnion">aoeu(9/30)In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ... (11/21) In Sage, so many wires. Go check it out if you need an ethernet cord or something. </td></tr>
   </table>
   
   <h2>Thank you as always for your support and taking of TVW! #12 are still out there! Email us if you want a copy but can't find any!</h2>
@@ -116,6 +116,7 @@
                 var output = "";
                 var bold = false;
                 for (i = 0;i<x.length;i++) {
+                    output += "<tr><td>";
                     var dest = x[i].childNodes[1].childNodes[0].textContent;
                     var date = x[i].childNodes[3].childNodes[0].textContent;
                     var data = x[i].childNodes[5].childNodes[0].textContent;
@@ -123,11 +124,11 @@
                     if (dest == "homeMarquee") {continue;}
                     // x[0].childNodes[1].childNodes[0] <== change the x[0] to change the textBlock, the childNodes[1] to either 1,3, or 5 for each block. Keep the last one the same.
                     // output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
-                    output += dest + ": (" + date + ") " + data + "<br>";
-                    console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
+                    output += places[i] + "</td><td>" + temp_date + "</td><td>" + temp_data + "</td></tr>\n";
+                    // console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
                     if (bold) {output += "</b>";bold = false;}
                 }
-                document.getElementById("guinea-pig").innerHTML = output;
+                document.getElementById("infotable").innerHTML = output;
             }
     </script>
    <!-- <script>
