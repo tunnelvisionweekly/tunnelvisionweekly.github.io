@@ -12,7 +12,7 @@
 
         <menuItem>
         <title>Puzzles n' Stuff Hall of Fame</title>
-        <link>'halloffame.html';</link> 
+        <link>'games/puzzles/halloffame.html';</link> 
         </menuItem>
 
         <menuItem>
@@ -37,12 +37,12 @@
 
         <menuItem>
         <title>Crossword Solutions!</title>
-        <link>'crossword-solns.html';</link> 
+        <link>'games/puzzles/crosswordsolutions.html';</link> 
         </menuItem>
 
         <menuItem>
         <title>SPECIAL FEATURE: Tech Dump Simulator - Play now!</title>
-        <link>'TDS-web-1-0-0.html';\" style=\"background-color:orange;</link> 
+        <link>'games/techdumpsimulator.html';\" style=\"background-color:orange;</link> 
         </menuItem>
 
 </topLinks>
