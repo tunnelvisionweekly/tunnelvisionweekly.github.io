@@ -20,7 +20,7 @@
     <dest>JEC</dest>
     <date>11-21-25</date>
     <msg>
-        There's so many (3) printers, plus a bunch of random electronic/plastic bits.";
+        There's so many (3) printers, plus a bunch of random electronic/plastic bits.
     </msg> 
 </textBlock>
 
@@ -28,7 +28,7 @@
     <dest>DCC</dest>
     <date>11-21-25</date>
     <msg>
-        Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.";
+        Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.
     </msg> 
 </textBlock>
 
@@ -36,7 +36,7 @@
     <dest>VCC</dest>
     <date>11-21-25</date>
     <msg>
-        A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).";
+        A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).
     </msg> 
 </textBlock>
 
@@ -44,39 +44,39 @@
     <dest>MRC</dest>
     <date>11-21-25</date>
     <msg>
-        Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.";
+        Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.
     </msg> 
 </textBlock>
 
 <textBlock>
-    <dest>Cog</dest>
+    <dest>Cogswell</dest>
     <date>11-21-25</date>
     <msg>
-        Cogswell still quite empty.";
+        Cogswell still quite empty.
     </msg> 
 </textBlock>
 
 <textBlock>
-    <dest>Sag</dest>
+    <dest>Sage</dest>
     <date>11-21-25</date>
     <msg>
-        In Sage, so many wires. Go check it out if you need an ethernet cord or something. ";
+        In Sage, so many wires. Go check it out if you need an ethernet cord or something.
     </msg> 
 </textBlock>
 
 <textBlock>
-    <dest>Wes</dest>
+    <dest>West</dest>
     <date>09-30-25</date>
     <msg>
-        In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ...";
+        In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too.
     </msg> 
 </textBlock>
 
 <textBlock>
-    <dest>Uni</dest>
+    <dest>Union</dest>
     <date>11-21-25</date>
     <msg>
-        Union Coverage Is Coming Soon To A Tunnel Vision Website Near You!";
+        Union Coverage Is Coming Soon To A Tunnel Vision Website Near You!
     </msg> 
 </textBlock>
 </textParent>
