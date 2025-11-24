@@ -1,5 +1,5 @@
 function fillTable() {
-    var xml = loadDoc("test-file.xml");
+    var xml = loadDoc("page-text.xml");
     var places = ["JEC","DCC","VCC","LOW","MRC","Cogswell","West","Sage","Union"];
     var output = "<h3>Start of Generated Table</h3>";
 
