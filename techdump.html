@@ -1,153 +1,197 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
-    <link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body onload="init();">
-    <h1>Tech Dump Listings!</h1>
-    <div id=top>
-    <table class=toptable id="toptable">
-      <tr>   
-          <td><button onclick="window.location.href = 'home.html';">Home</button></td>  
-          <td><button onclick="window.location.href = 'techdump.html';">What's New In The Box(es): Online Edition</button></td>  
-          <td><button onclick="window.location.href = 'about.html';">About us</button></td>
-          <td><button onclick="window.location.href = 'submit.html';">Submit News/Join Team</button></td>
-      </tr>
-    </table>
-    </div>
-  <h2>Find a listing of what was last seen in each tech dumps (by us), as of the updated date.</h2>
-  <h5>Note: Under construction</h5>
-<div class=infotable>
-  <table class=infotable id="infotable">
-    <tr><th>Tech Dump Location</th><th>Last Updated</th><th>Items currently there (as of updated date)</th></tr>
 
-    <tr><td>JEC</td>                  <td id="dJEC">11/21/25</td>        <td id="JEC"> aoeuThere's so many (3) printers, plus a bunch of random electronic/plastic bits.</td></tr>
-    <tr><td>DCC</td>                  <td id="dDCC">11/21/25</td>        <td id="DCC">aoeuAround 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.</td></tr>
-    <tr><td>VCC</td>                  <td id="dVCC">11/21/25</td>        <td id="VCC">aeouA complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).</td></tr>
-    <tr><td>LOW</td>                  <td id="dLow">11/21/25</td>        <td id="Low">aoeuThe VCC's box from over the past month or more ended up here today (11/7), there was a medium-sized PC dump the other day, the shells are still there (11/7). There are remnants of a robotic dog made by Sony, an 'aibo,' if you've heard of it. A bunch of PCs and the HEAVIEST/DENSEST cylinder I have ever seen, weighs at least 50 lbs but it's like a foot in diameter.</td></tr>
-    <tr><td>MRC/Cogswell</td>         <td id="dMRCCogs">11/21/25</td>        <td id="MRCCogs">aoeuCogswell still quite empty. Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.</td></tr>
-    <tr><td>Other (Sage and West)</td><td id="dSageWestUnion">11/21/25</td>        <td id="SageWestUnion">aoeu(9/30)In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ... (11/21) In Sage, so many wires. Go check it out if you need an ethernet cord or something. </td></tr>
-  </table>
-  
-  <h2>Thank you as always for your support and taking of TVW! #12 are still out there! Email us if you want a copy but can't find any!</h2>
-</div>
-  
-  <h2>Hope this helped! If you find anything that wasn't listed, let us know via the News Submission Form!</h2>
-  <h2>Happy Thanksgiving!!</h2>
-  
-  <p>Updated 11/21/2025</p>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Page</title>
+	<link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
+</head>
 
-  <!-- <script src="techdump.js"></script> -->
-  <script src="header-gen.js"></script>
-  <script>
-    function init() {
-      loadDoc();
-      loadDoc1();
-    }
-    var date = new Date();
-    var day = date.getDate();
-    var mon = date.getMonth() + 1;
-    var yr  = date.getFullYear();
-    var currentDate = mon + "-" + day + "-" + yr.toString().substring(2,4);
-    
-    function loadDoc1() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-            }
-        };
-        xhttp.open("GET", "page-text.xml", true);
-        xhttp.send();
-    }
+<body onload="init();">
+	<h1>Tech Dump Listings!</h1>
+	<div id="top">
+		<table class="toptable" id="toptable">
+			<tr>
+				<td><button onclick="window.location.href = 'home.html';">Home</button></td>
+				<td><button onclick="window.location.href = 'techdump.html';">What's New In The Box(es): Online Edition</button></td>
+				<td><button onclick="window.location.href = 'about.html';">About us</button></td>
+				<td><button onclick="window.location.href = 'submit.html';">Submit News/Join Team</button></td>
+			</tr>
+		</table>
+	</div>
+	<h2>Find a listing of what was last seen in each tech dumps (by us), as of the updated date.</h2>
+	<h5>Note: Under construction</h5>
+	<div class="infotable">
+		<table class="infotable" id="infotable">
+			<tr>
+				<th>Tech Dump Location</th>
+				<th>Last Updated</th>
+				<th>Items currently there (as of updated date)</th>
+			</tr>
+			<tr>
+				<td>JEC</td>
+				<td id="dJEC">11/21/25</td>
+				<td id="JEC"> aoeuThere's so many (3) printers, plus a bunch of random electronic/plastic bits.</td>
+			</tr>
+			<tr>
+				<td>DCC</td>
+				<td id="dDCC">11/21/25</td>
+				<td id="DCC">aoeuAround 10/28, there was a dump of video film and film reels! Really cool stuff IMO,
+					super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides
+					that, it doesn't look like there's anything else new. There's still some kettles/coffee machines,
+					video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few
+					extra vhs tapes were found. Still not much big change, though.</td>
+			</tr>
+			<tr>
+				<td>VCC</td>
+				<td id="dVCC">11/21/25</td>
+				<td id="VCC">aeouA complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't
+					worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed
+					(which they typically are).</td>
+			</tr>
+			<tr>
+				<td>LOW</td>
+				<td id="dLow">11/21/25</td>
+				<td id="Low">aoeuThe VCC's box from over the past month or more ended up here today (11/7), there was a
+					medium-sized PC dump the other day, the shells are still there (11/7). There are remnants of a
+					robotic dog made by Sony, an 'aibo,' if you've heard of it. A bunch of PCs and the HEAVIEST/DENSEST
+					cylinder I have ever seen, weighs at least 50 lbs but it's like a foot in diameter.</td>
+			</tr>
+			<tr>
+				<td>MRC/Cogswell</td>
+				<td id="dMRCCogs">11/21/25</td>
+				<td id="MRCCogs">aoeuCogswell still quite empty. Though the MRC is absolutely providing, there were 5
+					old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20.</td>
+			</tr>
+			<tr>
+				<td>Other (Sage and West)</td>
+				<td id="dSageWestUnion">11/21/25</td>
+				<td id="SageWestUnion">aoeu(9/30)In West, Printers, string lights, a DVD player (find of the week last
+					semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires,
+					too. ... (11/21) In Sage, so many wires. Go check it out if you need an ethernet cord or something.
+				</td>
+			</tr>
+		</table>
 
-    function myFunction(xml) {
-        console.log(xml);
-        var i;
-        var xmlDoc = xml.responseXML;
-        var x = xmlDoc.getElementsByTagName("textBlock");
-        var output = "<tr><th>Tech Dump Location</th><th>Last Updated</th><th>Items currently there (as of updated date)</th></tr>";
-        var bold = false;
-        for (i = 0;i<x.length;i++) {
-            output += "<tr><td>";
-            var dest = x[i].childNodes[1].childNodes[0].textContent;
-            var date = x[i].childNodes[3].childNodes[0].textContent;
-            var data = x[i].childNodes[5].childNodes[0].textContent;
-            if (date == currentDate) {bold = true; output += "<b>";}
-            if (dest == "homeMarquee" || dest == "test") {continue;}
-            // x[0].childNodes[1].childNodes[0] <== change the x[0] to change the textBlock, the childNodes[1] to either 1,3, or 5 for each block. Keep the last one the same.
-            // output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
-            output += dest + "</td><td>" + date + "</td><td>" + data + "</td></tr>\n";
-            // console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
-            if (bold) {output += "</b>";bold = false;}
-        }
-        document.getElementById("infotable").innerHTML = output;
-    }
-    </script>
-   <!-- <script>
-    function fillTable() {
-    // var xml = loadDoc("scripts/page-text.xml");
-    var places = ["JEC","DCC","VCC","LOW","MRC","Cogswell","West","Sage","Union"];
-    var output = "<h3>Start of Generated Table</h3>";
+		<h2>Thank you as always for your support and taking of TVW! #12 are still out there! Email us if you want a copy
+			but can't find any!</h2>
+	</div>
 
-    for (var i = 0;i<places.length;i++) {
-        var temp_parsed = loadDoc("scripts/page-text.xml",places[i].substring(0,3));
-        output += "<tr><td>";
-        // var temp_parsed = parseXML(xml,places[i].substring(0,3));
-        var temp_date = temp_parsed[1];
-        var temp_data = temp_parsed[2];
-        output += places[i] + "</td><td>" + temp_date + "</td><td>" + temp_data + "</td></tr>\n";
-        // document.getElementById(places[i]).innerHTML = temp_data;
-        // document.getElementById("d" + places[i]).innerHTML = temp_date;
-    }
-    output += "<h3>End of Generated Table</h3>"
-    document.getElementById("infotable").innerHTML = output;
-}
+	<h2>Hope this helped! If you find anything that wasn't listed, let us know via the News Submission Form!</h2>
+	<h2>Happy Thanksgiving!!</h2>
 
-function loadDoc(file,desiredDest) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        parseXML(this,desiredDest);
-        }
-    };
-    xhttp.open("GET", file, true);
-    xhttp.send();
-}
+	<p>Updated 11/21/2025</p>
 
-function retXML(xml) {
-    return xml;
-}
+	<!-- <script src="techdump.js"></script> -->
+	<script src="header-gen.js"></script>
+	<script>
+		function init() {
+			loadDoc();
+			loadDoc1();
+		}
+		var date = new Date();
+		var day = date.getDate();
+		var mon = date.getMonth() + 1;
+		var yr = date.getFullYear();
+		var currentDate = mon + "-" + day + "-" + yr.toString().substring(2, 4);
 
-function parseXML(xml,desiredDest) {
-    console.log(xml);
-    var i;
-    var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("textBlock");
-    // var output = "";
-    // var bold = false;
-    for (i = 0;i<x.length;i++) {
-        var dest = x[i].childNodes[1].childNodes[0].textContent;
-        var date = x[i].childNodes[3].childNodes[0].textContent;
-        var data = x[i].childNodes[5].childNodes[0].textContent;
-        // if (dest == "JEC") {bold = true; output += "<b>";}
-        if (dest == desiredDest) {
-            return [dest,date,data];
-        }
-        // x[0].childNodes[1].childNodes[0] <== change the x[0] to change the textBlock, the childNodes[1] to either 1,3, or 5 for each block. Keep the last one the same.
-        // output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
-        // output += dest + ": (" + date + ") " + data + "<br>";
-        // console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
-        // if (bold) {output += "</b>";bold = false;}
-    }
-}
+		function loadDoc1() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					myFunction(this);
+				}
+			};
+			xhttp.open("GET", "page-text.xml", true);
+			xhttp.send();
+		}
 
-function placeText(desiredDest,text) {
-    document.getElementById(desiredDest).innerHTML = text;
-}
-   </script> -->
-  </body>
+		function myFunction(xml) {
+			console.log(xml);
+			var i;
+			var xmlDoc = xml.responseXML;
+			var x = xmlDoc.getElementsByTagName("textBlock");
+			var output = "<tr><th>Tech Dump Location</th><th>Last Updated</th><th>Items currently there (as of updated date)</th></tr>";
+			var bold = false;
+			for (i = 0; i < x.length; i++) {
+				output += "<tr><td>";
+				var dest = x[i].childNodes[1].childNodes[0].textContent;
+				var date = x[i].childNodes[3].childNodes[0].textContent;
+				var data = x[i].childNodes[5].childNodes[0].textContent;
+				if (date == currentDate) { bold = true; output += "<b>"; }
+				if (dest == "homeMarquee" || dest == "test") { continue; }
+				// x[0].childNodes[1].childNodes[0] <== change the x[0] to change the textBlock, the childNodes[1] to either 1,3, or 5 for each block. Keep the last one the same.
+				// output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
+				output += dest + "</td><td>" + date + "</td><td>" + data + "</td></tr>\n";
+				// console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
+				if (bold) { output += "</b>"; bold = false; }
+			}
+			document.getElementById("infotable").innerHTML = output;
+		}
+	</script>
+	<!-- <script>
+		function fillTable() {
+			// var xml = loadDoc("scripts/page-text.xml");
+			var places = ["JEC","DCC","VCC","LOW","MRC","Cogswell","West","Sage","Union"];
+			var output = "<h3>Start of Generated Table</h3>";
+
+			for (var i = 0;i<places.length;i++) {
+				var temp_parsed = loadDoc("scripts/page-text.xml",places[i].substring(0,3));
+				output += "<tr><td>";
+				// var temp_parsed = parseXML(xml,places[i].substring(0,3));
+				var temp_date = temp_parsed[1];
+				var temp_data = temp_parsed[2];
+				output += places[i] + "</td><td>" + temp_date + "</td><td>" + temp_data + "</td></tr>\n";
+				// document.getElementById(places[i]).innerHTML = temp_data;
+				// document.getElementById("d" + places[i]).innerHTML = temp_date;
+			}
+			output += "<h3>End of Generated Table</h3>"
+			document.getElementById("infotable").innerHTML = output;
+		}
+
+		function loadDoc(file,desiredDest) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				parseXML(this,desiredDest);
+				}
+			};
+			xhttp.open("GET", file, true);
+			xhttp.send();
+		}
+
+		function retXML(xml) {
+			return xml;
+		}
+
+		function parseXML(xml,desiredDest) {
+			console.log(xml);
+			var i;
+			var xmlDoc = xml.responseXML;
+			var x = xmlDoc.getElementsByTagName("textBlock");
+			// var output = "";
+			// var bold = false;
+			for (i = 0;i<x.length;i++) {
+				var dest = x[i].childNodes[1].childNodes[0].textContent;
+				var date = x[i].childNodes[3].childNodes[0].textContent;
+				var data = x[i].childNodes[5].childNodes[0].textContent;
+				// if (dest == "JEC") {bold = true; output += "<b>";}
+				if (dest == desiredDest) {
+					return [dest,date,data];
+				}
+				// x[0].childNodes[1].childNodes[0] <== change the x[0] to change the textBlock, the childNodes[1] to either 1,3, or 5 for each block. Keep the last one the same.
+				// output += "msg " + i + ": " + x[i].getElementsByTagName("msg")[0].childNodes[0].nodeValue + "<br>";
+				// output += dest + ": (" + date + ") " + data + "<br>";
+				// console.log("The child nodes of this msg is: " + x[i].getElementsByTagName("msg")[0].childNodes);
+				// if (bold) {output += "</b>";bold = false;}
+			}
+		}
+
+		function placeText(desiredDest,text) {
+			document.getElementById(desiredDest).innerHTML = text;
+		}
+	</script> -->
+</body>
+
 </html>
