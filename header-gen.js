@@ -15,7 +15,7 @@ function loadDoc() {
         myFunction(this);
         }
     };
-    xhttp.open("GET","/top-links.xml", true);
+    xhttp.open("GET","//top-links.xml", true);
     xhttp.send();
 }
 
