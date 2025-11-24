@@ -1,11 +1,12 @@
 function fillTable() {
-    var xml = loadDoc("scripts/page-text.xml");
+    // var xml = loadDoc("scripts/page-text.xml");
     var places = ["JEC","DCC","VCC","LOW","MRC","Cogswell","West","Sage","Union"];
     var output = "<h3>Start of Generated Table</h3>";
 
     for (var i = 0;i<places.length;i++) {
+        var temp_parsed = loadDoc("scripts/page-text.xml",places[i].substring(0,3));
         output += "<tr><td>";
-        var temp_parsed = parseXML(xml,places[i].substring(0,3));
+        // var temp_parsed = parseXML(xml,places[i].substring(0,3));
         var temp_date = temp_parsed[1];
         var temp_data = temp_parsed[2];
         output += places[i] + "</td><td>" + temp_date + "</td><td>" + temp_data + "</td></tr>\n";
@@ -16,11 +17,11 @@ function fillTable() {
     document.getElementById("infotable").innerHTML = output;
 }
 
-function loadDoc(file) {
+function loadDoc(file,desiredDest) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-        retXML(this);
+        parseXML(this,desiredDest);
         }
     };
     xhttp.open("GET", file, true);
