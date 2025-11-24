@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* Original Neocities page styles */
+
+h1 {
+	font-weight: bold;
+	color: orange;
+}
+
+h2, h3 {
+	color: black;
+}
+
+button {
+	border: 0px;
+	background-color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.toptable {
+	background-color: green;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.infotable {
+	background-color: white;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td, th {
+	border: 1px solid black;
+}
+
+tr:hover {
+	background-color: blueviolet;
+	color: white;
+	transition-duration: 500ms;
+}
+
+button:hover {
+	background-color: green;
+	color: white;
+	transition-duration: 500ms;
+}
+
+/* #top {} */
+
+#text {
+	background-color: white;
+}
+
+body {
+	background-image: linear-gradient(green, blue);
+	color: black;
+	font-family: monospace;
+	text-align: center;
+}
+
+marquee {
+	background-color: forestgreen;
+	color: yellow;
+}
+
+table.crossword {
+	border-collapse: collapse;
+	text-align: center;
+	background-color: white;
+}
+
+table.crossword td {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-width: 2px;
+	font-size: xx-large;
+}
+
+table.crossword td.unused {
+	background-color: black;
+}
+
+table.crossword td .number {
+	position: absolute;
+	font-size: small;
+	top: 2px;
+	left: 2px;
+}
