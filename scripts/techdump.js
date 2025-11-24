@@ -2,8 +2,8 @@ var places = ["JEC", "DCC", "VCC", "LOW", "MRC", "Cogswell", "West", "Sage", "Un
 var output = "<h3>Start of Generated Table</h3>";
 
 function fillTable() {
-	// var xml = loadDoc("scripts/page-text.xml");
-	var temp_parsed = loadDoc("page-text.xml"); //,places[i].substring(0,3));
+	// var xml = loadDoc("/resources/page-text.xml");
+	var temp_parsed = loadDoc("/resources/page-text.xml"); //,places[i].substring(0,3));
 	for (var i = 0; i < places.length; i++) {
 		output += "<tr><td>";
 		// var temp_parsed = parseXML(xml,places[i].substring(0,3));

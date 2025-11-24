@@ -83,8 +83,8 @@
 
 	<p>Updated 11/21/2025</p>
 
-	<!-- <script src="techdump.js"></script> -->
-	<script src="header-gen.js"></script>
+	<!-- <script src="/scripts/techdump.js"></script> -->
+	<script src="/scripts/header-gen.js"></script>
 	<script>
 		function init() {
 			loadDoc();
@@ -103,7 +103,7 @@
 					myFunction(this);
 				}
 			};
-			xhttp.open("GET", "page-text.xml", true);
+			xhttp.open("GET", "/resources/page-text.xml", true);
 			xhttp.send();
 		}
 
@@ -132,12 +132,12 @@
 	</script>
 	<!-- <script>
 		function fillTable() {
-			// var xml = loadDoc("scripts/page-text.xml");
+			// var xml = loadDoc("/resources/page-text.xml");
 			var places = ["JEC","DCC","VCC","LOW","MRC","Cogswell","West","Sage","Union"];
 			var output = "<h3>Start of Generated Table</h3>";
 
 			for (var i = 0;i<places.length;i++) {
-				var temp_parsed = loadDoc("scripts/page-text.xml",places[i].substring(0,3));
+				var temp_parsed = loadDoc("/resources/page-text.xml",places[i].substring(0,3));
 				output += "<tr><td>";
 				// var temp_parsed = parseXML(xml,places[i].substring(0,3));
 				var temp_date = temp_parsed[1];
