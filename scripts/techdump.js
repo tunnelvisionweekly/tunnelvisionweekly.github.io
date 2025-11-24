@@ -4,7 +4,7 @@ function fillTable() {
     var output = "<h3>Start of Generated Table</h3>";
 
     for (var i = 0;i<places.length;i++) {
-        var temp_parsed = loadDoc("scripts/page-text.xml",places[i].substring(0,3));
+        var temp_parsed = loadDoc("page-text.xml",places[i].substring(0,3));
         output += "<tr><td>";
         // var temp_parsed = parseXML(xml,places[i].substring(0,3));
         var temp_date = temp_parsed[1];
