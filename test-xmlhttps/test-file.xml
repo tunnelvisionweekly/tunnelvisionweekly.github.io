@@ -2,7 +2,7 @@
 <textParent>
 <textBlock>
     <dest>test</dest>
-    <date />
+    <date>01-01-1970</date>
     <msg>
         if you see this right now then the world is saved
     </msg>
