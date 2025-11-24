@@ -42,7 +42,7 @@
 
         <menuItem>
         <title>SPECIAL FEATURE: Tech Dump Simulator - Play now!</title>
-        <link>'games/techdumpsimulator.html';\" style=\"background-color:orange;</link> 
+        <link>'games/techdumpsimulator.html';" style='background-color:orange;'</link> 
         </menuItem>
 
 </topLinks>
