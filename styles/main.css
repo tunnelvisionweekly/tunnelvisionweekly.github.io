@@ -110,6 +110,7 @@ body {
 }
 
 .paper .cover3, .paper .cover6 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	row-gap: 20px;
@@ -129,6 +130,7 @@ body {
 }
 
 .paper .cover4 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	row-gap: 20px;
@@ -136,6 +138,7 @@ body {
 }
 
 .paper .cover5 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	row-gap: 20px;
@@ -162,10 +165,6 @@ body {
 	grid-column: 4 / 7;
 }
 
-article + .cover3, article + .cover5 {
-	margin-top: 20px;
-}
-
 article.preview {
 	border-width: 2px;
 	border-style: solid;
@@ -173,11 +172,11 @@ article.preview {
 	padding: 15px;
 }
 
-article.preview h3 {
+article.preview h3, article.preview h3 + h4 {
 	margin-top: 0em;
 }
 
-article.preview h4 {
+article h4 {
 	margin-bottom: 0.5em;
 }
 
@@ -193,38 +192,54 @@ article.preview li + li {
 	margin-top: 0.5em;
 }
 
-article.preview p, article.intro p, article.full p {
-	margin-top: 0em;
-	margin-bottom: 0em;
-	text-indent: 4ch;
-}
-
-article.preview p:first-of-type, article.preview h3 + p, article.preview h4 + p,
-article.intro p:first-of-type,
-article.full p:first-of-type, article.full h2 + p, article.full h3 + p, article.full h4 + p {
-	text-indent: 0ch;
-}
-
-article.preview h3 + p::first-letter {
-	font-weight: bold;
-	margin-inline-end: 0.1em;
-	initial-letter: 3 1;
-}
-
 article.full {
 	max-width: 6.5in;
 	margin: 0px auto;
 }
 
-article.full.feature p:first-of-type::first-letter,
-article.full.feature p.lede-large::first-letter,
-article.intro p:first-of-type::first-letter {
+article hgroup {
+	margin-bottom: 1em;
+}
+
+article hgroup h2, article hgroup h3 {
+	margin-bottom: 0.5em;
+}
+
+article hgroup h2 + p, article hgroup h3 + p {
+	margin-top: 0.5em;
+}
+
+article p {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	text-indent: 4ch;
+}
+
+article p:first-of-type,
+article h2 + p, article h3 + p, article h4 + p {
+	text-indent: 0ch;
+}
+
+article.feature > hgroup:first-of-type + p::first-letter,
+article.feature > h2:first-of-type + p::first-letter,
+article.feature > h3:first-of-type + p::first-letter,
+article.intro p:first-of-type::first-letter,
+article p.lede-large::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 2 1;
 }
 
-article.full.feature p.lede-small::first-letter {
+article.preview > hgroup:first-of-type + p::first-letter,
+article.preview > h3:first-of-type + p::first-letter {
+	font-weight: bold;
+	margin-inline-end: 0.1em;
+	initial-letter: 3 1;
+}
+
+article.feature > hgroup:first-of-type + p.lede-small::first-letter,
+article.feature > h2:first-of-type + p.lede-small::first-letter,
+article.feature > h3:first-of-type + p.lede-small::first-letter {
 	font-weight: normal;
 	margin-inline-end: 0em;
 	initial-letter: normal;
