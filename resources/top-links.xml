@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <topLinks>
 	<menuItem>
-		<title>Home</title>
-		<link>'home.html';</link>
+		<title>Home Page</title>
+		<link>'/home.html';</link>
 	</menuItem>
 
 	<menuItem>
-		<title>What's New In The Box(es): Online Edition</title>
-		<link>'techdump.html';</link>
-	</menuItem>
-
-	<menuItem>
-		<title>Puzzles n' Stuff Hall of Fame</title>
-		<link>'games/puzzles/halloffame.html';</link>
+		<title>What's New in the Box(es)</title>
+		<link>'/techdump.html';</link>
 	</menuItem>
 
 	<menuItem>
@@ -21,28 +16,33 @@
 	</menuItem>
 
 	<menuItem>
-		<title>Past Issues</title>
-		<link>'past-issues.html';</link>
+		<title>Previous Issues</title>
+		<link>'/archive.html';</link>
 	</menuItem>
 
 	<menuItem>
-		<title>About us</title>
-		<link>'about.html';</link>
+		<title>Crossword Solutions</title>
+		<link>'/games/puzzles/crosswordsolutions.html';</link>
+	</menuItem>
+
+	<menuItem>
+		<title>Puzzles n' Stuff Hall of Fame</title>
+		<link>'/games/puzzles/halloffame.html';</link>
+	</menuItem>
+
+	<menuItem>
+		<title>About Us</title>
+		<link>'/about.html';</link>
 	</menuItem>
 
 	<menuItem>
 		<title>Submit News/Join Team</title>
-		<link>'submit.html';</link>
+		<link>'/submit.html';</link>
 	</menuItem>
 
 	<menuItem>
-		<title>Crossword Solutions!</title>
-		<link>'games/puzzles/crosswordsolutions.html';</link>
-	</menuItem>
-
-	<menuItem>
-		<title>SPECIAL FEATURE: Tech Dump Simulator - Play now!</title>
-		<link>'games/techdumpsimulator.html';</link>
+		<title>Tech Dump Simulator</title>
+		<link>'/games/techdumpsimulator.html';</link>
 	</menuItem>
 
 </topLinks>

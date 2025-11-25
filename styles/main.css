@@ -34,7 +34,7 @@ body {
 	border-color: blue;
 	border-radius: 10px;
 	overflow: hidden;
-	padding: 10px 20px 20px;
+	padding: 20px;
 }
 
 #menulink {
@@ -69,11 +69,10 @@ body {
 }
 
 #navlinks li a:hover, #navlinks li a:focus {
-	background-color: blue;
 	border-color: light-dark(mediumseagreen, greenyellow);
 }
 
-#navlinks li a.thispage {
+#navlinks li a:hover, #navlinks li a.thispage {
 	background-color: blue;
 }
 
@@ -249,6 +248,10 @@ dd {
 	margin-inline-start: 2ch;
 }
 
+dd + dt {
+	margin-top: 1em;
+}
+
 em {
 	font-style: inherit;
 	text-transform: uppercase;
@@ -284,6 +287,32 @@ table.archive th, table.archive td {
 
 table.archive th, table.archive td:nth-child(2) {
 	text-align: center;
+}
+
+table.crossword {
+	border-collapse: collapse;
+	text-align: center;
+	background-color: light-dark(var(--light-background), var(--dark-background));
+}
+
+table.crossword td {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-width: 2px;
+	font-size: xx-large;
+	text-align: center;
+}
+
+table.crossword td.unused {
+	background-color: light-dark(var(--light-color), var(--dark-color));
+}
+
+table.crossword td .number {
+	position: absolute;
+	font-size: small;
+	top: 2px;
+	left: 2px;
 }
 
 /* footer {

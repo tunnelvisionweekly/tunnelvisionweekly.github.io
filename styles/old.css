@@ -63,28 +63,3 @@ marquee {
 	background-color: forestgreen;
 	color: yellow;
 }
-
-table.crossword {
-	border-collapse: collapse;
-	text-align: center;
-	background-color: white;
-}
-
-table.crossword td {
-	position: relative;
-	width: 50px;
-	height: 50px;
-	border-width: 2px;
-	font-size: xx-large;
-}
-
-table.crossword td.unused {
-	background-color: black;
-}
-
-table.crossword td .number {
-	position: absolute;
-	font-size: small;
-	top: 2px;
-	left: 2px;
-}

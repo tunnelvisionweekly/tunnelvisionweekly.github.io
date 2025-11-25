@@ -3,89 +3,136 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>The beginnings of Tunnel Vision Weekly</title>
-	<link href="/styles/old.css" rel="stylesheet" type="text/css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet" type="text/css">
+	<title>The Beginnings of Tunnel Vision Weekly</title>
 </head>
 
-<body onload="loadDoc()">
-	<h1>Tunnel Vision Weekly: In the beginning...</h1>
-	<div id="top">
-		<table class="toptable" id="toptable">
-			<tr>
-				<td><button onclick="window.location.href = 'home.html';">Home</button></td>
-				<td><button onclick="window.location.href = 'techdump.html';">What's New In The Box(es): Online Edition</button></td>
-				<td><button onclick="window.location.href = '/games/puzzles/halloffame.html';">Puzzles n' Stuff Hall of Fame</button></td>
-				<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';">Latest Issue</button></td>
-				<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">Past Issues</button></td>
-				<td><button onclick="window.location.href = 'about.html';">About us</button></td>
-				<td><button onclick="window.location.href = 'submit.html';">Submit News/Join Team</button></td>
-			</tr>
-		</table>
-	</div>
-	<div id="text">
-		<h3>What is Tunnel Vision Weekly?</h3>
-		<p><i>Tunnel Vision Weekly</i> is a BI-weekly (for now) newspaper, distributed in paper every other Monday, and
-			digitally at some point during the week here, on this website. We started publication in March 2025, and
-			currently have 4 BI-weekly sections. Our circulation currently comfortably sits at around 40.</p>
-		<h4>Our sections!</h4>
-		<p><b>What's new in the box(es)</b> is a section all about the tech dumps. Are you curious about what people
-			threw out over the past week? That's where you look. Also included is a little opinion piece about the
-			latest stuff that happened, as well as the find(s) of the week: stuff we find in the tech dumps that are
-			saved and put into the DCC tech dump as a showcase for the week.</p>
-
-		<p><b>State of the Art</b> is a section all about the art of the tunnels connecting most of the main campus
-			buildings. All the latest drawings that popped up over the past week, and an expert analysis of what the
-			drawings mean.</p>
-
-		<p><b>Tunnel Vision: Out of the Tunnel</b> is a section about anything else, basically. In Issue #2 we featured
-			an article submitted to TVW, as the inaugural article for this section. Issue #3 focused on the art of the
-			past, also submitted to TVW.</p>
-
-		<p><b>Subterranean Homesick Blues</b> is a section authored by Pi, it is a section focusing on the underground
-			music scene and the people in it. It's a new section for Fall '25!</p>
-
-		<p><b>Geologic Fever</b> is a section authored by S.S. Illite, about rocks and geologic features around campus.
-			It's a new section for Fall '25, its debut being in issue #9!</p>
-
-
-		<p><b>Puzzles n' Stuff</b> is a section about games and stuff that you can play once you're done with your paper
-			(or while you're reading if you're cool enough). It's a new section for Fall '25.</p>
-		<br>
-
-		<h3>Who are we?</h3>
-		<p>We are a group of RPI students dedicated to providing the RPI community with a weekly news source, or at
-			least a little bit of entertainment each week. As of Fall '25, we have 3 people confirmed as regular
-			writers!</p>
-		<p>We've got names too, y'know!</p>
-		<ul>
-			<li>I, founder and CEO of Tunnel Vision Weekly in March of 2025. I writes for What's new in the Box(es) and
-				State of the Art.</li>
-			<li>Virginia, second member of Tunnel Vision Weekly, having joined during issue #2. Virginia writes for
-				Tunnel Vision: Out of the Tunnel.</li>
-			<li>S.S. Illite, third member of Tunnel Vision Weekly, debuting (hopefully) soon. S.S. Illite plans to write
-				for the rock section [currently unnamed].</li>
-			<li>Pi, fourth member of Tunnel Vision Weekly, they are writing for Subterranean Homesick Blues, starting in
-				Issue #7.</li>
-			<li>A currently anonymous contributor is helping us fix up this website! Be ready for updates in the coming
-				future!</li>
-			<li>Honorable mention: K is the person who submitted the current logo to us, modifying a previous logo
-				design by I, adding the eye in the middle. The original logo design was inspired by West Virginia's
-				original sketch. Thank you again!</li>
-		</ul>
-		<!--<p>Actually, it's just <i>I,</i> for now. I'm a sophomore at RPI, who goes to the tech dumps and through the tunnels a lot. And I have always wanted to make something like a newspaper. I also feel like physical media is a lost art, which is returning somewhat, but it feels like it has very much been lost. For example, the Poly has stopped printing after over 100 years, which I think really says something about all that.</p> -->
-		<br>
-
-		<h3>Can I submit news?</h3>
-		<p>If you have any news or interesting stuff related to RPI, its tech dumps, and/or the art in the tunnels, we'd
-			love to feature it in a future issue!</p>
-		<br>
-
-		<h3>Can I join?</h3>
-		<p>If you actually asked this question, <i>please</i> contact us at tunnelvisionweekly@proton.me and we can work
-			something out!</p>
-
-		<p>Last Updated: October 28, 2025</p>
+<body onload="getHeader()">
+	<div id="wrapper">
+		<header>
+			<nav>
+				<h2 id="menulink"><a href="#navlinks">Contents</a></h2>
+				<ul id="navlinks"></ul>
+			</nav>
+			<h1>Tunnel Vision Weekly: In the beginning...</h1>
+		</header>
+		<main>
+			<h2>What is Tunnel Vision Weekly?</h2>
+			<p>
+				Tunnel Vision Weekly is a biweekly (formerly weekly) newspaper,
+				distributed every other Monday in paper and published digitally at the end of the same week.
+				We started publication in <time datetime="2025-03-24">March 2025</time>,
+				and currently have 6 sections.
+				Our current circulation comfortably sits at around 40.
+			</p>
+		</main>
+		<h2>Our sections!</h2>
+		<dl>
+			<dt>What's new in the box(es)</dt>
+			<dd>
+				A section all about the tech dumps.
+				Are you curious about what people threw out over the past week?
+				That's where you look.
+				Also included is a little opinion piece about the latest stuff that happened,
+				as well as the find(s) of the week:
+				stuff we find in the tech dumps that are saved and put into the DCC tech dump as a showcase for the
+				week.
+			</dd>
+			<dt>State of the Art</dt>
+			<dd>
+				A section all about the art of the tunnels connecting most of the main campus buildings.
+				All the latest drawings that popped up over the past week, and an expert analysis of what the drawings
+				mean.
+			</dd>
+			<dt>Tunnel Vision: Out of the Tunnel</dt>
+			<dd>
+				A section about anything else, basically.
+				In <a href="issues/web/tvw2.html">Issue&nbsp;#2</a>
+				we featured an article submitted to TVW as the inaugural article for this section.
+				<a href="issues/web/tvw3.html">Issue&nbsp;#3</a> focused on the art of the past,
+				also submitted to TVW.
+			</dd>
+			<dt>Subterranean Homesick Blues</dt>
+			<dd>
+				A section authored by Pi focusing on the underground music scene and the people in it.
+				It's a new section for Fall '25!
+			</dd>
+			<dt>Geologic Fever</dt>
+			<dd>
+				A section authored by S.S. Illite about rocks and geologic features around campus.
+				It's a new section for Fall '25,
+				with its debut in <a href="issues/web/tvw9.html">Issue&nbsp;#9</a>!
+			</dd>
+			<dt>Puzzles n' Stuff</dt>
+			<dd>
+				A section about games and stuff that you can play once you're done with your paper
+				(or while you're reading if you're cool enough).
+				It's a new section for Fall '25.
+			</dd>
+		</dl>
+		<h2>Who are we?</h2>
+		<p>
+			We are a group of RPI students dedicated to providing the RPI community with a (bi)weekly news source,
+			or at least an entertainment source.
+			As of Fall '25, we have 3 people confirmed as regular writers!
+		</p>
+		<p>
+			We've got names too, you know!
+		</p>
+		<dl>
+			<dt>"I"</dt>
+			<dd>
+				Founder and CEO of Tunnel Vision Weekly in March of 2025.
+				I writes for What's new in the Box(es) and State of the Art.
+			</dd>
+			<dt>Virginia</dt>
+			<dd>
+				Second member of Tunnel Vision Weekly,
+				having joined during <a href="issues/web/tvw2.html">Issue&nbsp;#2</a>.
+				Virginia writes for Tunnel Vision: Out of the Tunnel.
+			</dd>
+			<dt>S.S. Illite</dt>
+			<dd>
+				Third member of Tunnel Vision Weekly,
+				debuting in <a href="issues/web/tvw9.html">Issue&nbsp;#9</a>.
+				S.S. Illite writes for Geologic Fever.
+			</dd>
+			<dt>Pi (&#960;)</dt>
+			<dd>
+				Fourth member of Tunnel Vision Weekly,
+				writing for Subterranean Homesick Blues
+				starting in <a href="issues/web/tvw7.html">Issue&nbsp;#7</a>.
+			</dd>
+		</dl>
+		<p>
+			A currently anonymous contributor is helping us fix up this website!
+			Be ready for updates in the coming future!
+		</p>
+		<p>
+			An honorable mention goes to K, the artist who submitted the current logo to us,
+			modifying I's previous logo design by adding the eye in the middle.
+			The logo design was inspired by West Virginia's original sketch.
+			Thank you again!
+		</p>
+		<h2>Can I submit news?</h2>
+		<p>
+			If you have any news or interesting stuff related to RPI, its tech dumps, and/or the art in the tunnels,
+			we'd love to feature it in a future issue!
+			See the <a href="submit.html">submission page</a> for more info.
+		</p>
+		<h2>Can I join?</h2>
+		<p>
+			If you actually asked this question,
+			please contact us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly@proton.me</a>
+			and we can work something out!
+		</p>
+		<footer>
+			<p>Copyright (C) <time datetime="2025-11-23">2025</time> Tunnel Vision Weekly</p>
+		</footer>
 	</div>
 	<script src="/scripts/header-gen.js"></script>
 </body>

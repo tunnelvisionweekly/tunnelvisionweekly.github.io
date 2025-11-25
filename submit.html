@@ -3,44 +3,39 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Submit to Tunnel Vision Weekly!</title>
-	<link href="/styles/old.css" rel="stylesheet" type="text/css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="styles/main.css" rel="stylesheet" type="text/css">
+	<title>Submit to Tunnel Vision Weekly</title>
 </head>
 
-<body onload="loadDoc()">
-	<h1>Submitting to Tunnel Vision Weekly</h1>
-	<div id="top">
-		<table class="toptable" id="toptable">
-			<tr>
-				<td><button onclick="window.location.href = 'home.html';">Home</button></td>
-				<td><button onclick="window.location.href = 'techdump.html';">What's New In The Box(es): Online
-						Edition</button></td>
-				<!-- SCHEDULED FOR UNCOMMENT 10/20 <td><button onclick="window.location.href = '/games/puzzles/halloffame.html';">Puzzles n' Stuff Hall of Fame</button></td>   -->
-				<td><button
-						onclick="window.location.href = 'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';">Latest
-						Issue</button></td>
-				<td><button
-						onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">Past
-						Issues</button></td>
-				<td><button onclick="window.location.href = 'about.html';">About us</button></td>
-				<td><button onclick="window.location.href = 'submit.html';">Submit News/Join Team</button></td>
-			</tr>
-		</table>
-	</div>
-	<div id="text">
-		<h1>Have some news to submit? Or comments, questions, or concerns? Ideas to implement into the paper? Let us
-			know through the form below!</h1>
-		<h2>If you would like to advertise in our paper, either club stuff or as a classified ad, contact us via the
-			form below as well!</h2>
-		<h2>S.S. Illite is looking for any suggestions for their section, post them here, too!</h2>
-		<h2>Did you win the contest in Puzzles n' Stuff? Let us know here, too! You can get yourself on the Tunnel
-			Vision Puzzle Hall of Fame!</h2>
-		<button
-			onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScBNJ8V0KHyzdVkXjWF59ZsIEHLTTP3-XM5ws_km2MMNV-9Tg/viewform?usp=dialog';"><u>
-				<h2 style="color:blue;">THE form for submission</h2>
-			</u></button>
-		<h2>OR email us at tunnelvisionweekly@proton.me!</h2>
+<body onload="getHeader()">
+	<div id="wrapper">
+		<header>
+			<nav>
+				<h2 id="menulink"><a href="#navlinks">Contents</a></h2>
+				<ul id="navlinks"></ul>
+			</nav>
+			<h1>Submitting to Tunnel Vision Weekly</h1>
+		</header>
+		<main>
+			<h2>Have some news to submit?<br />Comments, questions, or concerns?<br />Ideas to implement into the paper?
+			</h2>
+			<p>
+				Let us know through the <a href="https://docs.google.com/forms/d/e/1FAIpQLScBNJ8V0KHyzdVkXjWF59ZsIEHLTTP3-XM5ws_km2MMNV-9Tg/viewform">submission form</a>
+				or email us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly@proton.me</a>!
+			</p>
+			<ul>
+				<li>If you would like to advertise in our paper, either club stuff or as a classified ad, contact us via the form as well!</li>
+				<li>S.S. Illite is looking for any suggestions for their section, so post them here too!</li>
+				<li>Did you win the contest in Puzzles n' Stuff? Let us know and you can get yourself on the Tunnel Vision Puzzle Hall of Fame!</li>
+			</ul>
+		</main>
+		<footer>
+			<p>Copyright (C) <time datetime="2025-10-06">2025</time> Tunnel Vision Weekly</p>
+		</footer>
 	</div>
 	<script src="/scripts/header-gen.js"></script>
 </body>
