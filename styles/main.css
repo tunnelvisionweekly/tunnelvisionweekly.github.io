@@ -84,6 +84,27 @@ body {
 	margin-top: 0em;
 }
 
+.announcement {
+	color: light-dark(darkorange, orange);
+}
+
+.banner {
+	border-width: 2px;
+	border-style: solid;
+	border-color: light-dark(darkorange, orange);
+	background-color: light-dark(whitesmoke, transparent);
+	padding: 10px 15px;
+}
+
+.banner-old {
+	border-width: 2px;
+	border-style: solid;
+	border-color: light-dark(var(--light-color), var(--dark-color));
+	background-image: linear-gradient(to right, blue, green);
+	padding: 10px 15px;
+	color: white;
+}
+
 .paper {
 	min-width: fit-content;
 }

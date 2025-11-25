@@ -3,66 +3,80 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tunnel Vision (bi)Weekly: The website!</title>
-	<link href="styles/old.css" rel="stylesheet" type="text/css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="/styles/main.css" rel="stylesheet" type="text/css">
+	<title>Tunnel Vision (bi)Weekly: The Website!</title>
 </head>
 
-<body onload="loadDoc()">
-	<h1>Welcome to Tunnel Vision (bi)Weekly: The website!</h1>
-	<h2>(soon to be) New and Improved!</h2>
-	<div id="top">
-		<table class="toptable" id="toptable">
-			<tr>
-				<td><button onclick="window.location.href = 'home.html';">[old buttons]Home</button></td>
-				<td><button onclick="window.location.href = 'techdump.html';">What's New In The Box(es): Online Edition</button></td>
-				<td><button onclick="window.location.href = 'halloffame.html';">Puzzles n' Stuff Hall of Fame</button></td>
-				<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';">Latest Issue</button></td>
-				<td><button onclick="window.location.href = 'archive.html';">Past Issues</button></td>
-				<td><button onclick="window.location.href = 'about.html';">About us</button></td>
-				<td><button onclick="window.location.href = 'submit.html';">Submit News/Join Team</button></td>
-				<td><button onclick="window.location.href = 'crossword-solns.html';">Crossword Solutions!</button></td>
-				<td><button onclick="window.location.href = 'TDS-web-1-0-0.html';" style="background-color:orange;">SPECIAL FEATURE: Tech Dump Simulator - Play now!</button></td>
-				<!--<td><button onclick="window.location.href = 'ss-illite-tv10-fixed.html';" style="background-color:orange;">CORRECTION: S.S. Illite's Section (TV #10)- Correctly Formatted</button></td> -->
-			</tr>
-		</table>
-	</div>
-	<div id="text">
-		<h1>Releases Every Other Monday at 8 PM! Next release ~12/8 (after break)!</h1>
-		<h2>Here you can access digital enhancements to the (bi)weekly issues!</h2>
-		<h2>More specifically, this site was designed to...</h2>
+<body onload="getHeader()">
+	<div id="wrapper">
+		<header>
+			<nav>
+				<h2 id="menulink"><a href="#navlinks">Contents</a></h2>
+				<ul id="navlinks">
+					<!-- <li><a href="index.html" class="thispage">Home Page</a></li>
+					<li><a href="techdump.html">What's New in The Box(es)</a></li>
+					<li><a href="issues/web/tvw9.html">Latest Issue</a></li>
+					<li><a href="archive.html">Previous Issues</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="submit.html">Submit News/Join Team</a></li> -->
+				</ul>
+			</nav>
+		</header>
+		<h1>Welcome to Tunnel Vision (bi)Weekly: The Website!</h1>
+		<main>
+			<h2>Releases every other Monday at <time datetime="20:00">8 PM</time>! Next release ~<time datetime="2025-12-08T20:00-04:00">12/8</time>, after break!</h2>
+			<p class="announcement banner">
+				<strong><time datetime="2025-11-17T20:00-04:00">Monday, 11/17</time>, was a release day!</strong>
+				Be sure to find us in the Library, DCC, JEC, or select tech dumps while supplies last!
+				Or <b><a href="/issues/web/tvw12.html">read Issue&nbsp;#12 now</a>!</b>
+			</p>
+			<p>
+				Here you can access digital enhancements to the (bi)weekly issues!
+				More specifically, this soon-to-be-new and improved site was designed to...
+			</p>
+		</main>
 		<ul>
-			<!-- <li>- Provide you with access to FULL COLOR and LARGER photos as seen in State of the Art!</li> -->
-			<li>- Give you a place to directly share your thoughts, opinions, and news with TVW!</li>
-			<li>- Allow you to get to know us a little better!</li>
+			<!-- <li>Provide you with access to FULL COLOR and LARGER photos as seen in State of the Art!</li> -->
+			<li>Give you a place to directly share your thoughts, opinions, and news with TVW!</li>
+			<li>Allow you to get to know us a little better!</li>
 		</ul>
-		<h3>Hope you enjoy, and be ready every other Monday for the next issue of Tunnel Vision (bi)Weekly! Latest Issue
-			released yesterday (11/17)!</h3>
-		<h1 style="color:rgb(255, 149, 0)">(11/18) was a release day! Be sure to find us in the Library, DCC, JEC, or
-			select tech dumps while supplies last!!</h1>
-		<h2>If you missed us this fortnight and still want a copy, email us at tunnelvisionweekly@proton.me!</h2>
-		<button onclick="window.location.href = 'games/techdumpsimulator.html';"
-			style="background-color:orange;">SPECIAL FEATURE: Tech Dump Simulator - Play now!</button>
-		<br>
+			<p class="announcement banner">
+				<b>Special Feature: <a href="/games/techdumpsimulator.html">Play our Tech Dump Simulator</a>!</b>
+			</p>
+		<p>
+			Hope you enjoy, and be ready every other Monday for the next issue of Tunnel Vision (bi)Weekly!
+		</p>
+		<p>
+			If you missed us this fortnight and still want a paper copy,
+			email us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly@proton.me</a>!
+		</p>
+		<!-- <marquee style="font-size:25px;" scrollamount=12 id="news-ticker">
+			Testing testing 123, if you see this, this is a bug!
+			Please email us that you see this, and any Console errors (in the inspect element) if you get any.
+		</marquee> -->
+		<p class="banner-old">
+			In case you haven't noticed, this page is currently <em>very</em> under construction.
+			The blue-green gradient has been added for your viewing pleasure.
+			(Nonexistent) Studies show that these colors allow your brain
+			to see past the fourth wall and break out of the matrix.
+			It is definitely not because "I" has no idea how to make a good looking website in HTML and CSS.
+			The links should work, though!
+		</p>
+		<!-- <table>
+			<tr>
+				<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';">View the latest and greatest issue of Tunnel Vision Weekly!</button></td>
+				<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">View the archives of past issues!</button></td>
+			</tr>
+		</table> -->
+		<footer>
+			<p>Copyright (C) <time datetime="2025-11-25">2025</time> Tunnel Vision Weekly</p>
+		</footer>
 	</div>
-	<marquee style="font-size:25px;" scrollamount=12 id="news-ticker">Testing testing 123, if you see this, this is a
-		bug! Please email us that you see this, and any Console errors (in the inspect element) if you get any.
-	</marquee>
-	<br><br><br>
-
-	<h3>The blue-green gradient has been added for your viewing pleasure. (Nonexistent) Studies show that these colors
-		allow your brain to see past the fourth wall and break out of the matrix. It is definitely not because I has no
-		idea how to make a good looking website in HTML and CSS.</h3>
-	<h3>In case you haven't noticed, this page is currently VERY under construction. The links should work, though!</h3>
-	<h5>Updated 11-18-25</h5>
-	<!-- <table>
-		<tr>
-			<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1fAuf9Hmsv5HeyNkxIGv-rPQODy_v4JTy?usp=sharing';">View the latest and greatest issue of Tunnel Vision Weekly!</button></td>
-			<td><button onclick="window.location.href = 'https://drive.google.com/drive/folders/1xAsB0MmDd_8MwXGNV8X9r22Z6D4VK7W-?usp=sharing';">View the archives of past issues!</button></td>
-		</tr>
-	</table> -->
 	<script src="/scripts/header-gen.js"></script>
-
 </body>
 
 </html>
