@@ -197,6 +197,10 @@ article.full {
 	margin: 0px auto;
 }
 
+article.full + article.full {
+	margin-top: 0.5in;
+}
+
 article hgroup {
 	margin-bottom: 1em;
 }
@@ -216,7 +220,8 @@ article p {
 }
 
 article p:first-of-type,
-article h2 + p, article h3 + p, article h4 + p {
+article h2 + p, article h3 + p, article h4 + p,
+article ul + p {
 	text-indent: 0ch;
 }
 
@@ -262,6 +267,10 @@ h1.paper-title {
 
 h2.paper-subtitle {
 	text-align: center;
+}
+
+span.padded-right {
+	padding-right: 0.25em;
 }
 
 a:hover, a:active, a:focus, a.thispage {
