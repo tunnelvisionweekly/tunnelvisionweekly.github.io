@@ -309,6 +309,10 @@ li + ol, li + ol > li {
 	margin-top: 0.5em;
 }
 
+ul.collapsed, ol.collapsed, .collapsed li + li {
+	margin-top: 0em;
+}
+
 dt {
 	font-weight: bold;
 }
@@ -406,7 +410,8 @@ table.sudoku4, table.sudoku6, table.sudoku9 {
 }
 
 table.crossword td, table.nonogram td,
-table.sudoku4 td, table.sudoku6 td, table.sudoku9 td {
+table.sudoku4 td, table.sudoku6 td, table.sudoku9 td,
+table.colorable td {
 	position: relative;
 	width: 2em;
 	height: 2em;
@@ -431,19 +436,19 @@ table.crossword td .number {
 	left: 2px;
 }
 
-table.sudoku4 td:nth-child(even), table.sudoku6 td:nth-child(3n) {
+table.sudoku4 td:nth-child(even), table.sudoku6 td:nth-child(3n), table.sudoku9 td:nth-child(3n) {
 	border-right-width: 4px;
 }
 
-table.sudoku4 td:nth-child(odd), table.sudoku6 td:nth-child(3n + 1) {
+table.sudoku4 td:nth-child(odd), table.sudoku6 td:nth-child(3n + 1), table.sudoku9 td:nth-child(3n + 1) {
 	border-left-width: 4px;
 }
 
-table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td {
+table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td, table.sudoku9 tr:nth-child(3n + 1) td {
 	border-top-width: 4px;
 }
 
-table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td {
+table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.sudoku9 tr:nth-child(3n) td {
 	border-bottom-width: 4px;
 }
 
