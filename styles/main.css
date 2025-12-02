@@ -254,12 +254,10 @@ article.feature > h3:first-of-type + p.lede-small::first-letter {
 article.interview p {
 	margin-top: 1em;
 	text-indent: 0ch;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 article.interview h3 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: large;
+	font-size: 1em;
 }
 
 hr {
@@ -356,6 +354,7 @@ figure img + figcaption {
 }
 
 table {
+	margin-top: 1em;
 	border-width: 2px;
 	border-style: none;
 	border-color: light-dark(var(--light-color), var(--dark-color));
@@ -455,6 +454,13 @@ table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.
 /* footer {
 	text-align: center;
 } */
+
+/* Arial */
+.arial-regular {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
 
 /* IBM Plex Mono */
 .ibm-plex-mono-thin {
