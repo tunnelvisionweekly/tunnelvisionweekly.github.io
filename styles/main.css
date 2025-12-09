@@ -34,7 +34,7 @@ body {
 	border-color: blue;
 	border-radius: 10px;
 	overflow: hidden;
-	padding: 10px 20px 20px;
+	padding: 20px;
 }
 
 #menulink {
@@ -69,11 +69,10 @@ body {
 }
 
 #navlinks li a:hover, #navlinks li a:focus {
-	background-color: blue;
 	border-color: light-dark(mediumseagreen, greenyellow);
 }
 
-#navlinks li a.thispage {
+#navlinks li a:hover, #navlinks li a.thispage {
 	background-color: blue;
 }
 
@@ -85,11 +84,33 @@ body {
 	margin-top: 0em;
 }
 
+.announcement {
+	color: light-dark(darkorange, orange);
+}
+
+.banner {
+	border-width: 2px;
+	border-style: solid;
+	border-color: light-dark(darkorange, orange);
+	background-color: light-dark(whitesmoke, transparent);
+	padding: 10px 15px;
+}
+
+.banner-old {
+	border-width: 2px;
+	border-style: solid;
+	border-color: light-dark(var(--light-color), var(--dark-color));
+	background-image: linear-gradient(to right, blue, green);
+	padding: 10px 15px;
+	color: white;
+}
+
 .paper {
 	min-width: fit-content;
 }
 
 .paper .cover3, .paper .cover6 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	row-gap: 20px;
@@ -109,6 +130,7 @@ body {
 }
 
 .paper .cover4 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	row-gap: 20px;
@@ -116,6 +138,7 @@ body {
 }
 
 .paper .cover5 {
+	margin-top: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	row-gap: 20px;
@@ -142,10 +165,6 @@ body {
 	grid-column: 4 / 7;
 }
 
-article + .cover3, article + .cover5 {
-	margin-top: 20px;
-}
-
 article.preview {
 	border-width: 2px;
 	border-style: solid;
@@ -153,11 +172,11 @@ article.preview {
 	padding: 15px;
 }
 
-article.preview h3 {
+article.preview h3, article.preview h3 + h4 {
 	margin-top: 0em;
 }
 
-article.preview h4 {
+article h4 {
 	margin-bottom: 0.5em;
 }
 
@@ -173,41 +192,72 @@ article.preview li + li {
 	margin-top: 0.5em;
 }
 
-article.preview p, article.intro p, article.full p {
-	margin-top: 0em;
-	margin-bottom: 0em;
-	text-indent: 4ch;
-}
-
-article.preview p:first-of-type, article.preview h3 + p, article.preview h4 + p,
-article.intro p:first-of-type,
-article.full p:first-of-type, article.full h2 + p, article.full h3 + p, article.full h4 + p {
-	text-indent: 0ch;
-}
-
-article.preview h3 + p::first-letter {
-	font-weight: bold;
-	margin-inline-end: 0.1em;
-	initial-letter: 3 1;
-}
-
 article.full {
 	max-width: 6.5in;
 	margin: 0px auto;
 }
 
-article.full.feature p:first-of-type::first-letter,
-article.full.feature p.lede-large::first-letter,
-article.intro p:first-of-type::first-letter {
+article.full + article.full {
+	margin-top: 0.5in;
+}
+
+article hgroup {
+	margin-bottom: 1em;
+}
+
+article hgroup h2, article hgroup h3 {
+	margin-bottom: 0.5em;
+}
+
+article hgroup h2 + p, article hgroup h3 + p {
+	margin-top: 0.5em;
+}
+
+article p {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	text-indent: 4ch;
+}
+
+article p:first-of-type,
+article p.noindent,
+article h2 + p, article h3 + p, article h4 + p,
+article ul + p, article ol + p, article dl + p {
+	text-indent: 0ch;
+}
+
+article.feature > hgroup:first-of-type + p::first-letter,
+article.feature > h2:first-of-type + p::first-letter,
+article.feature > h3:first-of-type + p::first-letter,
+article.intro p:first-of-type::first-letter,
+article p.lede-large::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 2 1;
 }
 
-article.full.feature p.lede-small::first-letter {
+article.preview > hgroup:first-of-type + p::first-letter,
+article.preview > h3:first-of-type + p::first-letter {
+	font-weight: bold;
+	margin-inline-end: 0.1em;
+	initial-letter: 3 1;
+}
+
+article.feature > hgroup:first-of-type + p.lede-small::first-letter,
+article.feature > h2:first-of-type + p.lede-small::first-letter,
+article.feature > h3:first-of-type + p.lede-small::first-letter {
 	font-weight: normal;
 	margin-inline-end: 0em;
 	initial-letter: normal;
+}
+
+article.interview p {
+	margin-top: 1em;
+	text-indent: 0ch;
+}
+
+article.interview h3 {
+	font-size: 1em;
 }
 
 hr {
@@ -229,6 +279,10 @@ h2.paper-subtitle {
 	text-align: center;
 }
 
+span.padded-right {
+	padding-right: 0.25em;
+}
+
 a:hover, a:active, a:focus, a.thispage {
 	color: light-dark(mediumseagreen, greenyellow);
 }
@@ -237,8 +291,24 @@ ul {
 	list-style-type: "- ";
 }
 
-li + li {
+ol {
+	padding-inline-start: 4ch;
+}
+
+ol > ol {
+	list-style-type: lower-alpha;
+}
+
+li + li, ul + li, ol + li {
 	margin-top: 1em;
+}
+
+li + ol, li + ol > li {
+	margin-top: 0.5em;
+}
+
+ul.collapsed, ol.collapsed, .collapsed li + li {
+	margin-top: 0em;
 }
 
 dt {
@@ -249,16 +319,52 @@ dd {
 	margin-inline-start: 2ch;
 }
 
+dd + dt {
+	margin-top: 1em;
+}
+
 em {
 	font-style: inherit;
 	text-transform: uppercase;
 }
 
+blockquote {
+	margin-left: 4ch;
+	font-style: italic;
+}
+
+figure, .framed {
+	margin: 1em 0ch;
+	border-width: 2px;
+	border-style: solid;
+	border-color: light-dark(var(--light-color), var(--dark-color));
+}
+
+.framed {
+	padding: 0.5em;
+}
+
+figure img {
+	display: block;
+}
+
+figure img + figcaption {
+	display: block;
+	margin: 0.5em;
+}
+
 table {
+	margin-top: 1em;
 	border-width: 2px;
 	border-style: none;
 	border-color: light-dark(var(--light-color), var(--dark-color));
 	border-collapse: collapse;
+}
+
+caption {
+	caption-side: bottom;
+	padding: 0.5em;
+	text-align: left;
 }
 
 th, td {
@@ -266,6 +372,7 @@ th, td {
 	border-style: solid;
 	border-color: light-dark(var(--light-color), var(--dark-color));
 	padding: 0.25em 0.5em;
+	vertical-align: top;
 	text-align: left;
 }
 
@@ -276,6 +383,13 @@ table.gallery {
 
 table.gallery td {
 	text-align: center;
+	padding: 0em;
+}
+
+table.gallery figure {
+	display: inline-block;
+	margin: 0ch;
+	border-style: none;
 }
 
 table.archive th, table.archive td {
@@ -286,9 +400,67 @@ table.archive th, table.archive td:nth-child(2) {
 	text-align: center;
 }
 
+table.crossword, table.nonogram,
+table.sudoku4, table.sudoku6, table.sudoku9 {
+	margin: 1em 0ch;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: light-dark(var(--light-background), var(--dark-background));
+}
+
+table.crossword td, table.nonogram td,
+table.sudoku4 td, table.sudoku6 td, table.sudoku9 td,
+table.colorable td {
+	position: relative;
+	width: 2em;
+	height: 2em;
+	border-width: 2px;
+	font-size: x-large;
+	vertical-align: middle;
+	text-align: center;
+}
+
+table.nonogram td.sum {
+	background-color: light-dark(#DDD, #333);
+}
+
+table.crossword td.unused, table.nonogram td.unused {
+	background-color: light-dark(var(--light-color), var(--dark-color));
+}
+
+table.crossword td .number {
+	position: absolute;
+	font-size: small;
+	top: 2px;
+	left: 2px;
+}
+
+table.sudoku4 td:nth-child(even), table.sudoku6 td:nth-child(3n), table.sudoku9 td:nth-child(3n) {
+	border-right-width: 4px;
+}
+
+table.sudoku4 td:nth-child(odd), table.sudoku6 td:nth-child(3n + 1), table.sudoku9 td:nth-child(3n + 1) {
+	border-left-width: 4px;
+}
+
+table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td, table.sudoku9 tr:nth-child(3n + 1) td {
+	border-top-width: 4px;
+}
+
+table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.sudoku9 tr:nth-child(3n) td {
+	border-bottom-width: 4px;
+}
+
 /* footer {
 	text-align: center;
 } */
+
+/* Arial */
+.arial-regular {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
 
 /* IBM Plex Mono */
 .ibm-plex-mono-thin {
@@ -403,7 +575,7 @@ table.archive th, table.archive td:nth-child(2) {
 	font-style: normal;
 }
 
-.silkscreen-bold {
+.silkscreen-bold, table.techdumps th, dl.techdumps dt {
 	font-family: "Silkscreen", sans-serif;
 	font-weight: 700;
 	font-style: normal;
@@ -426,6 +598,55 @@ table.archive th, table.archive td:nth-child(2) {
 /* Monoton */
 .monoton-regular {
 	font-family: "Monoton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Metal Mania */
+.metal-mania-regular {
+	font-family: "Metal Mania", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+blockquote.metal-mania-regular {
+	font-family: "Metal Mania", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	font-size: larger;
+}
+
+/* Rubik Distressed */
+.rubik-distressed-regular {
+	font-family: "Rubik Distressed", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Geologica */
+.geologica-regular {
+	font-family: "Geologica", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"CRSV" 0,
+		"SHRP" 0;
+}
+
+/* Exo 2 */
+.exo-2-regular {
+	font-family: "Exo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Orbitron */
+.orbitron-regular {
+	font-family: "Orbitron", sans-serif;
+	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
 }

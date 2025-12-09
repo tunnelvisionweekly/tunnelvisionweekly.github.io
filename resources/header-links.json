@@ -1,0 +1,38 @@
+[
+	{
+		"title" : "Home Page",
+		"pathname" : "/home.html"
+	},
+	{
+		"title" : "What's New in The Box(es)",
+		"pathname" : "/techdump.html"
+	},
+	{
+		"title" : "Latest Issue",
+		"pathname" : "/issues/web/tvw12.html"
+	},
+	{
+		"title" : "Previous Issues",
+		"pathname" : "/archive.html"
+	},
+	{
+		"title" : "Crossword Solutions",
+		"pathname" : "/games/puzzles/crosswordsolutions.html"
+	},
+	{
+		"title" : "Puzzles n' Stuff Hall of Fame",
+		"pathname" : "/games/puzzles/halloffame.html"
+	},
+	{
+		"title" : "About Us",
+		"pathname" : "/about.html"
+	},
+	{
+		"title" : "Submit News/Join Team",
+		"pathname" : "/submit.html"
+	},
+	{
+		"title" : "Tech Dump Simulator",
+		"pathname" : "/games/techdumpsimulator.html"
+	}
+]

@@ -1,0 +1,83 @@
+[
+	{
+		"location" : "JEC",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "There's so many (3) printers, plus a bunch of random electronic/plastic bits."
+			}
+		]
+	},
+	{
+		"location" : "DCC",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, Super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though."
+			}
+		]
+	},
+	{
+		"location" : "Low",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "Not much in Low, still quite empty."
+			}
+		]
+	},
+	{
+		"location" : "VCC",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "A complete Core 2 Duo and 4 GB DDR3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are)."
+			}
+		]
+	},
+	{
+		"location" : "MRC",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "The MRC is absolutely providing, there were 5 old Thinkpads found today, they all power on, too! 2x T22,1xT40, 1xT430, and 1xT20."
+			}
+		]
+	},
+	{
+		"location" : "Cogswell",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "Cogswell still quite empty."
+			}
+		]
+	},
+	{
+		"location" : "Sage",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "In Sage, so many wires. Go check it out if you need an Ethernet cord or something."
+			}
+		]
+	},
+	{
+		"location" : "West",
+		"updates" : [
+			{
+				"date" : "2025-09-30",
+				"message" : "In West, printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too."
+			}
+		]
+	},
+	{
+		"location" : "Union",
+		"updates" : [
+			{
+				"date" : "2025-11-21",
+				"message" : "Union coverage is coming soon to a Tunnel Vision Website Near You!"
+			}
+		]
+	}
+]
