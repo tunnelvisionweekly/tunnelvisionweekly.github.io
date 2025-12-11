@@ -116,21 +116,34 @@ body {
 	column-gap: 20px;
 }
 
-.paper .cover2 {
-	grid-template-columns: 1fr 1fr;
+@media (min-width: 816px) {
+	.paper .cover2 {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.paper .cover3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.paper .cover2 > :nth-child(odd):last-child,
+	.paper .cover3 > :nth-child(3n + 1):last-child {
+		grid-column: 1 / -1;
+	}
+
+	.paper .cover3 > :nth-child(3n + 2):last-child {
+		grid-column: 2 / -1;
+	}
 }
 
-.paper .cover3 {
-	grid-template-columns: 1fr 1fr 1fr;
-}
+@media (max-width: 816px) {
+	.paper .cover2, .paper .cover3 {
+		grid-template-columns: 1fr 1fr;
+	}
 
-.paper .cover2 > :nth-child(odd):last-child,
-.paper .cover3 > :nth-child(3n + 1):last-child {
-	grid-column: 1 / -1;
-}
-
-.paper .cover3 > :nth-child(3n + 2):last-child {
-	grid-column: 2 / -1;
+	.paper .cover2 > :nth-child(odd):last-child,
+	.paper .cover3 > :nth-child(odd):last-child {
+		grid-column: 1 / -1;
+	}
 }
 
 article.preview {
