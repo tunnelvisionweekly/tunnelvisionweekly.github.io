@@ -110,6 +110,7 @@ body {
 }
 
 .paper .cover2, .paper .cover3 {
+	width: 100%;
 	margin: 20px 0px;
 	display: grid;
 	gap: 20px;
