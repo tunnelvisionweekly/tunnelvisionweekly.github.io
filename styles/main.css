@@ -295,7 +295,7 @@ li + ol, li + ol > li {
 	margin-top: 0.5em;
 }
 
-ul.collapsed, ol.collapsed, .collapsed li + li {
+.condensed li + li {
 	margin-top: 0em;
 }
 
