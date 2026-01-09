@@ -76,12 +76,8 @@ body {
 	background-color: blue;
 }
 
-#navlinks.vertical li a:hover, #navlinks.vertical li a.thispage {
+#navlinks.condensed li a:hover, #navlinks.condensed li a.thispage {
 	list-style-type: "> ";
-}
-
-#navlinks.vertical li + li {
-	margin-top: 0em;
 }
 
 .announcement {
@@ -179,13 +175,9 @@ article.preview li + li {
 	margin-top: 0.5em;
 }
 
-article.full {
+article {
 	max-width: 6.5in;
 	margin: 0px auto;
-}
-
-article.full + article.full {
-	margin-top: 0.5in;
 }
 
 article hgroup {
@@ -200,23 +192,27 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 	margin-top: 0.5em;
 }
 
-article p {
+.paper p {
 	margin-top: 0em;
 	margin-bottom: 0em;
 	text-indent: 4ch;
 }
 
-article p:first-of-type,
-article p.noindent,
-article h2 + p, article h3 + p, article h4 + p,
-article ul + p, article ol + p, article dl + p,
-article hgroup p {
+.paper p:first-of-type,
+.paper p.noindent,
+.paper h2 + p, .paper h3 + p, .paper h4 + p,
+.paper ul + p, .paper ol + p, .paper dl + p,
+.paper hgroup p {
 	text-indent: 0ch;
 }
 
-article.feature > hgroup:first-of-type + p::first-letter,
-article.feature > h2:first-of-type + p::first-letter,
-article.feature > h3:first-of-type + p::first-letter,
+article.feature p:not(article :not(main) *, article main + *):first-of-type::first-letter {
+	font-weight: bold;
+	margin-inline-end: 0.1em;
+	initial-letter: 2 1;
+}
+
+article.feature > :is(hgroup, h2, h3):first-of-type + p::first-letter,
 article.intro p:first-of-type::first-letter,
 article p.lede-large::first-letter {
 	font-weight: bold;
@@ -224,20 +220,17 @@ article p.lede-large::first-letter {
 	initial-letter: 2 1;
 }
 
-article.preview > hgroup:first-of-type + p::first-letter,
-article.preview > h3:first-of-type + p::first-letter {
+article.preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 3 1;
 }
 
-article.feature > hgroup:first-of-type + p.lede-small::first-letter,
-article.feature > h2:first-of-type + p.lede-small::first-letter,
-article.feature > h3:first-of-type + p.lede-small::first-letter {
+/* article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
 	font-weight: normal;
 	margin-inline-end: 0em;
 	initial-letter: normal;
-}
+} */
 
 article.interview p {
 	margin-top: 1em;

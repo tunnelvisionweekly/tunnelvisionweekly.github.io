@@ -4,24 +4,36 @@
 		"pathname" : "/home.html"
 	},
 	{
-		"title" : "What's New in The Box(es)",
-		"pathname" : "/techdump.html"
+		"title" : "What's New in the Box(es)",
+		"pathname" : "/newinthebox.html"
 	},
 	{
-		"title" : "Latest Issue",
-		"pathname" : "/issues/web/tvw12.html"
+		"title" : "State of the Art",
+		"pathname" : "/stateoftheart.html"
 	},
 	{
-		"title" : "Previous Issues",
-		"pathname" : "/archive.html"
+		"title" : "Out of the Tunnel",
+		"pathname" : "/outofthetunnel.html"
 	},
 	{
-		"title" : "Crossword Solutions",
-		"pathname" : "/games/puzzles/crosswordsolutions.html"
+		"title" : "Geologic Fever",
+		"pathname" : "/geologicfever.html"
 	},
 	{
-		"title" : "Puzzles n' Stuff Hall of Fame",
-		"pathname" : "/games/puzzles/halloffame.html"
+		"title" : "Subterranean Homesick Blues",
+		"pathname" : "/subterraneanhomesickblues.html"
+	},
+	{
+		"title" : "Extra Topics",
+		"pathname" : "/extras.html"
+	},
+	{
+		"title" : "Puzzles n' Stuff",
+		"pathname" : "/puzzles.html"
+	},
+	{
+		"title" : "All Issues",
+		"pathname" : "/issues.html"
 	},
 	{
 		"title" : "About Us",
@@ -33,6 +45,6 @@
 	},
 	{
 		"title" : "Tech Dump Simulator",
-		"pathname" : "/games/techdumpsimulator.html"
+		"pathname" : "/puzzles/techdumpsimulator.html"
 	}
 ]

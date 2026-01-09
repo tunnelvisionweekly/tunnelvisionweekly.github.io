@@ -36,7 +36,7 @@
 // 	console.log(output);
 // }
 
-async function getHeader() {
+(async () => {
 	const navlinks = document.getElementById("navlinks");
 	try {
 		const response = await fetch("/resources/header-links.json");
@@ -59,4 +59,4 @@ async function getHeader() {
 	} catch (error) {
 		console.error(error.message);
 	}
-}
+})();
