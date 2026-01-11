@@ -37,6 +37,19 @@ body {
 	padding: 20px;
 }
 
+#wrapper.game {
+	border-color: light-dark(var(--light-color), var(--dark-color));
+	background-color: rgba(188, 255, 255, 0.625);
+}
+
+#wrapper > :first-child {
+	margin-top: 0px;
+}
+
+#wrapper > :last-child {
+	margin-bottom: 0px;
+}
+
 #menulink {
 	display: none;
 }
@@ -78,6 +91,35 @@ body {
 
 #navlinks.condensed li a:hover, #navlinks.condensed li a.thispage {
 	list-style-type: "> ";
+}
+
+#controls menu {
+	width: 100%;
+	list-style-type: none;
+	margin: 1em 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: light-dark(var(--light-background), #333);
+}
+
+#controls li {
+	float: left;
+	margin: 0em;
+}
+
+#controls li button {
+	display: block;
+	text-align: center;
+	padding: 5px 10px;
+	text-decoration: none;
+	background-image: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: transparent;
+}
+
+#controls li button:hover {
+	border-color: light-dark(mediumseagreen, greenyellow);
 }
 
 .announcement {
@@ -430,6 +472,43 @@ table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td, table.su
 
 table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.sudoku9 tr:nth-child(3n) td {
 	border-bottom-width: 4px;
+}
+
+.game section {
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 5px;
+	margin: 1em 0;
+}
+
+.game section h3 {
+	margin: 0em;
+}
+
+.game section p {
+	background-color: light-dark(var(--light-background), #333);
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+	padding: 5px;
+}
+
+.game section button {
+	margin: 0.5em 0em;
+}
+
+button, select {
+	background-color: light-dark(var(--light-background), #333);
+	font-family: "IBM Plex Mono", "Monaco", monospace, monospace;
+}
+
+#logwrapper {
+	height: 200px;
+	background-color: lightyellow;
+	padding: 5px;
+	overflow: scroll;
+}
+
+#log {
+	margin-top: 0em;
 }
 
 /* footer {

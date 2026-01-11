@@ -72,13 +72,13 @@ function minebtn() {
 	var pickPrint = document.getElementById("location");
 	location1 = prompt("Pick a location to go. You can go to the JEC, DCC, LOW, MRC, VCC, or West.");
 	pickPrint.innerHTML = "You are currently at: " + location1;
-	logPrint.innerHTML += "<br> [" + step++ + "]: Went to " + location1;
+	logPrint.innerHTML += "<br />[" + step++ + "]: Went to " + location1;
 }
 
 function findThings() {
 	if (health <= 0) {
 		alert("Uh-oh! You died. That's too bad. Play again!");
-		logPrint.innerHTML += "<br> [" + step++ + "]: Uh-oh! You died. That's too bad. Play again!";
+		logPrint.innerHTML += "<br />[" + step++ + "]: Uh-oh! You died. That's too bad. Play again!";
 		document.getElementById("controls").style.display = "none";
 		document.getElementById("restartBtn").style.display = "block";
 	}
@@ -140,25 +140,25 @@ function findThings() {
 	// Find something based on location
 	// alert("hi");
 	var Event1Skipped = false;
-	logPrint.innerHTML += "<br> [" + step++ + "]: Went to the " + location1 + " tech dump.";
+	logPrint.innerHTML += "<br />[" + step++ + "]: Went to the " + location1 + " tech dump.";
 	var currentLoc;
 	if (location1 == '') {
 		alert("Choose a location first.");
-		logPrint.innerHTML += "<br> [" + step++ + "]:" + "Location not set, set one before digging around!";
+		logPrint.innerHTML += "<br />[" + step++ + "]: Location not set, set one before digging around!";
 		return;
 	}
 	if (location1 == "event") {
 		currentLoc = locMap.get("JEC");
 	} else if (typeof (locMap.get(location1.toUpperCase())) == 'undefined') {
 		alert("That's not a location! Check your spelling.");
-		logPrint.innerHTML += "<br> [" + step++ + "]:" + "That's not a location! Check your spelling.";
+		logPrint.innerHTML += "<br />[" + step++ + "]: That's not a location! Check your spelling.";
 	} else {
 		currentLoc = locMap.get(location1.toUpperCase());
 	}
 
 	if (dumpsVisited[currentLoc[3]] && location1 != "event") {
 		var tempRand = parseInt(Math.random() * harmlessEvents.length);
-		logPrint.innerHTML += "<br> [" + step + "]:" + harmlessEvents[tempRand] + " Check another tech dump, or go to sleep!";
+		logPrint.innerHTML += "<br />[" + step + "]:" + harmlessEvents[tempRand] + " Check another tech dump, or go to sleep!";
 		step++;
 		alert(harmlessEvents[tempRand] + " Check another tech dump, or go to sleep!");
 		return;
@@ -169,7 +169,7 @@ function findThings() {
 
 	var eventFreq = parseFloat(document.getElementById("diff").value);
 	if (eventFreq != prevDiff) {
-		logPrint.innerHTML += "<br> [" + step + "]:" + "Difficulty changed to " + eventFreq;
+		logPrint.innerHTML += "<br />[" + step + "]: Difficulty changed to " + eventFreq;
 		prevDiff = eventFreq;
 	}
 	// alert(eventFreq);
@@ -194,22 +194,22 @@ function findThings() {
 		switch (eventType) {
 			case 0:
 				alert(eventMsg);
-				logPrint.innerHTML += "<br> [" + step++ + "]:" + eventMsg;
+				logPrint.innerHTML += "<br />[" + step++ + "]:" + eventMsg;
 				money += moneyChg;
 				health += healthChg;
 				updateInventoryForEvent(inventory, invChg);
 				break;
 			case 1:
 				var ans = prompt(eventMsg + " [y/n]");
-				logPrint.innerHTML += "<br> [" + step++ + "]:" + eventMsg + " [y/n]";
+				logPrint.innerHTML += "<br />[" + step++ + "]:" + eventMsg + " [y/n]";
 				if (Math.random() > .5 && ans.toUpperCase() == "Y") {
 					alert("Your attempt was successful! " + successMsg);
-					logPrint.innerHTML += "<br> [" + step++ + "]:" + "Your attempt was successful! " + successMsg;
+					logPrint.innerHTML += "<br />[" + step++ + "]: Your attempt was successful! " + successMsg;
 					money += moneyChg[0];
 				} else if (ans.toUpperCase() == "N") {
 					Event1Skipped = true;
 					alert("You decide to do nothing and walk away. Let's go to another tech dump.");
-					logPrint.innerHTML += "<br> [" + step++ + "]:" + "You decide to do nothing and walk away. Let's go to another tech dump.";
+					logPrint.innerHTML += "<br />[" + step++ + "]: You decide to do nothing and walk away. Let's go to another tech dump.";
 					if (!dumpsVisited[currentLoc[3]] && location1 != "event") {
 						dumpsVisited[currentLoc[3]] = 1;
 						Event1Skipped = true;
@@ -217,7 +217,7 @@ function findThings() {
 					}
 				} else {
 					alert("Oh no, your attempt was unsuccessful. " + failMsg + " Let's go to another tech dump.");
-					logPrint.innerHTML += "<br> [" + step++ + "]:" + "Oh no, your attempt was unsuccessful. " + failMsg + " Let's go to another tech dump.";
+					logPrint.innerHTML += "<br />[" + step++ + "]: Oh no, your attempt was unsuccessful. " + failMsg + " Let's go to another tech dump.";
 					if (moneyChg[1] == -1) {
 						money = 0;
 					} else {
@@ -233,7 +233,7 @@ function findThings() {
 				break;
 			case 2:
 				alert(eventMsg);
-				logPrint.innerHTML += "<br> [" + step++ + "]:" + eventMsg;
+				logPrint.innerHTML += "<br />[" + step++ + "]:" + eventMsg;
 				money += moneyChg;
 				health += healthChg;
 				updateInventoryForEvent(inventory, invChg);
@@ -244,7 +244,7 @@ function findThings() {
 				return;
 			case 3:
 				var ans = prompt(eventMsg + " [y/n]");
-				logPrint.innerHTML += "<br> [" + step++ + "]:" + eventMsg + " [y/n]";
+				logPrint.innerHTML += "<br />[" + step++ + "]:" + eventMsg + " [y/n]";
 				if (ans.toUpperCase() == 'Y') {
 					var goodOrBad = Math.random();
 					var msgPool = []; // what msgs you'll get
@@ -254,7 +254,7 @@ function findThings() {
 					var tempProb = 0;
 					if (goodOrBad >= .5) {
 						// good stuff happens
-						logPrint.innerHTML += "<br> [" + step++ + "]: Good result Gotten!";
+						logPrint.innerHTML += "<br />[" + step++ + "]: Good result Gotten!";
 						tempProb = Math.floor(Math.random() * (successMsg.length));
 						msgPool = successMsg;
 						healthChgs = healthChg[0];
@@ -262,7 +262,7 @@ function findThings() {
 						// invChgs = invChg[0];
 					} else {
 						// bad stuff happens
-						logPrint.innerHTML += "<br> [" + step++ + "]: Bad result Gotten!";
+						logPrint.innerHTML += "<br />[" + step++ + "]: Bad result Gotten!";
 						tempProb = Math.floor(Math.random() * (successMsg.length));
 						msgPool = failMsg;
 						healthChgs = healthChg[1];
@@ -270,7 +270,7 @@ function findThings() {
 					}
 					alert(msgPool[tempProb]);
 					console.log(msgPool);
-					logPrint.innerHTML += "<br> [" + step++ + "]:" + msgPool[tempProb];
+					logPrint.innerHTML += "<br />[" + step++ + "]:" + msgPool[tempProb];
 					money += moneyChgs[tempProb];
 					health += healthChgs[tempProb];
 				}
@@ -308,7 +308,7 @@ function findThings() {
 				foundNow.push(items[i]);
 				if (i == 7) {
 					alert("Woah... You found the one-of-a-kind Tunnel Vision #10, made of pure gold! I think you won the tech dumps...");
-					logPrint.innerHTML += "<br> [" + step++ + "]: Golden Tunnel Vision Found";
+					logPrint.innerHTML += "<br />[" + step++ + "]: Golden Tunnel Vision Found";
 				}
 			}
 		}
@@ -316,23 +316,23 @@ function findThings() {
 	var toInvPrint = "";
 	var valueNow = 0;
 	foundNow.forEach(element => {
-		toInvPrint += element[0] + ", <br>";
+		toInvPrint += element[0] + ", <br />";
 		valueNow += element[2];
 	});
 	// update last haul
 	haulPrint.innerHTML = "From the last haul, you got: " + toInvPrint + ", totaling a value of: " + valueNow;
-	logPrint.innerHTML += "<br> [" + step++ + "]: (((From the last haul, you got: " + toInvPrint + ", totaling a value of: " + valueNow + ")))";
+	logPrint.innerHTML += "<br />[" + step++ + "]: (((From the last haul, you got: " + toInvPrint + ", totaling a value of: " + valueNow + ")))";
 	healthPrint.innerHTML = "" + health + "/100";
 	redrawInv();
 
 	if (health <= 0) {
 		alert("Uh-oh! You died. That's too bad. Play again!");
-		logPrint.innerHTML += "<br> [" + step++ + "]: Uh-oh! You died. That's too bad. Play again!";
+		logPrint.innerHTML += "<br />[" + step++ + "]: Uh-oh! You died. That's too bad. Play again!";
 		document.getElementById("controls").style.display = "none";
 		document.getElementById("restartBtn").style.display = "block";
 	}
 
-	logPrint.innerHTML += "<br> [" + step++ + "]: Money/Health check: $" + money + ", health: " + health + "/100";
+	logPrint.innerHTML += "<br />[" + step++ + "]: Money/Health check: $" + money + ", health: " + health + "/100";
 
 }
 
@@ -340,9 +340,9 @@ function redrawInv() {
 	var toInvDisp = "";
 	for (var i = 0; i < items.length; i++) {
 		if (i != 7) {
-			toInvDisp += "[" + i + "] " + items[i][0] + " x " + inventory[i] + "<br>";
+			toInvDisp += "[" + i + "] " + items[i][0] + " x " + inventory[i] + "<br />";
 		} else if (i == 7 && inventory[7] != 0) {
-			toInvDisp += "[" + i + "] " + items[i][0] + " x " + inventory[i] + "<br>";
+			toInvDisp += "[" + i + "] " + items[i][0] + " x " + inventory[i] + "<br />";
 		}
 	}
 	invPrint.innerHTML = toInvDisp;
@@ -375,25 +375,25 @@ function buy(itemName, cost) {
 			switch (itemName) {
 				case 'cereal':
 					alert("You bought the cereal. It's cinnamon toast crunch (not sponsored)! +2 health.");
-					logPrint.innerHTML += "<br> [" + step++ + "]: bought cereal";
+					logPrint.innerHTML += "<br />[" + step++ + "]: bought cereal";
 					health += 2;
 					healthPrint.innerHTML = "" + health + "/100";
 					break;
 				case 'car':
 					alert("You bought a car. It's a good car. You can now drive to the better thrift store. $25 bonus to every item sold from here on out (until it breaks...)!");
-					logPrint.innerHTML += "<br> [" + step++ + "]: bought car";
+					logPrint.innerHTML += "<br />[" + step++ + "]: bought car";
 					carHealth = Math.floor(Math.random() * 50);
 					hasCar = true;
 					break;
 				case 'display-case':
 					alert("You bought a display case for all your tech dump goodies. How pretty! You finally have a space for all your stuff!");
-					logPrint.innerHTML += "<br> [" + step++ + "]: bought display case";
+					logPrint.innerHTML += "<br />[" + step++ + "]: bought display case";
 					document.getElementById("gBcolChtn").style.display = 'inline';
 					// document.getElementById("gBcol").style.display = 'block';
 					break;
 				case 'RPI-tuition':
 					alert("Woah. You truly went above and beyond to pay off your RPI debt. Congratulations, you won the game!!! It took you " + day + " days to complete this. Email us a screenshot and your game log (bottom of page), and we'll send you a certificate for winning, while supplies last!");
-					logPrint.innerHTML += "<br> [" + step++ + "]: WON GAME!!" + day + " days to complete this. Email us a screenshot and we'll send you a certificate for winning, while supplies last!";
+					logPrint.innerHTML += "<br />[" + step++ + "]: WON GAME!!" + day + " days to complete this. Email us a screenshot and we'll send you a certificate for winning, while supplies last!";
 					break;
 				case 'laptop':
 					alert("You bought a laptop. The first order of business is to, well, start a business. Your online business will now make $10 a day. The more laptops you buy, the more you make a day!");
@@ -403,7 +403,7 @@ function buy(itemName, cost) {
 					}
 					laptopEarnings += 10;
 					document.getElementById("store_name").innerHTML = "CEO of " + storeName + ", making $" + laptopEarnings + " a day!";
-					logPrint.innerHTML += "<br> [" + step++ + "]: New laptop. CEO of " + storeName + ", making $" + laptopEarnings + " a day.";
+					logPrint.innerHTML += "<br />[" + step++ + "]: New laptop. CEO of " + storeName + ", making $" + laptopEarnings + " a day.";
 					break;
 				case 'store':
 					if (storeName == '') {
@@ -412,16 +412,16 @@ function buy(itemName, cost) {
 					}
 					laptopEarnings += 250;
 					document.getElementById("store_name").innerHTML = "CEO of " + storeName + ", making $" + laptopEarnings + " a day!";
-					logPrint.innerHTML += "<br> [" + step++ + "]: Bought store.CEO of " + storeName + ", making $" + laptopEarnings + " a day.";
+					logPrint.innerHTML += "<br />[" + step++ + "]: Bought store.CEO of " + storeName + ", making $" + laptopEarnings + " a day.";
 					break;
 				case 'store-name':
 					storeName = prompt("Man, that last name must've really sucked, huh? What do you want the new store name to be?");
-					logPrint.innerHTML += "<br> [" + step++ + "]: Changed name of store to " + storeName;
+					logPrint.innerHTML += "<br />[" + step++ + "]: Changed name of store to " + storeName;
 					break;
 			}
 		} else {
 			alert("You don't have the money to buy that!");
-			logPrint.innerHTML += "<br> [" + step++ + "]: Not enough money to buy " + itemName + ". Money: " + money;
+			logPrint.innerHTML += "<br />[" + step++ + "]: Not enough money to buy " + itemName + ". Money: " + money;
 		}
 	}
 }
@@ -432,7 +432,7 @@ function viewbtn() {
 
 function sleep() {
 	alert("You slept. The day is now: " + (day + 1));
-	logPrint.innerHTML += "<br> [" + step++ + "]: You slept. The day is now: " + (day + 1) + ". You made $" + laptopEarnings + " overnight!";
+	logPrint.innerHTML += "<br />[" + step++ + "]: You slept. The day is now: " + (day + 1) + ". You made $" + laptopEarnings + " overnight!";
 	day += 1;
 	money += laptopEarnings;
 	for (var i = 0; i < dumpsVisited.length; i++) {
@@ -440,7 +440,7 @@ function sleep() {
 	}
 	if (health <= 0) {
 		alert("Uh-oh! You died. That's too bad. Play again!");
-		logPrint.innerHTML += "<br> [" + step++ + "]: You died. Oof! Play again!";
+		logPrint.innerHTML += "<br />[" + step++ + "]: You died. Oof! Play again!";
 		document.getElementById("controls").style.display = "none";
 		document.getElementById("restartBtn").style.display = "block";
 	}
