@@ -50,11 +50,11 @@ body {
 	margin-bottom: 0px;
 }
 
-#menulink {
+#menulink-top {
 	display: none;
 }
 
-#navlinks {
+#navlinks-top, #navlinks-bottom {
 	width: 100%;
 	list-style-type: none;
 	margin: 0px;
@@ -64,12 +64,12 @@ body {
 	position: static;
 }
 
-#navlinks li {
+:is(#navlinks-top, #navlinks-bottom) li {
 	float: left;
 	margin: 0em;
 }
 
-#navlinks li a {
+:is(#navlinks-top, #navlinks-bottom) li a {
 	display: block;
 	color: white;
 	text-align: center;
@@ -81,15 +81,15 @@ body {
 	border-color: transparent;
 }
 
-#navlinks li a:hover, #navlinks li a:focus {
+:is(#navlinks-top, #navlinks-bottom) li a:is(:hover, :focus) {
 	border-color: light-dark(mediumseagreen, greenyellow);
 }
 
-#navlinks li a:hover, #navlinks li a.thispage {
+:is(#navlinks-top, #navlinks-bottom) li a:is(:hover, .thispage) {
 	background-color: blue;
 }
 
-#navlinks.condensed li a:hover, #navlinks.condensed li a.thispage {
+:is(#navlinks-top, #navlinks-bottom).condensed li a:is(:hover, .thispage) {
 	list-style-type: "> ";
 }
 
@@ -197,8 +197,20 @@ article.preview {
 	padding: 15px;
 }
 
-article.preview h3, article.preview h3 + h4 {
+article.preview + article.preview {
+	margin-top: 20px;
+}
+
+.paper article.preview + article.preview {
+	margin-top: 0px;
+}
+
+article.preview h2, article.preview h3, article.preview h3 + h4 {
 	margin-top: 0em;
+}
+
+article.preview p {
+	margin-bottom: 0em;
 }
 
 article h4 {
@@ -262,7 +274,7 @@ article p.lede-large::first-letter {
 	initial-letter: 2 1;
 }
 
-article.preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
+.paper article.preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 3 1;
@@ -308,6 +320,20 @@ span.padded-right {
 
 a:hover, a:active, a:focus, a.thispage {
 	color: light-dark(mediumseagreen, greenyellow);
+}
+
+a.title, a.author {
+	color: light-dark(var(--light-color), var(--dark-color));
+	text-decoration: none;
+}
+
+h2 a.title, h2 a.author {
+	text-decoration: underline;
+}
+
+a.title:hover, a.author:hover {
+	color: light-dark(mediumseagreen, greenyellow);
+	text-decoration: underline;
 }
 
 ul {

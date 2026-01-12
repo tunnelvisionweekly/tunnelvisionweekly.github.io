@@ -37,7 +37,7 @@
 // }
 
 (async () => {
-	const navlinks = document.getElementById("navlinks");
+	const navlinks_top = document.getElementById("navlinks-top");
 	try {
 		const response = await fetch("/resources/header-links.json");
 		if (!response.ok) {
@@ -53,7 +53,7 @@
 			anchor.appendChild(document.createTextNode(link["title"]));
 			let listitem = document.createElement("li");
 			listitem.appendChild(anchor);
-			navlinks.appendChild(listitem);
+			navlinks_top.appendChild(listitem);
 		}
 		console.log(result);
 	} catch (error) {
