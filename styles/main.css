@@ -286,13 +286,15 @@ article p.lede-large::first-letter {
 	initial-letter: normal;
 } */
 
-article.interview p {
+.interview p {
 	margin-top: 1em;
 	text-indent: 0ch;
 }
 
-article.interview h3 {
+.interview .question {
+	/* margin-top: 1em; */
 	font-size: 1em;
+	font-weight: bold;
 }
 
 hr {
@@ -783,6 +785,22 @@ blockquote.metal-mania-regular {
 /* EB Garamond */
 .eb-garamond-regular {
 	font-family: "EB Garamond", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Cinzel */
+.cinzel-regular {
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Lora */
+.lora-regular {
+	font-family: "Lora", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
