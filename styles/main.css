@@ -274,17 +274,17 @@ article p.lede-large::first-letter {
 	initial-letter: 2 1;
 }
 
+article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
+	font-weight: normal;
+	margin-inline-end: 0em;
+	initial-letter: normal;
+}
+
 .paper article.preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 3 1;
 }
-
-/* article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
-	font-weight: normal;
-	margin-inline-end: 0em;
-	initial-letter: normal;
-} */
 
 .interview p {
 	margin-top: 1em;
@@ -677,7 +677,7 @@ button, select {
 }
 
 /* Faster One */
-.faster-one-regular {
+.faster-one-regular, .faster-one-regular :is(h1, h2, h3) {
 	font-family: "Faster One", system-ui;
 	font-weight: 400;
 	font-style: normal;
@@ -831,16 +831,66 @@ blockquote.metal-mania-regular {
 	font-style: italic;
 }
 
+/* Cormorant Garamond */
+.cormorant-garamond-regular {
+	font-family: "Cormorant Garamond", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Crimson Text */
+.crimson-text-regular {
+	font-family: "Crimson Text", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.crimson-text-semibold {
+	font-family: "Crimson Text", serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.crimson-text-bold {
+	font-family: "Crimson Text", serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.crimson-text-regular-italic {
+	font-family: "Crimson Text", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+	font-family: "Crimson Text", serif;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.crimson-text-bold-italic {
+	font-family: "Crimson Text", serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2
 ?family=Archivo+Black
+&family=Cinzel:wght@400..900
+&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700
+&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700
 &family=EB+Garamond:ital,wght@0,400..800;1,400..800
 &family=Exo+2:ital,wght@0,100..900;1,100..900
 &family=Faster+One
 &family=Geologica:wght,CRSV@100..900,0
 &family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700
+&family=Lora:ital,wght@0,400..700;1,400..700
 &family=Metal+Mania
 &family=Monoton
 &family=Montserrat:ital,wght@0,100..900;1,100..900
