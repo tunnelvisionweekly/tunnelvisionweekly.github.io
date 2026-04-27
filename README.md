@@ -8,15 +8,13 @@ The official Tunnel Vision Website
   <h2>How to do it</h2>
   To update whats new in the boxes, see /resources/techdump-updates.xml. The standard format for each entry (by location) is:
 
-  	```
-    <textBlock>
-		  <dest>location</dest>
-		  <date>date of the most recent update</date>
-		  <msg>
-			   A message goes here!
-      </msg> 
-	  </textBlock>
-  ```
+	<textBlock>
+		<dest>location</dest>
+		<date>date of the most recent update</date>
+		<msg>
+			A message goes here!
+     	</msg> 
+	</textBlock>
   
   All of the locations of known tech dumps should already be set up and each has an entry, so to update just change the date and message as appropriate. 
 
