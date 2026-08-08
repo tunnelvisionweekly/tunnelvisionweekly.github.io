@@ -152,7 +152,7 @@ body {
 }
 
 .paper + .paper {
-	margin-top: 0.75in
+	margin-top: 0.5in
 }
 
 .paper .cover2, .paper .cover3 {
@@ -408,13 +408,18 @@ figure, .framed {
 	padding: 0.5em;
 }
 
+.paper .framed:last-child {
+	margin-bottom: 0em;
+}
+
 figure img {
-	display: block;
+	display: inline-block;
 }
 
 figure img + figcaption {
 	display: block;
 	margin: 0.5em;
+	text-align: left;
 }
 
 table {
