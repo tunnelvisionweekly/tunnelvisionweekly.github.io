@@ -24,6 +24,12 @@ body {
 	margin: 0px;
 }
 
+.invert {
+	color: light-dark(var(--dark-color), #16161d);
+	background-color: light-dark(var(--dark-background), var(--light-background));
+	border-color: light-dark(var(--dark-color), #16161d);
+}
+
 #wrapper {
 	width: 100%;
 	min-width: 5.5in;
@@ -155,6 +161,14 @@ body {
 	margin-top: 0.5in
 }
 
+.paper > :first-child, .paper h2:first-child {
+	margin-top: 0px;
+}
+
+.paper > :last-child {
+	margin-bottom: 0px;
+}
+
 .paper .cover2, .paper .cover3 {
 	width: 100%;
 	margin: 20px 0px 0px;
@@ -202,26 +216,30 @@ body {
 	}
 }
 
-article.preview {
+.preview {
 	border-width: 2px;
 	border-style: solid;
 	border-color: light-dark(var(--light-color), var(--dark-color));
 	padding: 15px;
 }
 
-article.preview + article.preview {
+.preview + .preview {
 	margin-top: 20px;
 }
 
-.paper article.preview + article.preview {
+.paper .preview + .preview {
 	margin-top: 0px;
 }
 
-article.preview h2, article.preview h3, article.preview h3 + h4 {
+.preview h2, .preview h3, .preview h3 + h4 {
 	margin-top: 0em;
 }
 
-article.preview p {
+.preview h2:not(:first-child), .preview h3:not(:first-child) {
+	margin-top: 0.5em;
+}
+
+.preview p {
 	margin-bottom: 0em;
 }
 
@@ -229,15 +247,15 @@ article h4 {
 	margin-bottom: 0.5em;
 }
 
-article.preview h4 + ul {
+.preview h4 + ul {
 	margin-top: 0em;
 }
 
-article.preview ul {
+.preview ul {
 	padding-left: 2ch;
 }
 
-article.preview li + li {
+.preview li + li {
 	margin-top: 0.5em;
 }
 
@@ -268,6 +286,7 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 .paper p.noindent,
 .paper h2 + p, .paper h3 + p, .paper h4 + p,
 .paper ul + p, .paper ol + p, .paper dl + p,
+.paper blockquote + p,
 .paper hgroup p {
 	text-indent: 0ch;
 }
@@ -292,7 +311,7 @@ article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter
 	initial-letter: normal;
 }
 
-.paper article.preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
+.paper .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 3 1;
@@ -321,12 +340,12 @@ hr.pagebreak {
 	margin: 0.75in 0in;
 }
 
-h1.paper-title {
+.paper-title, .paper-subtitle {
 	text-align: center;
 }
 
-h2.paper-subtitle {
-	text-align: center;
+.paper-banner {
+	fill: light-dark(var(--light-color), var(--dark-color));
 }
 
 span.padded-right, i.padded-right {
@@ -406,6 +425,14 @@ figure, .framed {
 
 .framed {
 	padding: 0.5em;
+}
+
+.framed > :first-child {
+	margin-top: 0em;
+}
+
+.framed > :last-child {
+	margin-bottom: 0em;
 }
 
 .paper .framed:last-child {
@@ -1009,12 +1036,43 @@ blockquote.metal-mania-regular {
 	font-style: normal;
 }
 
+/* Bitcount */
+
+.bitcount-regular {
+	font-family: "Bitcount", system-ui;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"CRSV" 0.5,
+		"ELSH" 0,
+		"ELXP" 0;
+}
+
+/* M PLUS 1 Code */
+
+.m-plus-1-code-regular {
+	font-family: "M PLUS 1 Code", monospace;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.m-plus-1-code-bold {
+	font-family: "M PLUS 1 Code", monospace;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2
 ?family=Archivo+Black
 &family=Bebas+Neue
+&family=Bitcount:wght@100..900
 &family=Bitter:ital,wght@0,100..900;1,100..900
 &family=Cinzel:wght@400..900
 &family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700
@@ -1026,6 +1084,7 @@ blockquote.metal-mania-regular {
 &family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700
 &family=Limelight
 &family=Lora:ital,wght@0,400..700;1,400..700
+&family=M+PLUS+1+Code:wght@100..700
 &family=Metal+Mania
 &family=Monoton
 &family=Montserrat:ital,wght@0,100..900;1,100..900
