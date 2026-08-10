@@ -243,10 +243,6 @@ body {
 	margin-bottom: 0em;
 }
 
-article h4 {
-	margin-bottom: 0.5em;
-}
-
 .preview h4 + ul {
 	margin-top: 0em;
 }
@@ -268,7 +264,7 @@ article hgroup {
 	margin-bottom: 1em;
 }
 
-article hgroup h2, article hgroup h3 {
+article hgroup h2, article hgroup h3, article h4 {
 	margin-bottom: 0.5em;
 }
 
@@ -348,7 +344,7 @@ hr.pagebreak {
 	fill: light-dark(var(--light-color), var(--dark-color));
 }
 
-span.padded-right, i.padded-right {
+.padded-right {
 	padding-right: 0.25em;
 }
 
@@ -708,7 +704,7 @@ button, select {
 	font-style: normal;
 }
 
-.silkscreen-bold, table.techdumps th, dl.techdumps dt {
+.silkscreen-bold, table.techdumps th, table.techdumps-horizontal td:first-child, dl.techdumps dt {
 	font-family: "Silkscreen", sans-serif;
 	font-weight: 700;
 	font-style: normal;
@@ -1037,7 +1033,6 @@ blockquote.metal-mania-regular {
 }
 
 /* Bitcount */
-
 .bitcount-regular {
 	font-family: "Bitcount", system-ui;
 	font-optical-sizing: auto;
@@ -1051,7 +1046,6 @@ blockquote.metal-mania-regular {
 }
 
 /* M PLUS 1 Code */
-
 .m-plus-1-code-regular {
 	font-family: "M PLUS 1 Code", monospace;
 	font-optical-sizing: auto;
@@ -1066,17 +1060,90 @@ blockquote.metal-mania-regular {
 	font-style: normal;
 }
 
+/* Turret Road */
+.turret-road-extralight {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.turret-road-light {
+	font-family: "Turret Road", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.turret-road-regular {
+	font-family: "Turret Road", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.turret-road-medium {
+	font-family: "Turret Road", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.turret-road-bold {
+	font-family: "Turret Road", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.turret-road-extrabold {
+	font-family: "Turret Road", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* Single Day */
+.single-day-regular {
+	font-family: "Single Day", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Comic Sans */
+.comic-sans-regular {
+	font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Asset */
+.asset-regular {
+	font-family: "Asset", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* DM Serif Display */
+.dm-serif-display-regular {
+	font-family: "DM Serif Display", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+	font-family: "DM Serif Display", serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2
 ?family=Archivo+Black
+&family=Asset
 &family=Bebas+Neue
 &family=Bitcount:wght@100..900
 &family=Bitter:ital,wght@0,100..900;1,100..900
 &family=Cinzel:wght@400..900
 &family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700
 &family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700
+&family=DM+Serif+Display:ital@0;1
 &family=EB+Garamond:ital,wght@0,400..800;1,400..800
 &family=Exo+2:ital,wght@0,100..900;1,100..900
 &family=Faster+One
@@ -1096,8 +1163,10 @@ blockquote.metal-mania-regular {
 &family=Rock+Salt
 &family=Rubik+Distressed
 &family=Silkscreen:wght@400;700
+&family=Single+Day
 &family=Sixtyfour
 &family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700
 &family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800
+&family=Turret+Road:wght@200;300;400;500;700;800
 &display=swap" rel="stylesheet">
 */
