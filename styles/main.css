@@ -275,6 +275,14 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 	text-indent: 4ch;
 }
 
+.paper .spaced p {
+	text-indent: 0ch;
+}
+
+.paper .spaced p + p {
+	margin-top: 1em;
+}
+
 .paper p:first-of-type,
 .paper p.noindent,
 .paper :not(p) + p,
@@ -307,12 +315,12 @@ article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter
 	initial-letter: normal;
 }
 
-.interview p {
+.paper .interview p {
 	margin-top: 1em;
 	text-indent: 0ch;
 }
 
-.interview .question {
+.paper .interview .question {
 	/* margin-top: 1em; */
 	font-size: 1em;
 	font-weight: bold;
@@ -417,8 +425,6 @@ blockquote {
 }
 
 .puzzles {
-	width: 100%;
-	margin: 0px;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 20px;
