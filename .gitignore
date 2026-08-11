@@ -1,2 +1,5 @@
 # Ignore local system file
 .DS_Store
+
+# Ignore VSCode cache directory
+.vscode
