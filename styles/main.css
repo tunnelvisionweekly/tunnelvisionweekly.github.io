@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* Simplify width and height calculations */
 
+/* Simplify width and height calculations */
 html {
 	box-sizing: border-box;
 }
@@ -8,7 +8,7 @@ html {
 :root {
 	color-scheme: light dark;
 	--light-background: white;
-	--light-color: black;
+	--light-color: #16161d;
 	--dark-background: #16161d; /* Eigengrau */
 	--dark-color: white;
 }
@@ -25,9 +25,15 @@ body {
 }
 
 .invert {
-	color: light-dark(var(--dark-color), #16161d);
+	color: light-dark(var(--dark-color), var(--light-color));
 	background-color: light-dark(var(--dark-background), var(--light-background));
-	border-color: light-dark(var(--dark-color), #16161d);
+	border-color: light-dark(var(--dark-color), var(--light-color));
+}
+
+@media (prefers-color-scheme: dark) {
+	.invert-dark {
+		filter: invert(1);
+	}
 }
 
 #wrapper {
@@ -35,16 +41,11 @@ body {
 	min-width: 5.5in;
 	max-width: 11in;
 	margin: 0px auto;
-	/* border-width: 2px;
-	border-style: none;
-	border-color: blue;
-	border-radius: 10px; */
 	overflow: hidden;
 	padding: 20px;
 }
 
 #wrapper.game {
-	border-color: light-dark(var(--light-color), var(--dark-color));
 	background-color: rgba(188, 255, 255, 0.625);
 }
 
@@ -67,7 +68,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #334;
 	position: static;
 }
 
@@ -161,11 +162,11 @@ body {
 	margin-top: 0.5in
 }
 
-.paper > :first-child, .paper h2:first-child {
+.paper :first-child {
 	margin-top: 0px;
 }
 
-.paper > :last-child {
+.paper :last-child {
 	margin-bottom: 0px;
 }
 
@@ -227,23 +228,19 @@ body {
 	margin-top: 20px;
 }
 
-.paper .preview + .preview {
+.cover2 .preview + .preview, .cover3 .preview + .preview {
 	margin-top: 0px;
 }
 
-.preview h2, .preview h3, .preview h3 + h4 {
-	margin-top: 0em;
+.preview > :first-child, .preview h2:first-child {
+	margin-top: 0px;
 }
 
-.preview h2:not(:first-child), .preview h3:not(:first-child) {
-	margin-top: 0.5em;
+.preview > :last-child {
+	margin-bottom: 0px;
 }
 
-.preview p {
-	margin-bottom: 0em;
-}
-
-.preview h4 + ul {
+.preview h3, .preview h3 + h4, .preview h4 + ul, .preview h4 + ol {
 	margin-top: 0em;
 }
 
@@ -280,9 +277,7 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 
 .paper p:first-of-type,
 .paper p.noindent,
-.paper h2 + p, .paper h3 + p, .paper h4 + p,
-.paper ul + p, .paper ol + p, .paper dl + p,
-.paper blockquote + p,
+.paper :not(p) + p,
 .paper hgroup p {
 	text-indent: 0ch;
 }
@@ -294,23 +289,22 @@ article.feature p:not(article :not(main) *, article main + *):first-of-type::fir
 }
 
 article.feature > :is(hgroup, h2, h3):first-of-type + p::first-letter,
-article.intro p:first-of-type::first-letter,
 article p.lede-large::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 2 1;
 }
 
-article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
-	font-weight: normal;
-	margin-inline-end: 0em;
-	initial-letter: normal;
-}
-
 .paper .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 3 1;
+}
+
+article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
+	font-weight: normal;
+	margin-inline-end: 0em;
+	initial-letter: normal;
 }
 
 .interview p {
@@ -332,20 +326,23 @@ hr {
 	border-style: none;
 }
 
-hr.pagebreak {
-	margin: 0.75in 0in;
-}
-
 .paper-title, .paper-subtitle {
 	text-align: center;
 }
 
-.paper-banner {
-	fill: light-dark(var(--light-color), var(--dark-color));
+.paper-subtitle {
+	font-size: larger;
 }
 
+/* Used for Rock Salt text preceding a colon */
 .padded-right {
-	padding-right: 0.25em;
+	padding-inline-end: 0.25ch;
+}
+
+/* Used for em dashes in monospace text */
+.padded-both {
+	padding-inline-start: 0.5ch;
+	padding-inline-end: 0.5ch;
 }
 
 a:hover, a:active, a:focus, a.thispage {
@@ -355,10 +352,6 @@ a:hover, a:active, a:focus, a.thispage {
 a.title, a.author {
 	color: light-dark(var(--light-color), var(--dark-color));
 	text-decoration: none;
-}
-
-h2 a.title, h2 a.author {
-	text-decoration: underline;
 }
 
 a.title:hover, a.author:hover {
@@ -412,11 +405,31 @@ blockquote {
 	font-style: italic;
 }
 
-figure, .framed {
+.framed {
 	margin: 1em 0ch;
 	border-width: 2px;
 	border-style: solid;
 	border-color: light-dark(var(--light-color), var(--dark-color));
+}
+
+:is(figure, table, .framed) + :is(figure, table, .framed) {
+	margin-top: 20px;
+}
+
+.puzzles {
+	width: 100%;
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.puzzles :is(h2, figure, .framed) {
+	margin: 0px;
+}
+
+.puzzles :is(figure, table, .framed) + :is(figure, table, .framed) {
+	margin: 0px;
 }
 
 .framed {
@@ -435,18 +448,13 @@ figure, .framed {
 	margin-bottom: 0em;
 }
 
-figure img {
-	display: inline-block;
-}
-
 figure img + figcaption {
-	display: block;
-	margin: 0.5em;
+	margin-top: 0.5em;
 	text-align: left;
 }
 
 table {
-	margin-top: 1em;
+	margin: 1em 0;
 	border-width: 2px;
 	border-style: none;
 	border-color: light-dark(var(--light-color), var(--dark-color));
@@ -455,7 +463,7 @@ table {
 
 caption {
 	caption-side: bottom;
-	padding: 0.5em;
+	padding-top: 0.5em;
 	text-align: left;
 }
 
