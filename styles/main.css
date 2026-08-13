@@ -32,7 +32,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
 	.invert-dark {
-		filter: invert(1);
+		color: var(--light-color); /* preserve visibility for alt text */
+		filter: brightness(0) invert(1); /* turn white */
 	}
 }
 
@@ -151,6 +152,11 @@ body {
 	color: white;
 }
 
+.highlight {
+	color: var(--light-color);
+	background-color: #ffd966;
+}
+
 .paper {
 	min-width: fit-content;
 	border-width: 2px;
@@ -168,6 +174,26 @@ body {
 
 .paper :last-child {
 	margin-bottom: 0px;
+}
+
+#paper-top {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
+	gap: 20px;
+	align-items: start;
+	text-align: center;
+}
+
+#paper-top h1 {
+	margin: 0px;
+}
+
+#paper-top img {
+	display: block;
+}
+
+#paper-top :nth-child(n + 4) {
+	grid-column: 1 / -1;
 }
 
 .paper .cover2, .paper .cover3 {
@@ -252,6 +278,17 @@ body {
 	margin-top: 0.5em;
 }
 
+.preview .read-more {
+	margin-top: 1em;
+	text-indent: 0ch;
+	text-align: right;
+}
+
+.flush-right {
+	text-indent: 0ch;
+	text-align: right;
+}
+
 article {
 	max-width: 6.5in;
 	margin: 0px auto;
@@ -290,7 +327,7 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 	text-indent: 0ch;
 }
 
-article.feature p:not(article :not(main) *, article main + *):first-of-type::first-letter {
+article.feature p:not(article :not(main, section:first-of-type) *, article main + *):first-of-type::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 2 1;
@@ -334,11 +371,11 @@ hr {
 	border-style: none;
 }
 
-.paper-title, .paper-subtitle {
+.paper-title, .subtitle {
 	text-align: center;
 }
 
-.paper-subtitle {
+.subtitle {
 	font-size: larger;
 }
 
@@ -357,12 +394,12 @@ a:hover, a:active, a:focus, a.thispage {
 	color: light-dark(mediumseagreen, greenyellow);
 }
 
-a.title, a.author {
+a.title, a.author, a.page {
 	color: light-dark(var(--light-color), var(--dark-color));
 	text-decoration: none;
 }
 
-a.title:hover, a.author:hover {
+a.title:hover, a.author:hover, a.page:hover {
 	color: light-dark(mediumseagreen, greenyellow);
 	text-decoration: underline;
 }
@@ -413,6 +450,18 @@ blockquote {
 	font-style: italic;
 }
 
+.starred::before {
+	content: "\2606  \2606  \2606  "
+}
+
+.starred::after {
+	content: " \2606  \2606  \2606"
+}
+
+section + section {
+	margin-top: 20px;
+}
+
 .framed {
 	margin: 1em 0ch;
 	border-width: 2px;
@@ -422,6 +471,10 @@ blockquote {
 
 :is(figure, table, .framed) + :is(figure, table, .framed) {
 	margin-top: 20px;
+}
+
+#paper-top :is(figure, table, .framed) + :is(figure, table, .framed) {
+	margin-top: 0px;
 }
 
 .puzzles {
@@ -1145,6 +1198,12 @@ blockquote.metal-mania-regular {
 	font-style: italic;
 }
 
+.special-elite-regular {
+	font-family: "Special Elite", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1180,6 +1239,7 @@ blockquote.metal-mania-regular {
 &family=Single+Day
 &family=Sixtyfour
 &family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700
+&family=Special+Elite
 &family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800
 &family=Turret+Road:wght@200;300;400;500;700;800
 &display=swap" rel="stylesheet">
