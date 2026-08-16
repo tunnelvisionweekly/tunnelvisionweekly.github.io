@@ -1,0 +1,76 @@
+{
+	"issues" : [
+		{
+			"title" : "TVW #1",
+			"pathname" : "/issues/web/tvw1.html"
+		},
+		{
+			"title" : "TVW #2",
+			"pathname" : "/issues/web/tvw2.html"
+		},
+		{
+			"title" : "TVW #3",
+			"pathname" : "/issues/web/tvw3.html"
+		},
+		{
+			"title" : "TVW #4",
+			"pathname" : "/issues/web/tvw4.html"
+		},
+		{
+			"title" : "TVW #5",
+			"pathname" : "/issues/web/tvw5.html"
+		},
+		{
+			"title" : "TVW #6",
+			"pathname" : "/issues/web/tvw6.html"
+		},
+		{
+			"title" : "TVW #7",
+			"pathname" : "/issues/web/tvw7.html"
+		},
+		{
+			"title" : "TVW #8",
+			"pathname" : "/issues/web/tvw8.html"
+		},
+		{
+			"title" : "TVW #9",
+			"pathname" : "/issues/web/tvw9.html"
+		},
+		{
+			"title" : "TVW #10",
+			"pathname" : "/issues/web/tvw10.html"
+		},
+		{
+			"title" : "TVW #11",
+			"pathname" : "/issues/web/tvw11.html"
+		},
+		{
+			"title" : "TVW #12",
+			"pathname" : "/issues/web/tvw12.html"
+		},
+		{
+			"title" : "TVW #13",
+			"pathname" : "/issues/web/tvw13.html"
+		},
+		{
+			"title" : "TVW #14",
+			"pathname" : "/issues/web/tvw14.html"
+		},
+		{
+			"title" : "TVW #15",
+			"pathname" : "/issues/web/tvw15.html"
+		},
+		{
+			"title" : "TVW #16",
+			"pathname" : "/issues/web/tvw16.html"
+		},
+		{
+			"title" : "TVW #17",
+			"pathname" : "/issues/web/tvw17.html"
+		},
+		{
+			"title" : "TVW #18",
+			"pathname" : "/issues/web/tvw18.html"
+		}
+	]
+}

@@ -164,7 +164,7 @@ body {
 	padding: 20px;
 }
 
-.paper + .paper {
+.paper + .paper, .paper + footer {
 	margin-top: 0.5in
 }
 
@@ -254,7 +254,8 @@ body {
 	margin-top: 20px;
 }
 
-.cover2 .preview + .preview, .cover3 .preview + .preview {
+.cover2 .preview + .preview,
+.cover3 .preview + .preview {
 	margin-top: 0px;
 }
 
@@ -327,6 +328,13 @@ article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
 	text-indent: 0ch;
 }
 
+.cover2 .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter,
+.cover3 .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
+	font-weight: bold;
+	margin-inline-end: 0.1em;
+	initial-letter: 3 1;
+}
+
 article.feature p:not(article :not(main, section:first-of-type) *, article main + *):first-of-type::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
@@ -338,12 +346,6 @@ article p.lede-large::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
 	initial-letter: 2 1;
-}
-
-.paper .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
-	font-weight: bold;
-	margin-inline-end: 0.1em;
-	initial-letter: 3 1;
 }
 
 article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
@@ -399,7 +401,11 @@ a.title, a.author, a.page {
 	text-decoration: none;
 }
 
-a.title:hover, a.author:hover, a.page:hover {
+a.social {
+	text-decoration: none;
+}
+
+a.title:hover, a.author:hover, a.page:hover, a.social:hover {
 	color: light-dark(mediumseagreen, greenyellow);
 	text-decoration: underline;
 }
@@ -483,6 +489,10 @@ section + section {
 	gap: 20px;
 }
 
+.puzzles section + section {
+	margin-top: 0px;
+}
+
 .puzzles :is(h2, figure, .framed) {
 	margin: 0px;
 }
@@ -560,7 +570,7 @@ table.archive th, table.archive td:nth-child(2) {
 }
 
 table.crossword, table.nonogram,
-table.sudoku4, table.sudoku6, table.sudoku9 {
+table.sudoku4, table.sudoku6, table.sudoku9, table.sudoku16 {
 	margin: 1em 0ch;
 	border-collapse: collapse;
 	text-align: center;
@@ -568,15 +578,26 @@ table.sudoku4, table.sudoku6, table.sudoku9 {
 }
 
 table.crossword td, table.nonogram td,
-table.sudoku4 td, table.sudoku6 td, table.sudoku9 td,
+table.sudoku4 td, table.sudoku6 td, table.sudoku9 td, table.sudoku16 td,
 table.colorable td {
 	position: relative;
-	width: 2em;
-	height: 2em;
 	border-width: 2px;
-	font-size: x-large;
 	vertical-align: middle;
 	text-align: center;
+}
+
+table.crossword td, table.nonogram td,
+table.sudoku4 td, table.sudoku6 td, table.sudoku9 td,
+table.colorable td {
+	width: 2em;
+	height: 2em;
+	font-size: x-large;
+}
+
+table.sudoku16 td {
+	width: 2.5em;
+	height: 2.5em;
+	font-size: smaller;
 }
 
 table.nonogram td.sum {
@@ -594,19 +615,19 @@ table.crossword td .number {
 	left: 2px;
 }
 
-table.sudoku4 td:nth-child(even), table.sudoku6 td:nth-child(3n), table.sudoku9 td:nth-child(3n) {
+table.sudoku4 td:nth-child(even), table.sudoku6 td:nth-child(3n), table.sudoku9 td:nth-child(3n), table.sudoku16 td:nth-child(4n) {
 	border-right-width: 4px;
 }
 
-table.sudoku4 td:nth-child(odd), table.sudoku6 td:nth-child(3n + 1), table.sudoku9 td:nth-child(3n + 1) {
+table.sudoku4 td:nth-child(odd), table.sudoku6 td:nth-child(3n + 1), table.sudoku9 td:nth-child(3n + 1), table.sudoku16 td:nth-child(4n + 1) {
 	border-left-width: 4px;
 }
 
-table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td, table.sudoku9 tr:nth-child(3n + 1) td {
+table.sudoku4 tr:nth-child(odd) td, table.sudoku6 tr:nth-child(odd) td, table.sudoku9 tr:nth-child(3n + 1) td, table.sudoku16 tr:nth-child(4n + 1) td {
 	border-top-width: 4px;
 }
 
-table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.sudoku9 tr:nth-child(3n) td {
+table.sudoku4 tr:nth-child(even) td, table.sudoku6 tr:nth-child(even) td, table.sudoku9 tr:nth-child(3n) td, table.sudoku16 tr:nth-child(4n) td {
 	border-bottom-width: 4px;
 }
 
@@ -1204,6 +1225,44 @@ blockquote.metal-mania-regular {
 	font-style: normal;
 }
 
+/* Carter One */
+.carter-one-regular {
+	font-family: "Carter One", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Gravitas One */
+.gravitas-one-regular {
+	font-family: "Gravitas One", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Merriweather */
+.merriweather-regular {
+	font-family: "Merriweather", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+}
+
+/* Caveat Brush */
+.caveat-brush-regular {
+	font-family: "Caveat Brush", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.caveat-brush-xx-large {
+	font-family: "Caveat Brush", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: xx-large;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1213,6 +1272,8 @@ blockquote.metal-mania-regular {
 &family=Bebas+Neue
 &family=Bitcount:wght@100..900
 &family=Bitter:ital,wght@0,100..900;1,100..900
+&family=Carter+One
+&family=Caveat+Brush
 &family=Cinzel:wght@400..900
 &family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700
 &family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700
@@ -1221,10 +1282,12 @@ blockquote.metal-mania-regular {
 &family=Exo+2:ital,wght@0,100..900;1,100..900
 &family=Faster+One
 &family=Geologica:wght,CRSV@100..900,0
+&family=Gravitas+One
 &family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700
 &family=Limelight
 &family=Lora:ital,wght@0,400..700;1,400..700
 &family=M+PLUS+1+Code:wght@100..700
+&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900
 &family=Metal+Mania
 &family=Monoton
 &family=Montserrat:ital,wght@0,100..900;1,100..900
