@@ -164,7 +164,7 @@ body {
 	padding: 20px;
 }
 
-.paper + .paper, .paper + footer {
+.paper + .paper {
 	margin-top: 0.5in
 }
 
@@ -371,10 +371,6 @@ hr {
 	margin: 20px 0px;
 	background-color: light-dark(var(--light-color), var(--dark-color));
 	border-style: none;
-}
-
-.paper-title, .subtitle {
-	text-align: center;
 }
 
 .subtitle {
@@ -668,9 +664,9 @@ button, select {
 	margin-top: 0em;
 }
 
-/* footer {
-	text-align: center;
-} */
+footer {
+	margin-top: 20px;
+}
 
 /* Arial */
 .arial-regular {
