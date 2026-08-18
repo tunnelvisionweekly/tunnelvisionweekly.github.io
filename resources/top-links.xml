@@ -2,7 +2,7 @@
 <topLinks>
 	<menuItem>
 		<title>Home Page</title>
-		<link>'/home.html';</link>
+		<link>'/index.html';</link>
 	</menuItem>
 
 	<menuItem>

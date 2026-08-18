@@ -28,7 +28,7 @@
 // 	for (i = 0; i < x.length; i++) {
 // 		var title = x[i].childNodes[1].childNodes[0].textContent;
 // 		var link = x[i].childNodes[3].childNodes[0].textContent;
-// 		// <td><anchor onclick="window.location.href = 'home.html';">Home</anchor></td>  
+// 		// <td><anchor onclick="window.location.href = 'index.html';">Home</anchor></td>  
 // 		output += "<td><anchor onclick=\"window.location.href = " + link + "\">" + title + "</anchor></td>";
 // 	}
 // 	output += "</tr>";
