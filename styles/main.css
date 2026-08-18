@@ -1259,6 +1259,20 @@ blockquote.metal-mania-regular {
 	font-size: xx-large;
 }
 
+/* Righteous */
+.righteous-regular {
+	font-family: "Righteous", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Sedgwick Ave Display */
+.sedgwick-ave-display-regular {
+	font-family: "Sedgwick Ave Display", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1291,9 +1305,11 @@ blockquote.metal-mania-regular {
 &family=Orbitron:wght@400..900
 &family=Oswald:wght@200..700
 &family=Playfair+Display:ital,wght@0,400..900;1,400..900
+&family=Righteous
 &family=Roboto:ital,wght@0,100..900;1,100..900
 &family=Rock+Salt
 &family=Rubik+Distressed
+&family=Sedgwick+Ave+Display
 &family=Silkscreen:wght@400;700
 &family=Single+Day
 &family=Sixtyfour
