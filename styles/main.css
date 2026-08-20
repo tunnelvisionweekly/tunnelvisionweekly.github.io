@@ -39,7 +39,7 @@ body {
 
 #wrapper {
 	width: 100%;
-	min-width: 5.5in;
+	/* min-width: 5.5in; */
 	max-width: 11in;
 	margin: 0px auto;
 	overflow: hidden;
@@ -157,15 +157,21 @@ body {
 	background-color: #ffd966;
 }
 
+header {
+	margin-bottom: 20px;
+}
+
+/* Issue page replica */
 .paper {
 	min-width: fit-content;
+	margin: 20px auto;
 	border-width: 2px;
 	border-style: solid;
 	padding: 20px;
 }
 
 .paper + .paper {
-	margin-top: 0.5in
+	margin-top: 0.5in;
 }
 
 .paper :first-child {
@@ -176,6 +182,7 @@ body {
 	margin-bottom: 0px;
 }
 
+/* Issue header layout */
 #paper-top {
 	display: grid;
 	grid-template-columns: 2fr 1fr 2fr;
@@ -184,7 +191,7 @@ body {
 	text-align: center;
 }
 
-#paper-top h1 {
+#paper-top * {
 	margin: 0px;
 }
 
@@ -192,10 +199,12 @@ body {
 	display: block;
 }
 
+/* Issue title/logo and subtitle */
 #paper-top :nth-child(n + 4) {
 	grid-column: 1 / -1;
 }
 
+/* Issue front page previews */
 .paper .cover2, .paper .cover3 {
 	width: 100%;
 	margin: 20px 0px 0px;
@@ -267,8 +276,9 @@ body {
 	margin-bottom: 0px;
 }
 
-.preview h3, .preview h3 + h4, .preview h4 + ul, .preview h4 + ol {
-	margin-top: 0em;
+.preview h2, .preview h3, .preview ul {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 .preview ul {
@@ -279,7 +289,7 @@ body {
 	margin-top: 0.5em;
 }
 
-.preview .read-more {
+.read-more {
 	margin-top: 1em;
 	text-indent: 0ch;
 	text-align: right;
@@ -295,71 +305,49 @@ article {
 	margin: 0px auto;
 }
 
-article hgroup {
+article + article {
+	margin-top: 20px;
+}
+
+hgroup {
 	margin-bottom: 1em;
 }
 
-article hgroup h2, article hgroup h3, article h4 {
+hgroup h2, hgroup h3, article h4,
+h2:has(+ h3) {
 	margin-bottom: 0.5em;
 }
 
-article hgroup h2 + p, article hgroup h3 + p, article hgroup p + p {
+hgroup h2 + p, hgroup h3 + p, hgroup p + p,
+h2 + h3 {
 	margin-top: 0.5em;
 }
 
-.paper p {
+.condensed p {
 	margin-top: 0em;
 	margin-bottom: 0em;
 	text-indent: 4ch;
 }
 
-.paper .spaced p {
+.condensed p:first-of-type,
+.condensed p.lede-large,
+.condensed :not(p) + p,
+.condensed hgroup p {
 	text-indent: 0ch;
 }
 
-.paper .spaced p + p {
-	margin-top: 1em;
-}
-
-.paper p:first-of-type,
-.paper p.noindent,
-.paper :not(p) + p,
-.paper hgroup p {
-	text-indent: 0ch;
-}
-
-.cover2 .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter,
-.cover3 .preview > :is(hgroup, h2, h3):first-of-type + p::first-letter {
+p.lede-large::first-letter {
 	font-weight: bold;
 	margin-inline-end: 0.1em;
+	initial-letter: 2 1;
+}
+
+.cover2 .preview p.lede-large::first-letter,
+.cover3 .preview p.lede-large::first-letter {
 	initial-letter: 3 1;
 }
 
-article.feature p:not(article :not(main, section:first-of-type) *, article main + *):first-of-type::first-letter {
-	font-weight: bold;
-	margin-inline-end: 0.1em;
-	initial-letter: 2 1;
-}
-
-article.feature > :is(hgroup, h2, h3):first-of-type + p::first-letter,
-article p.lede-large::first-letter {
-	font-weight: bold;
-	margin-inline-end: 0.1em;
-	initial-letter: 2 1;
-}
-
-article.feature > :is(hgroup, h2, h3):first-of-type + p.lede-small::first-letter {
-	font-weight: normal;
-	margin-inline-end: 0em;
-	initial-letter: normal;
-}
-
-.paper .interview p {
-	margin-top: 1em;
-	text-indent: 0ch;
-}
-
-.paper .interview .question {
+.interview .question {
 	/* margin-top: 1em; */
 	font-size: 1em;
 	font-weight: bold;
@@ -513,9 +501,45 @@ section + section {
 	margin-bottom: 0em;
 }
 
-figure img + figcaption {
+figure img {
+	display: block;
+}
+
+figure img + img, figure img + figcaption {
 	margin-top: 0.5em;
 	text-align: left;
+}
+
+.gallery {
+	width: 100%;
+	margin: 20px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	/* text-align: center; */
+}
+
+@media (max-width: 576px) {
+	.gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.gallery > :nth-child(odd):last-child {
+		grid-column: 1 / -1;
+	}
+}
+
+.gallery * {
+	min-width: 100%;
+	margin: 0px;
+}
+
+.gallery img {
+	display: block;
+}
+
+.gallery :is(figure, table, .framed) + :is(figure, table, .framed) {
+	margin: 0px;
 }
 
 table {
@@ -539,22 +563,6 @@ th, td {
 	padding: 0.25em 0.5em;
 	vertical-align: top;
 	text-align: left;
-}
-
-table.gallery {
-	width: 100%;
-	margin: 1em auto;
-}
-
-table.gallery td {
-	text-align: center;
-	padding: 0em;
-}
-
-table.gallery figure {
-	display: inline-block;
-	margin: 0ch;
-	border-style: none;
 }
 
 table.archive th, table.archive td {
