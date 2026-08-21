@@ -1,0 +1,83 @@
+[
+	{
+		"location" : "JEC",
+		"updates" : [
+			{
+				"date" : "2026-04-09",
+				"message" : "Plenty more PCs, so many PCs. Plus a bunch of old laptops! Overall though, nothing spectacular but relatively active."
+			}
+		]
+	},
+	{
+		"location" : "DCC",
+		"updates" : [
+			{
+				"date" : "2026-04-09",
+				"message" : "This time around was pretty uneventful. Seems like there may have been more film, though!"
+			}
+		]
+	},
+	{
+		"location" : "Low",
+		"updates" : [
+			{
+				"date" : "2026-04-09",
+				"message" : "Just a bunch of (taken apart) CD drives. Also only one box?"
+			}
+		]
+	},
+	{
+		"location" : "VCC",
+		"updates" : [
+			{
+				"date" : "2026-1-14",
+				"message" : "There's some Sun Microsystems server-looking computers filling the box, and a bunch of wires including phone wires and what looks like ethernet cables."
+			}
+		]
+	},
+	{
+		"location" : "MRC",
+		"updates" : [
+			{
+				"date" : "2026-1-14",
+				"message" : "The boxes are still pretty full from before break, most of the stuff from then is still there. There is a xerox photocopier precariously inside the boxes now, though!"
+			}
+		]
+	},
+	{
+		"location" : "Cogswell",
+		"updates" : [
+			{
+				"date" : "2026-04-09",
+				"message" : "Quite surprising to see Cogswell getting some action, finds of the week this time!"
+			}
+		]
+	},
+	{
+		"location" : "Sage",
+		"updates" : [
+			{
+				"date" : "2026-1-15",
+				"message" : "Some wires and an old looking printer make up most of what's in here today."
+			}
+		]
+	},
+	{
+		"location" : "West",
+		"updates" : [
+			{
+				"date" : "2025-09-30",
+				"message" : "In West, printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too."
+			}
+		]
+	},
+	{
+		"location" : "Union",
+		"updates" : [
+			{
+				"date" : "2026-1-14",
+				"message" : "There's a printer and 3 network switches."
+			}
+		]
+	}
+]

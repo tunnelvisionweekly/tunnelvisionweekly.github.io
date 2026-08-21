@@ -29,75 +29,73 @@
 
 	<textBlock>
 		<dest>JEC</dest>
-		<date>11-21-25</date>
+		<date>04-09-26</date>
 		<msg>
-			There's so many (3) printers, plus a bunch of random electronic/plastic bits.
-		</msg>
+			Plenty more PCs, so many PCs. Plus a bunch of old laptops! Overall though, nothing spectacular but relatively active.
+		</msg> 
 	</textBlock>
 
 	<textBlock>
 		<dest>DCC</dest>
-		<date>11-21-25</date>
+		<date>04-09-26</date>
 		<msg>
-			Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO,
-			super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look.
-			Besides that, it doesn't look like there's anything else new. There's still some
-			kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic
-			guts inside. Most recently, a few extra vhs tapes were found. Still not much big change,
-			though.
+			This time around was pretty uneventful. Seems like there may have been more film, though!
+		</msg> 
+	</textBlock>
+
+	<textBlock>
+		<dest>Low</dest>
+		<date>04-09-26</date>
+		<msg>
+			Just a bunch of (taken apart) CD drives. Also only one box?
 		</msg>
 	</textBlock>
 
 	<textBlock>
 		<dest>VCC</dest>
-		<date>11-21-25</date>
+		<date>01-14-26</date>
 		<msg>
-			A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry,
-			though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be
-			believed (which they typically are).
-		</msg>
+			There's some Sun Microsystems server-looking computers filling the box, and a bunch of wires including phone wires and what looks like ethernet cables.
+		</msg> 
 	</textBlock>
 
 	<textBlock>
 		<dest>MRC</dest>
-		<date>11-21-25</date>
+		<date>01-14-26</date>
 		<msg>
-			Though the MRC is absolutely providing, there were 5 old Thinkpads found today, they all
-			power on, too! 2x T22,1xT40, 1xT430, and 1xT20.
-		</msg>
+			The MRC has slowed down, most of the things are there from before break, and they have not changed almost at all, except for a xerox photocopier that found its way in.
+		</msg> 
 	</textBlock>
 
 	<textBlock>
-		<dest>Cogswell</dest>
-		<date>11-21-25</date>
+		<dest>Cog</dest>
+		<date>04-09-26</date>
 		<msg>
-			Cogswell still quite empty.
-		</msg>
+			Quite surprising to see Cogswell getting some action, finds of the week this time!
+		</msg> 
 	</textBlock>
 
 	<textBlock>
-		<dest>Sage</dest>
-		<date>11-21-25</date>
+		<dest>Sag</dest>
+		<date>1-15-26</date>
 		<msg>
-			In Sage, so many wires. Go check it out if you need an ethernet cord or something.
-		</msg>
+			Some wires and an old looking printer make up most of what's in here today.
+		</msg> 
 	</textBlock>
 
 	<textBlock>
-		<dest>West</dest>
+		<dest>Wes</dest>
 		<date>09-30-25</date>
 		<msg>
-			In West, Printers, string lights, a DVD player (find of the week last semester?).
-			There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires,
-			too.
-		</msg>
+			In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ...";
+		</msg> 
 	</textBlock>
 
 	<textBlock>
-		<dest>Union</dest>
-		<date>11-21-25</date>
+		<dest>Uni</dest>
+		<date>1-14-26</date>
 		<msg>
-			Union Coverage Is Coming Soon To A Tunnel Vision Website Near You!
-		</msg>
+			There's a printer and 3 network switches.
+		</msg> 
 	</textBlock>
 </textParent>

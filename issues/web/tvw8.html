@@ -8,21 +8,30 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Faster+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monoton&family=Rock+Salt&family=Silkscreen:wght@400;700&family=Sixtyfour&display=swap" rel="stylesheet">
 	<link href="/styles/main.css" rel="stylesheet" type="text/css">
-	<title>Tunnel Vision Weekly #8</title>
+	<title>Tunnel Vision Weekly #8: The Late Issue</title>
 </head>
 
 <body>
 	<div id="wrapper">
 		<header>
-			<h1>Tunnel Vision Weekly #8</h1>
-			<h2>Published <time datetime="2025-09-23">9/23/25</time></h2>
+			<nav>
+				<p id="menulink-top"><a href="#navlinks-top">Contents</a></p>
+				<menu id="navlinks-top"></menu>
+				<script async src="/scripts/header-gen.js"></script>
+			</nav>
+			<hgroup>
+				<h1>Tunnel Vision Weekly #8</h1>
+				<p><b>Published <time datetime="2025-09-23T20:00-04:00">9/23/25</time></b></p>
+			</hgroup>
 		</header>
-		<hr />
 		<div id="page1" class="paper">
-			<h1 class="paper-title sixtyfour-bold">Tunnel Vision Weekly</h1>
-			<main>
-				<h2 class="paper-subtitle sixtyfour-bold"><em>Your</em> (maybe) weekly source on the tech dumps and RPI tunnels (and RPI, sometimes)</h2>
-			</main>
+			<hgroup id="paper-top">
+				<p><em>The Late Issue</em> (No.&nbsp;8)</p>
+				<p><b><em>Free</em></b></p>
+				<p><time datetime="2025-09-23T20:00-04:00">9/23/25</time></p>
+				<h1><img src="/images/tvw-logo-white.png" width="100%" alt="Tunnel Vision" /></h1>
+				<p class="subtitle"><em>Your</em> weekly source on the tech dumps and RPI tunnels (and RPI, sometimes)</p>
+			</hgroup>
 			<div class="cover3">
 				<article id="preview1" class="preview">
 					<hgroup>
@@ -89,7 +98,7 @@
 						Check the official TVW website for tech dump listings
 						on a more regular (and current) basis!
 					</p>
-					<p>...Read more on page 2!</p>
+					<p class="read-more">...Read more on page 2!</p>
 				</article>
 				<article id="preview3" class="preview">
 					<h3>State of the Art:<br /><em>Tunnel Art Coverage Over for Forseeable Future</em></h3>
@@ -108,7 +117,7 @@
 						and/or a section focused on a different club each week.
 						Submit your ideas using the QR code on this page!
 					</p>
-					<p>...Read more on page 3!</p>
+					<p class="read-more">...Read more on page 3!</p>
 				</article>
 				<article id="preview4" class="preview">
 					<hgroup>
@@ -120,7 +129,7 @@
 						An in-depth analysis of the seating and a little history
 						of the most famous lecture hall at RPI.
 					</p>
-					<p>...Read more on page 4!</p>
+					<p class="read-more">...Read more on page 4!</p>
 				</article>
 				<article id="preview5" class="preview">
 					<hgroup>
@@ -159,9 +168,8 @@
 				</article>
 			</div>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page2" class="paper">
-			<article class="full feature">
+			<article>
 				<hgroup>
 					<h2 class="silkscreen-bold">What's new in the box(es): ...Wait, where are they again? Edition</h2>
 					<p>&mdash;By I</p>
@@ -294,9 +302,8 @@
 				</p>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page3" class="paper">
-			<article class="full feature">
+			<article>
 				<hgroup>
 					<h2 class="rock-salt-regular"><span class="padded-right">State of the Art</span>: RIP Tunnel Art (for now)</h2>
 					<p>&mdash;By I</p>
@@ -342,9 +349,8 @@
 				</p>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page4" class="paper">
-			<article class="full feature">
+			<article>
 				<hgroup class="faster-one-regular">
 					<h2>Tunnel Vision: Out of the Tunnel</h2>
 					<h3>DCC 308, A Case Study</h3>
@@ -417,9 +423,8 @@
 				</table>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page5" class="paper">
-			<article class="full">
+			<article class="puzzles">
 				<h2 class="monoton-regular">The Last Page: Puzzles n' Stuff</h2>
 				<section>
 					<figure>
@@ -440,7 +445,7 @@
 							<td onclick="colorByNumber(this)" colspan="2">3</td>
 						</tr>
 					</table>
-					<ol class="collapsed">
+					<ol class="condensed">
 						<li>Blue</li>
 						<li>Red</li>
 						<li>Green</li>
@@ -522,6 +527,21 @@
 						</tr>
 					</table>
 				</section>
+				<section class="framed">
+					<p>
+						Before we go, roll the credits:
+					</p>
+					<ul class="condensed">
+						<li>I, 'CEO' of Tunnel Vision Weekly</li>
+						<li>S.S. Illite, The Geologist</li>
+						<li>West Virginia, Tunnel Vision: Out of the Tunnel writer</li>
+						<li>&pi; (Pi), Tunnel Vision contributor</li>
+						<li>K and &pi;, logo design based on logo by I, which was based on a logo by Virginia</li>
+					</ul>
+					<p>
+						Thank you all for your help!
+					</p>
+				</section>
 				<section>
 					<p>
 						...And that's all, folks!
@@ -529,23 +549,27 @@
 						I'm really glad you picked us to be your source
 						for all news tech dump and tunnel art!
 						If you missed any past issues,
-						be sure to check out our <a href="/archive.html">archive</a>,
+						be sure to check out our <a href="/issues.html">archive</a>,
 						also if you have any stories
 						or want to help with writing articles/sections,
-						contact us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly@proton.me</a>!
+						contact us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly<wbr />@proton.me</a>!
 						Don't forget to try out the games in the insert if you'd like!
 					</p>
 					<p>
-						We'll see you next week with Issue #9!
+						We'll see you next week with <a href="tvw9.html">Issue&nbsp;#9</a>!
 					</p>
 				</section>
 			</article>
 		</div>
 		<footer>
+			<nav>
+				<menu id="navlinks-bottom"></menu>
+				<script async src="/scripts/footer-gen.js"></script>
+			</nav>
 			<p>Copyright (C) <time datetime="2025-09-23">2025</time> Tunnel Vision Weekly</p>
 		</footer>
 	</div>
-	<script src="/scripts/coloring.js"></script>
+	<script async src="/scripts/coloring.js"></script>
 </body>
 
 </html>

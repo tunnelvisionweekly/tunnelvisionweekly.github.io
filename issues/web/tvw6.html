@@ -8,21 +8,30 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Faster+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monoton&family=Rock+Salt&family=Silkscreen:wght@400;700&family=Sixtyfour&display=swap" rel="stylesheet">
 	<link href="/styles/main.css" rel="stylesheet" type="text/css">
-	<title>Tunnel Vision Weekly #6</title>
+	<title>Tunnel Vision Weekly #6: The We Are So Back Issue</title>
 </head>
 
 <body>
 	<div id="wrapper">
 		<header>
-			<h1>Tunnel Vision Weekly #6</h1>
-			<h2>Published <time datetime="2025-09-08">9/8/25</time></h2>
+			<nav>
+				<p id="menulink-top"><a href="#navlinks-top">Contents</a></p>
+				<menu id="navlinks-top"></menu>
+				<script async src="/scripts/header-gen.js"></script>
+			</nav>
+			<hgroup>
+				<h1>Tunnel Vision Weekly #6</h1>
+				<p><b>Published <time datetime="2025-09-08T20:00-04:00">9/8/25</time></b></p>
+			</hgroup>
 		</header>
-		<hr />
 		<div id="page1" class="paper">
-			<h1 class="paper-title sixtyfour-bold">Tunnel Vision Weekly</h1>
-			<main>
-				<h2 class="paper-subtitle sixtyfour-bold"><em>Your</em> (maybe) weekly source on the tech dumps and RPI tunnels (and RPI, sometimes)</h2>
-			</main>
+			<hgroup id="paper-top">
+				<p><em>The We Are So Back Issue</em> (No.&nbsp;6)</p>
+				<p><b><em>Free</em></b></p>
+				<p><time datetime="2025-09-08T20:00-04:00">9/8/25</time></p>
+				<h1><img src="/images/tvw-logo-white.png" width="100%" alt="Tunnel Vision" /></h1>
+				<p class="subtitle"><em>Your</em> weekly source on the tech dumps and RPI tunnels (and RPI, sometimes)</p>
+			</hgroup>
 			<div class="cover3">
 				<article id="preview1" class="preview">
 					<h3>We are so back guys</h3>
@@ -69,7 +78,7 @@
 						Not only were there active patrols over the summer for certain tech dumps,
 						there were tons of things put into Low right around move-in day.
 					</p>
-					<p>...Read more on page&nbsp;2!</p>
+					<p class="read-more">...Read more on page&nbsp;2!</p>
 				</article>
 				<article id="preview3" class="preview">
 					<h3>State of the Art: Bye Bye, Camera!</h3>
@@ -92,7 +101,7 @@
 						were drawn over the summer,
 						at least one of them coming from an artist who graduated this year.
 					</p>
-					<p>...Read more on page&nbsp;3!</p>
+					<p class="read-more">...Read more on page&nbsp;3!</p>
 				</article>
 				<article id="preview4" class="preview">
 					<hgroup>
@@ -104,7 +113,7 @@
 						Want to know what's changed since you've been gone?
 						Flip to page 4 for an update on all things RPI!
 					</p>
-					<p>...Read more on page&nbsp;4!</p>
+					<p class="read-more">...Read more on page&nbsp;4!</p>
 				</article>
 				<article id="preview5" class="preview">
 					<h3>Teaser Trailer for next week: S.S. Illite and &pi;</h3>
@@ -127,7 +136,7 @@
 					<p>Stay tuned!</p>
 				</article>
 				<article id="preview6" class="preview">
-					<h3>Other misc stuff - <em>puzzles</em>!</h3>
+					<h3>Other misc stuff<span class="padded-both">&mdash;</span><em>puzzles</em>!</h3>
 					<p>
 						Oh boy,
 						if you thought last semester's paper was fun,
@@ -139,9 +148,8 @@
 				</article>
 			</div>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page2" class="paper">
-			<article class="full feature">
+			<article>
 				<hgroup>
 					<h2 class="silkscreen-bold">What's new in the box(es): summer recap edition</h2>
 					<p>&mdash;by "I" in collaboration with EHC</p>
@@ -252,9 +260,8 @@
 				</p>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page3" class="paper">
-			<article class="full feature">
+			<article>
 				<h2 class="rock-salt-regular"><span class="padded-right">State of the Art</span>: Bye Bye, Camera</h2>
 				<p>
 					You're here to see the art,
@@ -294,9 +301,8 @@
 				</p>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page4" class="paper">
-			<article class="full feature">
+			<article>
 				<h2 class="faster-one-regular">Tunnel Vision: Out of the Tunnel: Welcome back!</h2>
 				<p>
 					Welcome back or welcome to RPI!
@@ -376,16 +382,140 @@
 				</p>
 			</article>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page5" class="paper">
-			<article class="full feature">
-				<h2 class="monoton-regular">The last page: Puzzles 'n' stuff</h2>
+			<article class="puzzles">
+				<h2 class="monoton-regular">The Last Page: Puzzles n' Stuff</h2>
+				<section>
+					<figure>
+						<img src="/images/puzzles/shuffleboard.jpg" width="200" />
+						<figcaption>Enjoy the classic game of newspaper shuffleboard above!</figcaption>
+					</figure>
+				</section>
+				<section>
+					<table class="colorable">
+						<caption>
+							Here's a color-by-number!
+						</caption>
+						<tr>
+							<td onclick="colorByNumber(this)">1</td>
+						</tr>
+					</table>
+					<ol class="condensed">
+						<li>Blue</li>
+					</ol>
+				</section>
+				<section>
+					<table class="nonogram">
+						<caption>
+							Number nonogram!
+							Write in the numbers 1&ndash;15
+							such that each row and column adds up to the right number!
+							Each number is only used once.
+						</caption>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="sum">37</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="sum">40</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="sum">43</td>
+						</tr>
+						<tr>
+							<td class="sum">18</td>
+							<td class="sum">23</td>
+							<td class="sum">36</td>
+							<td class="sum">35</td>
+							<td class="sum">18</td>
+							<td class="unused"></td>
+						</tr>
+					</table>
+				</section>
+				<section class="framed">
+					<p>
+						Let's play a game!
+						Winner gets their name (if they want) and a message
+						in this box next week.
+						The first person to answer correctly wins.
+					</p>
+					<p>
+						How many times is the letter 'z'
+						used in this paper? Case-insensitive.
+						Good luck!
+					</p>
+				</section>
+				<section>
+					<table class="sudoku9">
+						<tr>
+							<td></td><td></td><td></td><td></td><td></td><td>1</td><td></td><td>9</td><td>3</td>
+						</tr>
+						<tr>
+							<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td></td><td>6</td><td>7</td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>9</td><td>2</td><td>5</td><td></td><td></td><td>7</td><td></td><td>4</td>
+						</tr>
+						<tr>
+							<td></td><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
+							<td></td><td></td><td></td><td>4</td><td>1</td><td></td><td></td><td></td><td>8</td>
+						</tr>
+						<tr>
+							<td></td><td></td><td></td><td></td><td>9</td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>5</td><td>4</td><td></td><td>6</td><td></td><td></td><td>8</td><td></td>
+						</tr>
+						<tr>
+							<td>3</td><td>8</td><td></td><td></td><td></td><td>7</td><td>1</td><td></td><td></td>
+						</tr>
+					</table>
+				</section>
+				<section class="framed">
+					<p>
+						Before we go, roll the credits:
+					</p>
+					<ul class="condensed">
+						<li>I, 'CEO' of Tunnel Vision Weekly</li>
+						<li>S.S. Illite, The Geologist</li>
+						<li>Virginia, Tunnel Vision: Out of the Tunnel writer</li>
+						<li>&pi; (Pi), Tunnel Vision contributor</li>
+						<li>K and &pi;, logo design based on logo by I, which was based on a logo by Virginia</li>
+					</ul>
+					<p>
+						Thank you all for your help!
+					</p>
+				</section>
 			</article>
 		</div>
 		<footer>
+			<nav>
+				<menu id="navlinks-bottom"></menu>
+				<script async src="/scripts/footer-gen.js"></script>
+			</nav>
 			<p>Copyright (C) <time datetime="2025-09-08">2025</time> Tunnel Vision Weekly</p>
 		</footer>
 	</div>
+	<script async src="/scripts/coloring.js"></script>
 </body>
 
 </html>

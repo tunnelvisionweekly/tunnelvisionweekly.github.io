@@ -8,25 +8,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Faster+One&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rock+Salt&family=Silkscreen:wght@400;700&family=Sixtyfour&display=swap" rel="stylesheet">
 	<link href="/styles/main.css" rel="stylesheet" type="text/css">
-	<title>Tunnel Vision Weekly #3</title>
+	<title>Tunnel Vision Weekly #3: The Past Issue</title>
 </head>
 
 <body>
 	<div id="wrapper">
 		<header>
-			<h1>Tunnel Vision Weekly #3</h1>
-			<h2>Published <time datetime="2025-04-07">4/7/25</time></h2>
+			<nav>
+				<p id="menulink-top"><a href="#navlinks-top">Contents</a></p>
+				<menu id="navlinks-top"></menu>
+				<script async src="/scripts/header-gen.js"></script>
+			</nav>
+			<hgroup>
+				<h1>Tunnel Vision Weekly #3</h1>
+				<p><b>Published <time datetime="2025-04-07T20:00-04:00">4/7/25</time></b></p>
+			</hgroup>
 		</header>
-		<hr />
 		<div id="page1" class="paper">
-			<h1 class="paper-title sixtyfour-bold">Tunnel Vision Weekly</h1>
-			<main>
-				<h2 class="paper-subtitle sixtyfour-bold"><em>Your</em> (maybe) weekly source on the tech dumps and RPI tunnels (and RPI, sometimes)</h2>
-			</main>
-			<div class="cover2">
+			<hgroup id="paper-top">
+				<p><em>The Past Issue</em> (No.&nbsp;3)</p>
+				<p><b><i><em>Free</em></i></b></p>
+				<p><time datetime="2025-04-07T20:00-04:00">4/7/25</time></p>
+				<h1 class="caps-lock sixtyfour-bold"><span>Tunnel Vision</span><br />Weekly</h1>
+				<p class="subtitle sixtyfour-bold"><em>Your</em> one and only source on the tech dumps and RPI tunnels (and RPI, sometimes)</p>
+			</hgroup>
+			<div class="cover2 condensed">
 				<article id="preview1" class="preview">
 					<h3>Welcome back to Tunnel Vision Weekly!</h3>
-					<p>
+					<p class="lede-large">
 						Welcome back!
 						The logo has changed yet a third time,
 						and the front has reverted pretty much back to the first issue's design.
@@ -66,7 +75,7 @@
 				</article>
 				<article id="preview2" class="preview">
 					<h3>What's new in the box(es): No more lab stuff?</h3>
-					<p>
+					<p class="lede-large">
 						Oh, if you thought the lab dumps were over, you're probably right, honestly. Though this week
 						might've had the climax of the whole event: A CRT and 2 Pentium II PCs were dropped in the JEC,
 						taken so fast I didn't even have a chance to see them! Besides that, a printer in the DCC, and
@@ -81,11 +90,13 @@
 						Also on page&nbsp;2, my take on CRT monitors, seeing as there has been one recently dumped in the
 						JEC!
 					</p>
-					<p>...Read more on page&nbsp;2!</p>
+					<p class="read-more">
+						...Read more on <a class="page" href="#page2">page&nbsp;2</a>!
+					</p>
 				</article>
 				<article id="preview3" class="preview">
-					<h3>State of the Art</h3>
-					<p>
+					<h3>State of the Art <em>Breaking News:</em> Terrorists Invade Trolley Problem</h3>
+					<p class="lede-large">
 						Another interesting week in the JEC tunnels!
 						A terrorist crisis has erupted over the Trolley Problem,
 						as well as signs telling others to 'RUN' spanning the ENTIRE tunnels.
@@ -94,146 +105,167 @@
 						way more than last time, even.
 						Could this mean paint soon? I guess we'll have to find out...
 					</p>
-					<p>...Read more on page&nbsp;3!</p>
+					<p class="read-more">
+						...Read more on <a class="page" href="#page3">page&nbsp;3</a>!
+					</p>
 				</article>
 				<article id="preview4" class="preview">
-					<h3>Tunnel Vision: Out of the tunnel</h3>
-					<p>
+					<hgroup>
+						<h3>Tunnel Vision: Out of the Tunnel</h3>
+						<p>
+							<b>But still in the tunnel this week:
+							Tunnel art from the <span class="faster-one-regular">past</span>,
+							submitted via email</b>
+						</p>
+					</hgroup>
+					<p class="lede-large">
 						Have you ever wondered what the tunnel art used to look like?
 						Perhaps you even remember some of these old tunnel arts!
 						Mere hours after the first issue came out, we got an email,
 						which led to the exchange of a lot of old photos from the tunnels.
 						If you wanna see what the tunnels looked like in some places...
 					</p>
-					<p>...Read more on page 4!</p>
+					<p class="read-more">
+						...Read more on <a class="page" href="#page4">page&nbsp;4</a>!
+					</p>
 				</article>
 			</div>
 		</div>
-		<hr class="pagebreak" />
 		<div id="page2" class="paper">
-			<article class="full feature">
-				<h2 class="silkscreen-bold">What's new in the box(es): The Lab - Is it dumped?</h2>
-				<h3 class="silkscreen-bold">CRT monitors - a lost technology (that I like)</h3>
-				<p>
-					I&nbsp;love CRT monitors.
-					They're a relic of the past that most people have cast away
-					in favor of newer, sleeker flatscreens.
-					I mean, it makes sense.
-					There's a lot to hate about CRTs,
-					for one, their weight.
-					Seriously, it feels like any decently sized CRT computer monitor
-					weighs at least 50 lbs.
-					Plus, they are boxy and quite difficult to fit on a lot of desks.
-					They're thick. Quite thick.
-					If you can look past that, though,
-					I think there's a lot of stuff that has been taken away from us
-					that once was commonplace with these monitors.
-					For one, they are quite possibly indestructible.
-					I heard a story of someone dropping one of them from a staircase,
-					and it literally still worked.
-					You can tap the screens with your finger
-					without worrying about cracking the glass, too, that's for sure.
-					Plus, you can technically set it to any resolution without issue
-					(though some monitors get blurry at too high of a resolution),
-					and you can actually get infinite color depth,
-					due to the analog way that it displays things!
-					I wish CRTs were still in use in some capacity,
-					but alas, it was not meant to be, I guess.
-					If you have the space and arm strength to get yourself a CRT monitor or TV,
-					I'd recommend it!
-				</p>
-				<h3 class="silkscreen-bold">Find of the Week: Analog Multimeter - probably broken, though :&#40;</h3>
-				<p class="lede-large">
-					Unfortunately,
-					I was not able to find anything super neat for you all this time around,
-					buut I still managed to find an analog multimeter to look at!
-					It seems to be broken, but it lights up,
-					and I'm sure with a bit of fiddling, it'll work like new!
-					You can find it now (unless someone claimed it) in the DCC tech dump!
-					To probably nobody's surprise,
-					the drunk goggles are still in the DCC dump as well!
-					If you don't know what I'm talking about,
-					head on over to <a href="https://tinyurl.com/tvw-archive">https://tinyurl.com/tvw-archive</a>
-					and read the drunk goggles article in Issue #1.
-					It's pretty neat, and I think it's still worth an experience if you haven't already seen it!
-				</p>
-				<h3 class="silkscreen-bold">The Latest Finds and Stuff</h3>
-				<h4 class="silkscreen-bold">JEC - lotsa lab stuff</h4>
-				<p>
-					Lotsa stuff continues to be thrown out.
-					Last Monday, a CRT monitor and 2 Pentium II PCs were thrown out!
-					Unfortunately, I was not there in time to see them for myself.
-					I found the information in the EHC Discord server's #techdumps channel.
-				</p>
-				<p>
-					There were also these neat fluorescent lamps,
-					I dropped one off in Low.
-					Plus, a Thinkpad T61, horrifically torn apart,
-					was also found on Saturday,
-					as well as a 4-HDD hub?
-					Unfortunately that's all I know about it,
-					it's gone now.
-				</p>
-				<p>
-					Finally, the lab equipment,
-					looks like the last of it for a
-					while, has been tossed, some of
-					the last stuff includes some
-					neat Kodak film stuff, over 60
-					years old!
-				</p>
-				<h4 class="silkscreen-bold">DCC - printer and finds of the week</h4>
-				<p>
-					The table I distributed Issue #1 on has <em>disappeared</em>!
-					It looks like 2 of the copies went with them
-					(hopefully to read).
-				</p>
-				<p>
-					Also, found on Saturday
-					was a boxed Brother laser printer,
-					it says 'OLD PRINTER' only not the original box!
-				</p>
-				<h4 class="silkscreen-bold">VCC - Ethernet cables and PC</h4>
-				<p>
-					The VCC had a great find this Monday,
-					with a <em>full</em> Dell Dimension 4600
-					(minus the HDD)!
-					CPU and 1 GB DDR RAM still inside,
-					plus 2 CD drives and a floppy drive!
-					Quite a solid-looking machine, I woulda taken it
-					if I didn't have enough PCs already.
-					It was gone the next time I checked on Wednesday,
-					unfortunately.
-				</p>
-				<h4 class="silkscreen-bold">MRC/Cogswell/Low - literally nothing</h4>
-				<p>
-					Nothin'. These seem to be the least active of all,
-					and have been all semester, ever since the big lab dump in the MRC.
-				</p>
-				<p>
-					<b>Correction from Week 1:</b>
-					The TV from issue #1 had its picture taken
-					in the EHC #techdumps channel,
-					not the free and for sale server!
-					The picture is still up, too. My bad!
-				</p>
-				<h4 class="silkscreen-bold">West - new coverage!</h4>
-				<p>
-					This is the first coverage of West Hall's tech dump!
-					I figured I'd add a quick blurb about it here, not much.
-					It was recently mostly cleared out,
-					leaving behind toner cartridges and boxen and loose electronic parts,
-					but nothing really of value.
-					I honestly don't think I've ever gotten anything interesting from there.
-					Oh well.
-				</p>
+			<article>
+				<section>
+					<h2 class="silkscreen-bold">What's new in the box(es): The Lab<span class="padded-both">&mdash;</span>Is it dumped?</h2>
+					<h3 class="silkscreen-bold">CRT monitors<span class="padded-both">&mdash;</span>a lost technology (that I like)</h3>
+					<p class="lede-large">
+						I&nbsp;love CRT monitors.
+						They're a relic of the past that most people have cast away
+						in favor of newer, sleeker flatscreens.
+						I mean, it makes sense.
+						There's a lot to hate about CRTs,
+						for one, their weight.
+						Seriously, it feels like any decently sized CRT computer monitor
+						weighs at least 50 lbs.
+						Plus, they are boxy and quite difficult to fit on a lot of desks.
+						They're thick. Quite thick.
+						If you can look past that, though,
+						I think there's a lot of stuff that has been taken away from us
+						that once was commonplace with these monitors.
+						For one, they are quite possibly indestructible.
+						I heard a story of someone dropping one of them from a staircase,
+						and it literally still worked.
+						You can tap the screens with your finger
+						without worrying about cracking the glass, too, that's for sure.
+						Plus, you can technically set it to any resolution without issue
+						(though some monitors get blurry at too high of a resolution),
+						and you can actually get infinite color depth,
+						due to the analog way that it displays things!
+						I wish CRTs were still in use in some capacity,
+						but alas, it was not meant to be, I guess.
+						If you have the space and arm strength to get yourself a CRT monitor or TV,
+						I'd recommend it!
+					</p>
+					<figure>
+						<img src="" width="200" alt="CRT monitor found in the tech dumps" />
+					</figure>
+				</section>
+				<section>
+					<h3 class="silkscreen-bold">Find of the Week: Analog Multimeter<span class="padded-both">&mdash;</span>probably broken, though :&#40;</h3>
+					<p class="lede-large">
+						Unfortunately,
+						I was not able to find anything super neat for you all this time around,
+						buut I still managed to find an analog multimeter to look at!
+						It seems to be broken, but it lights up,
+						and I'm sure with a bit of fiddling, it'll work like new!
+						You can find it now (unless someone claimed it) in the DCC tech dump!
+						To probably nobody's surprise,
+						the drunk goggles are still in the DCC dump as well!
+						If you don't know what I'm talking about,
+						head on over to <a href="https://tinyurl.com/tvw-archive">https://tinyurl.com/tvw-archive</a>
+						and read the drunk goggles article in Issue #1.
+						It's pretty neat, and I think it's still worth an experience if you haven't already seen it!
+					</p>
+					<figure>
+						<img src="" width="200" alt="Multimeter found in the DCC tech dump" />
+					</figure>
+				</section>
+				<section>
+					<h3 class="silkscreen-bold">The Latest Finds and Stuff</h3>
+					<h4 class="silkscreen-bold">JEC<span class="padded-both">&mdash;</span>lotsa lab stuff</h4>
+					<p>
+						Lotsa stuff continues to be thrown out.
+						Last Monday, a CRT monitor and 2 Pentium II PCs were thrown out!
+						Unfortunately, I was not there in time to see them for myself.
+						I found the information in the EHC Discord server's #techdumps channel.
+					</p>
+					<p>
+						There were also these neat fluorescent lamps,
+						I dropped one off in Low.
+						Plus, a Thinkpad T61, horrifically torn apart,
+						was also found on Saturday,
+						as well as a 4-HDD hub?
+						Unfortunately that's all I know about it,
+						it's gone now.
+					</p>
+					<p>
+						Finally, the lab equipment,
+						looks like the last of it for a
+						while, has been tossed, some of
+						the last stuff includes some
+						neat Kodak film stuff, over 60
+						years old!
+					</p>
+					<h4 class="silkscreen-bold">DCC<span class="padded-both">&mdash;</span>printer and finds of the week</h4>
+					<p>
+						The table I distributed Issue #1 on has <em>disappeared</em>!
+						It looks like 2 of the copies went with them
+						(hopefully to read).
+					</p>
+					<p>
+						Also, found on Saturday
+						was a boxed Brother laser printer,
+						it says 'OLD PRINTER' only not the original box!
+					</p>
+					<h4 class="silkscreen-bold">VCC<span class="padded-both">&mdash;</span>Ethernet cables and PC</h4>
+					<p>
+						The VCC had a great find this Monday,
+						with a <em>full</em> Dell Dimension 4600
+						(minus the HDD)!
+						CPU and 1 GB DDR RAM still inside,
+						plus 2 CD drives and a floppy drive!
+						Quite a solid-looking machine, I woulda taken it
+						if I didn't have enough PCs already.
+						It was gone the next time I checked on Wednesday,
+						unfortunately.
+					</p>
+					<h4 class="silkscreen-bold">MRC/Cogswell/Low<span class="padded-both">&mdash;</span>literally nothing</h4>
+					<p>
+						Nothin'. These seem to be the least active of all,
+						and have been all semester, ever since the big lab dump in the MRC.
+					</p>
+					<p>
+						<b class="silkscreen-bold">Correction from Week 1:</b>
+						The TV from Issue #1 had its picture taken
+						in the EHC #techdumps channel,
+						not the free and for sale server!
+						The picture is still up, too. My bad!
+					</p>
+					<h4 class="silkscreen-bold">West<span class="padded-both">&mdash;</span>new coverage!</h4>
+					<p>
+						This is the first coverage of West Hall's tech dump!
+						I figured I'd add a quick blurb about it here, not much.
+						It was recently mostly cleared out,
+						leaving behind toner cartridges and boxen and loose electronic parts,
+						but nothing really of value.
+						I honestly don't think I've ever gotten anything interesting from there.
+						Oh well.
+					</p>
+				</section>
 			</article>
 		</div>
-		<hr class="pagebreak" />
-		<div id="page3" id="paper">
-			<article class="full feature">
-				<h2 class="rock-salt-regular">State of the Art - Terrorists Hold Trolley Problem Hostage</h2>
-				<p>
+		<div id="page3" class="paper">
+			<article class="condensed">
+				<h2 class="rock-salt-regular">State of the Art<span class="padded-both">&mdash;</span>Terrorists Hold Trolley Problem Hostage</h2>
+				<p class="lede-large">
 					Tensions have risen at the Trolley Problem this <time datetime="2025-04-06">last Sunday</time>
 					when <em>terrorists</em> seized control of the lever,
 					rigging it with explosives.
@@ -262,14 +294,97 @@
 					and as always, if you havy any art to share,
 					contact us via the QR code on page 1 or via email!
 				</p>
+				<div class="gallery">
+					<figure>
+						<img src="" width="" alt="Trolley Problem drawing" />
+						<figcaption>
+							<b>Cover story:</b> Terrorists take over Trolley Problem junction.
+							Citizens still unsure whether pulling the lever is good or bad.
+							The terrorists have made no comment on what they will do themselves at this time.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Miscellaneous tunnel writings" />
+						<figcaption>
+							Pretty solid snapshot at the state of the tunnels,
+							art over art, Bill Clinton added to the poll,
+							"RUN RUN RUN" seen at the bottom.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;I can do anything&quot; written repeatedly" />
+						<figcaption>
+							"I can do anything," says one person.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Stairs Closed&quot; written on the tunnel wall" />
+						<figcaption>
+							JEC Tunnel stairs are closed until April 15th,
+							according to the sign. Could it be due to AIDS?
+							Perhaps this is why all the stairs are closed during the icy winter.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="A tunnel drawing of a wall clock" />
+						<figcaption>
+							"RPI, whos [sic] hands are sweeping, past the minutes of its face..."
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Y'all can't stop me&quot; written repeatedly" />
+						<figcaption>
+							"Y'all can't stop me&hellip;"
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="The &quot;Wall of Shame&quot;" />
+						<figcaption>
+							There it is, sitting in all its infamy...
+							May they live in infamy for what they have done...
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Viagra&quot; written on the tunnel wall" />
+						<figcaption>
+							The <em>Viagra</em> ad has expanded with customer testimonials this week.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="15 Big Booms written on the tunnel wall" />
+						<figcaption>
+							15 <em>Big Booms</em> (and 1 red boom)
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;I can't stop&quot; written repeatedly" />
+						<figcaption>
+							&hellip;but they can't stop it?
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Among Us Crewmate drawn with a face" />
+						<figcaption>
+							The face of the Among Us has been revealed after all these years!
+							Also...<em>they're multiplying</em>!!!
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Keep Rollin'&quot; written repeatedly" />
+						<figcaption>
+							"Keep rollin'," as they say.
+						</figcaption>
+					</figure>
+				</div>
 			</article>
 		</div>
-		<hr class="pagebreak" />
-		<div id="page4" id="paper">
-			<article class="full feature">
-				<h2 class="faster-one-regular">Tunnel Vision: Out of the Tunnel - but this week, still in the tunnel!
-				</h2>
-				<p>
+		<div id="page4" class="paper">
+			<article class="condensed">
+				<hgroup class="faster-one-regular">
+					<h2>Tunnel Vision: Out of the Tunnel</h2>
+					<p class="subtitle">But this week, still in the tunnel!</p>
+				</hgroup>
+				<p class="lede-large">
 					Furries.
 					According to popular belief, furries lurk among us,
 					hiding axound campus, putting around stickers, et cetera.
@@ -295,8 +410,79 @@
 					contact us at <a href="mailto:tunnelvisionweekly@proton.me">tunnelvisionweekly@proton.me</a>
 					or the QR code!
 				</p>
+				<div class="gallery">
+					<figure>
+						<img src="" width="" alt="Furry tunnel art" />
+						<figcaption>
+							I think this one's still around in J-ROWL.
+							Didn't know it was around so long!
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="More furry tunnel art" />
+						<figcaption>
+							The caption... sure is a caption alright.
+							The art looks like it took some effort though, neat!
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Cat Boi&quot; tunnel art" />
+						<figcaption>
+							"If you aren't a cat boi do you really go to RPI?"
+							Depends on who you ask, I guess.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Punnett Square tunnel art" />
+						<figcaption>
+							The Punnett Square for furries revealed!
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Bizarre office label in the tunnels" />
+						<figcaption>
+							"Official Vore Office"
+							In the words of Principal Skinner,
+							"Good lord, what is happening in there???"
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Greek letter lambda drawing" />
+						<figcaption>
+							Neat, a Half-Life reference!
+							You can see remnants of a similar lambda
+							in the J-ROWL tunnel elevator.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Unpainted furry tunnel art" />
+						<figcaption>
+							Apparently this one's been around a while,
+							since during COVID they didn't really paint the tunnels much.
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="&quot;Lobotomy&quot; tunnel writing" />
+						<figcaption>
+							Don't forget your monthly lobotomy!
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Puckman stick figure" />
+						<figcaption>
+							I think this one's just nice and wholesome
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="" width="" alt="Meme tunnel drawing" />
+						<figcaption>
+							A meme format. Compared are females, femboys, and furries.
+						</figcaption>
+					</figure>
+				</div>
 			</article>
-			<article class="full">
+			<hr />
+			<article>
 				<p>
 					Well, that's it for this week's issue
 					of <i>Tunnel Vision Weekly</i>!
@@ -316,7 +502,7 @@
 					</li>
 					<li>
 						Do you want to read past issues?
-						Head on over to the <a href="/archive.html">archive</a>!
+						Head on over to the <a href="/issues.html">archive</a>!
 					</li>
 					<li>
 						Are you good at logo design? I'm not.
@@ -332,6 +518,10 @@
 			</article>
 		</div>
 		<footer>
+			<nav>
+				<menu id="navlinks-bottom"></menu>
+				<script async src="/scripts/footer-gen.js"></script>
+			</nav>
 			<p>Copyright (C) <time datetime="2025-04-07">2025</time> Tunnel Vision Weekly</p>
 		</footer>
 	</div>

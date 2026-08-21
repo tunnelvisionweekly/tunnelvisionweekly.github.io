@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<textParent>
+<textBlock>
+    <dest>test</dest>
+    <date>01-01-1970</date>
+    <msg>
+        if you see this right now then the world is saved
+    </msg>
+</textBlock>
+
+<textBlock>
+    <dest>homeMarquee</dest>
+    <date>11-23-25</date>
+    <msg>
+        (Updated 11-23-25) Thank you for tuning into the official news ticker of Tunnel Vision (bi)Weekly! Latest news (Updated 11-23-25): Issue #13 is coming out around 12/8, or a week afterwards, to give us some time to catch up after break. The tech dumps have been pretty quiet lately, save for a fun Thinkpad dump in the MRC on Friday. 5 older Thinkpads from the early 2000s or so were dropped in, all mostly working! Hopefully they'll get to someone who can breathe new life into it before it all gets thrown out. Even comes with the charger! ... The cameras are still in the tunnels, best to not draw or anything there for the time being. Coverage for the Starbucks doodle book will continue nonetheless! ... Besides that, hope you all enjoy Thanksgiving break, and we'll see you afterwards! This has been the news ticker team for Tunnel Vision (bi)Weekly, thanks for tuning in, we'll see you next time! - I, Tunnel Vision (bi)Weekly, Updated 11-23-25
+    </msg>
+</textBlock>
+
+<textBlock>
+    <dest>JEC</dest>
+    <date>1-14-26</date>
+    <msg>
+        The boxes are full. There are lots and lots of things, though most of them stripped. A few CD/DVD players if you're in the market for one, though! Recently there was also a stack of vinyl the other day, in other words lots of activity!
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>DCC</dest>
+    <date>1-14-26</date>
+    <msg>
+        Huge PC case on the side, besides that, there are a few monitors, printers, and videotape/film, still persisting nearly a semester later. Some kind of phone conferencing equipment, too from the looks of it.
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>VCC</dest>
+    <date>1-14-26</date>
+    <msg>
+        There's some Sun Microsystems server-looking computers filling the box, and a bunch of wires including phone wires and what looks like ethernet cables.
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>MRC</dest>
+    <date>1-14-26</date>
+    <msg>
+        The MRC has slowed down, most of the things are there from before break, and they have not changed almost at all, except for a xerox photocopier that found its way in.
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>Cog</dest>
+    <date>1-14-26</date>
+    <msg>
+        Cogswell still quite empty.";
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>Sag</dest>
+    <date>11-21-25</date>
+    <msg>
+        In Sage, so many wires. Go check it out if you need an ethernet cord or something. ";
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>Wes</dest>
+    <date>09-30-25</date>
+    <msg>
+        In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ...";
+    </msg> 
+</textBlock>
+
+<textBlock>
+    <dest>Uni</dest>
+    <date>1-14-26</date>
+    <msg>
+        There's a printer and 3 network switches.
+    </msg> 
+</textBlock>
+</textParent>

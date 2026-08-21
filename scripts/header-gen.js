@@ -28,7 +28,7 @@
 // 	for (i = 0; i < x.length; i++) {
 // 		var title = x[i].childNodes[1].childNodes[0].textContent;
 // 		var link = x[i].childNodes[3].childNodes[0].textContent;
-// 		// <td><anchor onclick="window.location.href = 'home.html';">Home</anchor></td>  
+// 		// <td><anchor onclick="window.location.href = 'index.html';">Home</anchor></td>  
 // 		output += "<td><anchor onclick=\"window.location.href = " + link + "\">" + title + "</anchor></td>";
 // 	}
 // 	output += "</tr>";
@@ -36,8 +36,8 @@
 // 	console.log(output);
 // }
 
-async function getHeader() {
-	const navlinks = document.getElementById("navlinks");
+(async () => {
+	const navlinks_top = document.getElementById("navlinks-top");
 	try {
 		const response = await fetch("/resources/header-links.json");
 		if (!response.ok) {
@@ -53,10 +53,10 @@ async function getHeader() {
 			anchor.appendChild(document.createTextNode(link["title"]));
 			let listitem = document.createElement("li");
 			listitem.appendChild(anchor);
-			navlinks.appendChild(listitem);
+			navlinks_top.appendChild(listitem);
 		}
 		console.log(result);
 	} catch (error) {
 		console.error(error.message);
 	}
-}
+})();

@@ -2,12 +2,12 @@
 <topLinks>
 	<menuItem>
 		<title>Home Page</title>
-		<link>'/home.html';</link>
+		<link>'/index.html';</link>
 	</menuItem>
 
 	<menuItem>
 		<title>What's New in the Box(es)</title>
-		<link>'/techdump.html';</link>
+		<link>'/newinthebox.html';</link>
 	</menuItem>
 
 	<menuItem>
@@ -17,17 +17,17 @@
 
 	<menuItem>
 		<title>Previous Issues</title>
-		<link>'/archive.html';</link>
+		<link>'/issues.html';</link>
 	</menuItem>
 
 	<menuItem>
 		<title>Crossword Solutions</title>
-		<link>'/games/puzzles/crosswordsolutions.html';</link>
+		<link>'/puzzles/crosswordsolutions.html';</link>
 	</menuItem>
 
 	<menuItem>
 		<title>Puzzles n' Stuff Hall of Fame</title>
-		<link>'/games/puzzles/halloffame.html';</link>
+		<link>'/puzzles/halloffame.html';</link>
 	</menuItem>
 
 	<menuItem>
@@ -42,7 +42,7 @@
 
 	<menuItem>
 		<title>Tech Dump Simulator</title>
-		<link>'/games/techdumpsimulator.html';</link>
+		<link>'/puzzles/techdumpsimulator.html';</link>
 	</menuItem>
 
 </topLinks>
