@@ -323,16 +323,19 @@ h2 + h3 {
 	margin-top: 0.5em;
 }
 
-.condensed p {
+.condensed p:not(hgroup *, .framed, .read-more) {
 	margin-top: 0em;
 	margin-bottom: 0em;
+}
+
+.condensed p + p {
 	text-indent: 4ch;
 }
 
-.condensed p:first-of-type,
+.condensed hgroup p + p,
 .condensed p.lede-large,
-.condensed :not(p) + p,
-.condensed hgroup p {
+.condensed p.framed,
+.condensed p.read-more {
 	text-indent: 0ch;
 }
 
@@ -602,6 +605,16 @@ table.sudoku16 td {
 	width: 2.5em;
 	height: 2.5em;
 	font-size: smaller;
+}
+
+@media (max-width: 576px) {
+	table.sudoku9 td {
+		font-size: medium;
+	}
+
+	table.sudoku16 td {
+		font-size: x-small;
+	}
 }
 
 table.nonogram td.sum {
