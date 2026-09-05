@@ -565,14 +565,6 @@ th, td {
 	text-align: left;
 }
 
-table.archive th, table.archive td {
-	border-style: none;
-}
-
-table.archive th, table.archive td:nth-child(2) {
-	text-align: center;
-}
-
 table.crossword, table.nonogram,
 table.sudoku4, table.sudoku6, table.sudoku9, table.sudoku16 {
 	margin: 1em 0ch;
