@@ -3,17 +3,28 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tunnel Vision (bi)Weekly: The website!</title>
-	<link href="styles/old.css" rel="stylesheet" type="text/css" media="all">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="/styles/main.css" rel="stylesheet" type="text/css">
+	<title>Tunnel Vision (bi)Weekly: The Website!</title>
 </head>
 
 <body>
-	<h1>Redirecting you momentarily to our neocities website!</h1>
+	<div id="wrapper">
+		<main>
+			<h1>Redirecting you momentarily to our Neocities website!</h1>
+			<p class="banner-old">
+				If you are not automatically redirected, please click <a href="https://tunnelvisionweekly.neocities.org/">here</a>.
+			</p>
+		</main>
+		<footer>
+			<p>Copyright (C) <time datetime="2026">2026</time> Tunnel Vision Weekly</p>
+		</footer>
+	</div>
 	<script>
-
-		var marqText = "(Updated 11-23-25) Thank you for tuning into the official news ticker of Tunnel Vision (bi)Weekly! Latest news (Updated 11-23-25): Issue #13 is coming out around 12/8, or a week afterwards, to give us some time to catch up after break. The tech dumps have been pretty quiet lately, save for a fun Thinkpad dump in the MRC on Friday. 5 older Thinkpads from the early 2000s or so were dropped in, all mostly working! Hopefully they'll get to someone who can breathe new life into it before it all gets thrown out. Even comes with the charger! ... The cameras are still in the tunnels, best to not draw or anything there for the time being. Coverage for the Starbucks doodle book will continue nonetheless! ... Besides that, hope you all enjoy Thanksgiving break, and we'll see you afterwards! This has been the news ticker team for Tunnel Vision (bi)Weekly, thanks for tuning in, we'll see you next time! - I, Tunnel Vision (bi)Weekly, Updated 11-23-25";
-
+		// var marqText = "(Updated 11-23-25) Thank you for tuning into the official news ticker of Tunnel Vision (bi)Weekly! Latest news (Updated 11-23-25): Issue #13 is coming out around 12/8, or a week afterwards, to give us some time to catch up after break. The tech dumps have been pretty quiet lately, save for a fun Thinkpad dump in the MRC on Friday. 5 older Thinkpads from the early 2000s or so were dropped in, all mostly working! Hopefully they'll get to someone who can breathe new life into it before it all gets thrown out. Even comes with the charger! ... The cameras are still in the tunnels, best to not draw or anything there for the time being. Coverage for the Starbucks doodle book will continue nonetheless! ... Besides that, hope you all enjoy Thanksgiving break, and we'll see you afterwards! This has been the news ticker team for Tunnel Vision (bi)Weekly, thanks for tuning in, we'll see you next time! - I, Tunnel Vision (bi)Weekly, Updated 11-23-25";
 		// var JEC = "11-21-25;There's so many (3) printers, plus a bunch of random electronic/plastic bits.";
 		// var DCC = "11-21-25;Around 10/28, there was a dump of video film and film reels! Really cool stuff IMO, super 8 and some 16mm film, plus some magnetic recording tape! Definitely worth a look. Besides that, it doesn't look like there's anything else new. There's still some kettles/coffee machines, video tapes of obscure formst, and metal boxes with electronic guts inside. Most recently, a few extra vhs tapes were found. Still not much big change, though.";
 		// var VCC = "11-21-25;A complete Core 2 Duo and 4 gb ddr3 PC (minus HDD) was found today (11/18)! Don't worry, though. At least 20 HDDs were dumped recently, all degaussed, if the 'X's are to be believed (which they typically are).";
@@ -23,7 +34,7 @@
 		// var Wes = "09-30-25;In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ...";
 		// var Uni = "11-21-25;Union Coverage Is Coming Soon To A Tunnel Vision Website Near You!";
 
-		localStorage.setItem("marquee-text", marqText);
+		// localStorage.setItem("marquee-text", marqText);
 		// localStorage.setItem("JEC",JEC);
 		// localStorage.setItem("VCC",VCC);
 		// localStorage.setItem("DCC",DCC);
@@ -33,8 +44,7 @@
 		// localStorage.setItem("West",West);
 		// localStorage.setItem("Union",Union);
 
-		window.location.href = "https://tunnelvisionweekly.neocities.org/";
-
+		window.location.replace("https://tunnelvisionweekly.neocities.org/");
 	</script>
 </body>
 
