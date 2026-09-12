@@ -90,10 +90,8 @@
 			loadDoc1();
 		}
 		var date = new Date();
-		var day = date.getDate();
-		var mon = date.getMonth() + 1;
-		var yr = date.getFullYear();
-		var currentDate = mon + "-" + day + "-" + yr.toString().substring(2, 4);
+		// convert to new Intl.DateTimeFormat("en-US").format(date) in the future
+		var currentDate = `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear().toString().substring(2, 4)}`;
 
 		function loadDoc1() {
 			var xhttp = new XMLHttpRequest();
