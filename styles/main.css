@@ -155,9 +155,13 @@ header, #navlinks-top {
 	margin-bottom: 20px;
 }
 
-main:not(:has(.paper)) {
+main {
 	max-width: 70ch;
 	margin: auto;
+}
+
+main:has(.paper) {
+	max-width: 10in;
 }
 
 /* Issue page replica */
@@ -499,10 +503,6 @@ figure img + img, figure img + figcaption {
 @media (max-width: 576px) {
 	.gallery {
 		grid-template-columns: 1fr 1fr;
-	}
-
-	.gallery > :nth-child(odd):last-child {
-		grid-column: 1 / -1;
 	}
 }
 
