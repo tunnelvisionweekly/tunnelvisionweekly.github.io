@@ -155,14 +155,14 @@ header, #navlinks-top {
 	margin-bottom: 20px;
 }
 
-main {
+main:not(:has(.paper)) {
 	max-width: 70ch;
 	margin: auto;
 }
 
 /* Issue page replica */
 .paper {
-	max-width: 11in;
+	max-width: 10in;
 	margin: 20px auto;
 	border-width: 2px;
 	border-style: solid;
@@ -490,7 +490,7 @@ figure img + img, figure img + figcaption {
 
 .gallery {
 	width: 100%;
-	margin: 20px 0;
+	/* margin: 20px 0; */
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
@@ -1263,6 +1263,62 @@ blockquote.metal-mania-regular {
 	font-style: normal;
 }
 
+/* Pacifico */
+.pacifico-regular {
+	font-family: "Pacifico", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Ubuntu */
+.ubuntu-light {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.ubuntu-regular {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.ubuntu-medium {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.ubuntu-bold {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.ubuntu-light-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.ubuntu-regular-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.ubuntu-medium-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.ubuntu-bold-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
 /*
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1294,6 +1350,7 @@ blockquote.metal-mania-regular {
 &family=Open+Sans:ital,wght@0,300..800;1,300..800
 &family=Orbitron:wght@400..900
 &family=Oswald:wght@200..700
+&family=Pacifico
 &family=Playfair+Display:ital,wght@0,400..900;1,400..900
 &family=Righteous
 &family=Roboto:ital,wght@0,100..900;1,100..900
@@ -1307,5 +1364,6 @@ blockquote.metal-mania-regular {
 &family=Special+Elite
 &family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800
 &family=Turret+Road:wght@200;300;400;500;700;800
+&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700
 &display=swap" rel="stylesheet">
 */
