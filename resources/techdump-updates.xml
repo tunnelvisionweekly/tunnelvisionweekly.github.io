@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <textParent>
-	<textBlock>
+	<!-- <textBlock>
 		<dest>test</dest>
 		<date>01-01-1970</date>
 		<msg>
 			if you see this right now then the world is saved
 		</msg>
-	</textBlock>
+	</textBlock> -->
 
 	<!--	<textBlock>
 		<dest>homeMarquee</dest>
@@ -32,7 +32,7 @@
 		<date>04-09-26</date>
 		<msg>
 			Plenty more PCs, so many PCs. Plus a bunch of old laptops! Overall though, nothing spectacular but relatively active.
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -40,7 +40,7 @@
 		<date>04-09-26</date>
 		<msg>
 			This time around was pretty uneventful. Seems like there may have been more film, though!
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -56,7 +56,7 @@
 		<date>01-14-26</date>
 		<msg>
 			There's some Sun Microsystems server-looking computers filling the box, and a bunch of wires including phone wires and what looks like ethernet cables.
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -64,7 +64,7 @@
 		<date>01-14-26</date>
 		<msg>
 			The MRC has slowed down, most of the things are there from before break, and they have not changed almost at all, except for a xerox photocopier that found its way in.
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -72,7 +72,7 @@
 		<date>04-09-26</date>
 		<msg>
 			Quite surprising to see Cogswell getting some action, finds of the week this time!
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -80,7 +80,7 @@
 		<date>1-15-26</date>
 		<msg>
 			Some wires and an old looking printer make up most of what's in here today.
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -88,7 +88,7 @@
 		<date>09-30-25</date>
 		<msg>
 			In West, Printers, string lights, a DVD player (find of the week last semester?). There's an AC unit, some trashed laptops, and a smashed flatscreen TV. Lots of wires, too. ...";
-		</msg> 
+		</msg>
 	</textBlock>
 
 	<textBlock>
@@ -96,6 +96,6 @@
 		<date>1-14-26</date>
 		<msg>
 			There's a printer and 3 network switches.
-		</msg> 
+		</msg>
 	</textBlock>
 </textParent>

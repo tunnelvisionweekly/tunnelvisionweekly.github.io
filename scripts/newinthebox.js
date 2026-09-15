@@ -13,7 +13,7 @@ function fillTable() {
 		// document.getElementById(places[i]).innerHTML = temp_data;
 		// document.getElementById("d" + places[i]).innerHTML = temp_date;
 	}
-	output += "<h3>End of Generated Table</h3>"
+	// output += "<h3>End of Generated Table</h3>"
 	document.getElementById("infotable").innerHTML = output;
 }
 

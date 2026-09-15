@@ -506,6 +506,12 @@ figure img + img, figure img + figcaption {
 	}
 }
 
+@media (max-width: 324px) {
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+}
+
 .gallery * {
 	min-width: 100%;
 }
