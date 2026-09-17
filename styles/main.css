@@ -457,11 +457,15 @@ section + section {
 	padding: 0.5em;
 }
 
-:is(figure, table, .framed) + :is(figure, table, .framed) {
+.framed:not(:first-child) {
+	margin-top: 1em;
+}
+
+:is(figure, table, .framed, .gallery) + :is(figure, table, .framed, .gallery) {
 	margin-top: 20px;
 }
 
-#paper-top :is(figure, table, .framed) + :is(figure, table, .framed) {
+#paper-top :is(figure, table, .framed, .gallery) + :is(figure, table, .framed, .gallery) {
 	margin-top: 0px;
 }
 
@@ -494,10 +498,13 @@ figure img + img, figure img + figcaption {
 
 .gallery {
 	width: 100%;
-	/* margin: 20px 0; */
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
+}
+
+.gallery:not(:first-child) {
+	margin-top: 1em;
 }
 
 @media (max-width: 576px) {
