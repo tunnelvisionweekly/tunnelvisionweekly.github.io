@@ -171,6 +171,7 @@ main:has(.paper) {
 	border-width: 2px;
 	border-style: solid;
 	padding: 20px;
+	overflow: hidden;
 }
 
 .paper + .paper {
@@ -461,7 +462,7 @@ section + section {
 	margin-top: 1em;
 }
 
-:is(figure, table, .framed, .gallery) + :is(figure, table, .framed, .gallery) {
+:is(figure, table, .scroll-horizontal, .framed, .gallery) + :is(figure, table, .scroll-horizontal, .framed, .gallery) {
 	margin-top: 20px;
 }
 
@@ -533,6 +534,11 @@ figure img + img, figure img + figcaption {
 
 .gallery :is(figure, table, .framed) + :is(figure, table, .framed) {
 	margin: 0px;
+}
+
+.scroll-horizontal {
+	margin: 1em 0 0;
+	overflow: scroll;
 }
 
 table {
