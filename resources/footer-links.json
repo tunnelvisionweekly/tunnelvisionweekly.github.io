@@ -75,6 +75,10 @@
 		{
 			"title" : "TVW #19",
 			"pathname" : "/issues/web/tvw19.html"
+		},
+		{
+			"title" : "TVW #20",
+			"pathname" : "/issues/web/tvw20.html"
 		}
 	]
 }
