@@ -458,6 +458,10 @@ section + section {
 	padding: 0.5em;
 }
 
+.framed.dashed {
+	border-style: dashed;
+}
+
 .framed:not(:first-child) {
 	margin-top: 1em;
 }
