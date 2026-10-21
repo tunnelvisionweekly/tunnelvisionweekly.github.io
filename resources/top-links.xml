@@ -7,7 +7,7 @@
 
 	<menuItem>
 		<title>What's New in the Box(es)</title>
-		<link>'/newinthebox.html';</link>
+		<link>'/newinthebox/';</link>
 	</menuItem>
 
 	<menuItem>
@@ -17,7 +17,7 @@
 
 	<menuItem>
 		<title>Previous Issues</title>
-		<link>'/issues.html';</link>
+		<link>'/issues/';</link>
 	</menuItem>
 
 	<menuItem>

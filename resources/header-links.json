@@ -5,35 +5,35 @@
 	},
 	{
 		"title" : "What's New in the Box(es)",
-		"pathname" : "/newinthebox.html"
+		"pathname" : "/newinthebox/"
 	},
 	{
 		"title" : "State of the Art",
-		"pathname" : "/stateoftheart.html"
+		"pathname" : "/stateoftheart/"
 	},
 	{
 		"title" : "Out of the Tunnel",
-		"pathname" : "/outofthetunnel.html"
+		"pathname" : "/outofthetunnel/"
 	},
 	{
 		"title" : "Geologic Fever",
-		"pathname" : "/geologicfever.html"
+		"pathname" : "/geologicfever/"
 	},
 	{
 		"title" : "Subterranean Homesick Blues",
-		"pathname" : "/subterraneanhomesickblues.html"
+		"pathname" : "/subterraneanhomesickblues/"
 	},
 	{
 		"title" : "Extra Topics",
-		"pathname" : "/extras.html"
+		"pathname" : "/extras/"
 	},
 	{
 		"title" : "Puzzles n' Stuff",
-		"pathname" : "/puzzles.html"
+		"pathname" : "/puzzles/"
 	},
 	{
 		"title" : "All Issues",
-		"pathname" : "/issues.html"
+		"pathname" : "/issues/"
 	},
 	{
 		"title" : "About Us",

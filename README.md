@@ -20,7 +20,7 @@ All of the locations of known tech dumps should already be set up and each has a
 
 ## How it works
 
-The XML file is retrieved and parsed using JavaScript, which is located in `/scripts/newinthebox.js`. This script is called from `newinthebox.html`, which is where the table is displayed.
+The XML file is retrieved and parsed using JavaScript, which is located in `/scripts/newinthebox.js`. This script is called from `newinthebox/`, which is where the table is displayed.
 
 ## Old Files
 
