@@ -492,7 +492,11 @@ section + section {
 	margin: 0px;
 }
 
-figure img {
+.framed figure, figure.framed {
+	margin: 0px;
+}
+
+figure * {
 	display: block;
 }
 
