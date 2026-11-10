@@ -41,6 +41,11 @@ body {
 @media (prefers-color-scheme: dark) {
 	.invert-dark {
 		color: var(--light-color); /* preserve visibility for alt text */
+		filter: invert(1); /* invert */
+	}
+
+	.whiteout-dark {
+		color: var(--light-color); /* preserve visibility for alt text */
 		filter: brightness(0) invert(1); /* turn white */
 	}
 }
@@ -195,8 +200,12 @@ main:has(.paper) {
 	margin: 0px;
 }
 
-#paper-top img, img.logo {
+#paper-top img, img.banner-image {
 	display: block;
+}
+
+img.logo-inline {
+	vertical-align: middle;
 }
 
 /* Issue title/logo and subtitle */
@@ -496,13 +505,23 @@ section + section {
 	margin: 0px;
 }
 
-figure * {
+figure img, figure figcaption {
 	display: block;
 }
 
-figure img + img, figure img + figcaption {
+figure img + img, figure figcaption {
 	margin-top: 0.5em;
 	text-align: left;
+}
+
+.sidebyside {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.sidebyside > * + * {
+	margin-top: 0px;
 }
 
 .gallery {
@@ -516,7 +535,7 @@ figure img + img, figure img + figcaption {
 	margin-top: 1em;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 	.gallery {
 		grid-template-columns: 1fr 1fr;
 	}
