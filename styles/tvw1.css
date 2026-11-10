@@ -2,12 +2,13 @@
 
 /* To be used in conjunction with main.css */
 
-.paper #newinthebox .gallery {
+#newinthebox .gallery {
 	figure:first-child {
 		img:first-child {
 			filter: brightness(1.34) contrast(1.34);
 		}
 		img:nth-child(2) {
+			margin-top: 20px;
 			filter: brightness(1.42) contrast(1.42);
 		}
 	}
@@ -17,6 +18,7 @@
 			filter: brightness(1.25) contrast(1.34);
 		}
 		img:nth-child(2) {
+			margin-top: 20px;
 			filter: brightness(1.05) contrast(1.61);
 		}
 	}
@@ -26,12 +28,13 @@
 			filter: brightness(1.31) contrast(1.24);
 		}
 		img:nth-child(2) {
+			margin-top: 20px;
 			filter: brightness(1.47) contrast(1.32);
 		}
 	}
 }
 
-.paper #stateoftheart .gallery {
+#stateoftheart .gallery {
 	grid-template:
 		"b a a c"
 		"d a a e"
@@ -43,7 +46,7 @@
 }
 
 @media (max-width: 816px) {
-	.paper #stateoftheart .gallery {
+	#stateoftheart .gallery {
 		grid-template:
 			"a a"
 			"b c"
@@ -59,7 +62,7 @@
 }
 
 @media (max-width: 324px) {
-	.paper #stateoftheart .gallery {
+	#stateoftheart .gallery {
 		grid-template:
 			"a"
 			"b"
@@ -79,11 +82,11 @@
 }
 
 
-.paper #stateoftheart .gallery > :first-child {
+#stateoftheart .gallery > :first-child {
 	grid-area: a;
 }
 
-.paper #stateoftheart .gallery > :nth-child(2) {
+#stateoftheart .gallery > :nth-child(2) {
 	grid-area: b;
 
 	img {
@@ -91,7 +94,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(3) {
+#stateoftheart .gallery > :nth-child(3) {
 	grid-area: c;
 
 	img {
@@ -99,7 +102,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(4) {
+#stateoftheart .gallery > :nth-child(4) {
 	grid-area: d;
 
 	img {
@@ -107,7 +110,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(5) {
+#stateoftheart .gallery > :nth-child(5) {
 	grid-area: e;
 
 	img {
@@ -115,7 +118,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(6) {
+#stateoftheart .gallery > :nth-child(6) {
 	grid-area: f;
 
 	img {
@@ -123,7 +126,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(7) {
+#stateoftheart .gallery > :nth-child(7) {
 	grid-area: g;
 
 	img {
@@ -131,7 +134,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(8) {
+#stateoftheart .gallery > :nth-child(8) {
 	grid-area: h;
 
 	img {
@@ -139,7 +142,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(9) {
+#stateoftheart .gallery > :nth-child(9) {
 	grid-area: i;
 
 	img {
@@ -147,7 +150,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(10) {
+#stateoftheart .gallery > :nth-child(10) {
 	grid-area: j;
 
 	img {
@@ -155,7 +158,7 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(11) {
+#stateoftheart .gallery > :nth-child(11) {
 	grid-area: k;
 
 	img {
@@ -163,6 +166,6 @@
 	}
 }
 
-.paper #stateoftheart .gallery > :nth-child(12) {
+#stateoftheart .gallery > :nth-child(12) {
 	grid-area: l;
 }
