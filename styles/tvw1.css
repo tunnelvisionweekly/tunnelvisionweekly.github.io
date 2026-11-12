@@ -43,6 +43,94 @@
 		". . k j"
 		"l l l l";
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	> :first-child {
+		grid-area: a;
+	}
+
+	> :nth-child(2) {
+		grid-area: b;
+
+		img {
+			filter: brightness(1.14) contrast(1.93);
+		}
+	}
+
+	> :nth-child(3) {
+		grid-area: c;
+
+		img {
+			filter: brightness(1.21);
+		}
+	}
+
+	> :nth-child(4) {
+		grid-area: d;
+
+		img {
+			filter: brightness(0.87) contrast(1.65);
+		}
+	}
+
+	> :nth-child(5) {
+		grid-area: e;
+
+		img {
+			filter: brightness(1.24);
+		}
+	}
+
+	> :nth-child(6) {
+		grid-area: f;
+
+		img {
+			filter: brightness(1.47) contrast(1.34);
+		}
+	}
+
+	> :nth-child(7) {
+		grid-area: g;
+
+		img {
+			filter: brightness(1.24) contrast(1.16);
+		}
+	}
+
+	> :nth-child(8) {
+		grid-area: h;
+
+		img {
+			filter: brightness(1.26) contrast(1.58);
+		}
+	}
+
+	> :nth-child(9) {
+		grid-area: i;
+
+		img {
+			filter: brightness(1.34) contrast(1.28);
+		}
+	}
+
+	> :nth-child(10) {
+		grid-area: j;
+
+		img {
+			filter: brightness(1.48) contrast(1.33);
+		}
+	}
+
+	> :nth-child(11) {
+		grid-area: k;
+
+		img {
+			filter: brightness(1.18) contrast(1.61);
+		}
+	}
+
+	> :nth-child(12) {
+		grid-area: l;
+	}
 }
 
 @media (max-width: 816px) {
@@ -79,93 +167,4 @@
 ;
 		grid-template-columns: 1fr;
 	}
-}
-
-
-#stateoftheart .gallery > :first-child {
-	grid-area: a;
-}
-
-#stateoftheart .gallery > :nth-child(2) {
-	grid-area: b;
-
-	img {
-		filter: brightness(1.14) contrast(1.93);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(3) {
-	grid-area: c;
-
-	img {
-		filter: brightness(1.21);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(4) {
-	grid-area: d;
-
-	img {
-		filter: brightness(0.87) contrast(1.65);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(5) {
-	grid-area: e;
-
-	img {
-		filter: brightness(1.24);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(6) {
-	grid-area: f;
-
-	img {
-		filter: brightness(1.47) contrast(1.34);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(7) {
-	grid-area: g;
-
-	img {
-		filter: brightness(1.24) contrast(1.16);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(8) {
-	grid-area: h;
-
-	img {
-		filter: brightness(1.26) contrast(1.58);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(9) {
-	grid-area: i;
-
-	img {
-		filter: brightness(1.34) contrast(1.28);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(10) {
-	grid-area: j;
-
-	img {
-		filter: brightness(1.48) contrast(1.33);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(11) {
-	grid-area: k;
-
-	img {
-		filter: brightness(1.18) contrast(1.61);
-	}
-}
-
-#stateoftheart .gallery > :nth-child(12) {
-	grid-area: l;
 }
